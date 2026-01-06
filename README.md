@@ -6,7 +6,7 @@ This guide explains how to set up, use, and update the API collection for the **
 
 Before starting, ensure you have the following:
 
-1.  **Project Code:** Clone the repository to your local machine.
+1.  **Clone :** Clone the repository to your local machine.
     ```bash
     git clone https://github.com/mahendratechnosoft/Deal-Management-APICollection.git
     ```
