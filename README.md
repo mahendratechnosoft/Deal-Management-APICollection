@@ -8,7 +8,7 @@ Before starting, ensure you have the following:
 
 1.  **Project Code:** Clone the repository to your local machine.
     ```bash
-    git clone <YOUR_REPO_URL_HERE>
+    git clone https://github.com/mahendratechnosoft/Deal-Management-APICollection.git
     ```
 2.  **Bruno Client:** Download and install the tool.
     * [Download Bruno](https://www.usebruno.com/downloads)
