@@ -1,0 +1,49 @@
+meta {
+  name: http://localhost:8080/lead/updateLead/{leadId}
+  type: http
+  seq: 5
+}
+
+put {
+  url: http://localhost:8080/employee/updateLead
+  body: json
+  auth: bearer
+}
+
+auth:bearer {
+  token: {{bearerToken}}
+}
+
+body:json {
+  {
+  
+     "adminId": "c0a800b0-9a29-1fb3-819a-2a53fe3c001b",
+     "employeeId": "c0a800b0-9a38-119a-819a-3dbe8f2c0023",
+  
+      "status": "New Lead",
+      "source": "Instagram",
+      "clientName": "Dinesh Company 25",
+      "revenue": 3000.22,
+      "mobileNumber": "89750",
+      "phoneNumber": "8585",
+      "email": "kartik@gmail.com",
+      "website": "kartik.com",
+      "industry": "IT",
+      "priority": "High",
+      "converted": false,
+      "street":"home street",
+      "country":"India",
+      "state":"MH",
+      "city":"akola",
+      "zipCode":"445505",
+      "description":"5000",
+      "createdDate": "2025-10-27T18:24:23.2014112",
+      "updatedDate": "2025-10-27T18:24:23.2014112"
+  
+     
+  }
+}
+
+settings {
+  encodeUrl: true
+}

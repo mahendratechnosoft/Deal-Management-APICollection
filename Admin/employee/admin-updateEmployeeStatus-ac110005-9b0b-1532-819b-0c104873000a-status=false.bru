@@ -1,0 +1,19 @@
+meta {
+  name: /admin/updateEmployeeStatus/ac110005-9b0b-1532-819b-0c104873000a?status=false
+  type: http
+  seq: 7
+}
+
+put {
+  url: {{baseUrl}}/admin/updateEmployeeStatus/ac110005-9b0b-1532-819b-0c104873000a?status=false
+  body: none
+  auth: inherit
+}
+
+params:query {
+  status: false
+}
+
+settings {
+  encodeUrl: true
+}

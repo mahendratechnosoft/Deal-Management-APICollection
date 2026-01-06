@@ -1,0 +1,19 @@
+meta {
+  name: http://localhost:8080/employee/getLatestTime
+  type: http
+  seq: 2
+}
+
+get {
+  url: http://localhost:8080/employee/getLatestTime
+  body: none
+  auth: bearer
+}
+
+auth:bearer {
+  token: eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJrYXJ0aWtAZ21haWwuY29tIiwiaWF0IjoxNzYzMDA3NzE3LCJleHAiOjE3NjMxODc3MTd9.Ztm-24nKYDcuNyzFtzrTwtTTM-Z8ECcAYQAqOu5u4fkzpF1wAW1RVGvG0xB-v86a0lWXCPYMkxfRpB9AJY0x2A
+}
+
+settings {
+  encodeUrl: true
+}

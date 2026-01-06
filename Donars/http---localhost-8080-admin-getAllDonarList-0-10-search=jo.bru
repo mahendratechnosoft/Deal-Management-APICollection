@@ -1,0 +1,23 @@
+meta {
+  name: http://localhost:8080/admin/getAllDonarList/0/10?search=jo
+  type: http
+  seq: 9
+}
+
+get {
+  url: http://localhost:8080/admin/getAllDonorList/0/10
+  body: none
+  auth: bearer
+}
+
+params:query {
+  ~search: jo
+}
+
+auth:bearer {
+  token: {{bearerToken}}
+}
+
+settings {
+  encodeUrl: true
+}

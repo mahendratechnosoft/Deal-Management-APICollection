@@ -1,0 +1,30 @@
+meta {
+  name: {{baseUrl}}/admin/updateFinanceSetting
+  type: http
+  seq: 1
+}
+
+put {
+  url: {{baseUrl}}/admin/updateFinanceSetting
+  body: json
+  auth: bearer
+}
+
+auth:bearer {
+  token: {{bearerToken}}
+}
+
+body:json {
+  {
+    "type": "INVOICE",
+    "prefix": "INV-",
+    "termsAndCondition": "Payment is due within the specified period.",
+    "dueDays": 30,
+    "numberFormat": "NUMBER"
+  }
+  
+}
+
+settings {
+  encodeUrl: true
+}

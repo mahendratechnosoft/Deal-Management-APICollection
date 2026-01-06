@@ -1,0 +1,21 @@
+meta {
+  name: /employee/activeTimer
+  type: http
+  seq: 4
+}
+
+get {
+  url: {{baseUrl}}/admin/activeTimer
+  body: text
+  auth: inherit
+}
+
+body:text {
+  {
+      "taskId":"c0a800ef-9afd-1b9e-819a-fdd15de2000c"
+  }
+}
+
+settings {
+  encodeUrl: true
+}

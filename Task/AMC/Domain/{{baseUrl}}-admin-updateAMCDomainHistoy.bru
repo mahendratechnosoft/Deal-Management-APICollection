@@ -1,0 +1,31 @@
+meta {
+  name: {{baseUrl}}/admin/updateAMCDomainHistoy
+  type: http
+  seq: 2
+}
+
+put {
+  url: {{baseUrl}}/admin/updateAMCDomainHistoy
+  body: json
+  auth: bearer
+}
+
+auth:bearer {
+  token: {{bearerToken}}
+}
+
+body:json {
+  {
+      "acmDomainHistoryId": "ac16d001-9b07-1321-819b-07d3758e0002",
+      "amcId": "ac16d001-9b07-1321-819b-07d374e40000",
+      "domainStartDate": "2025-01-01",
+      "domainRenewalDate": "2026-01-01",
+      "domainAmount": "1200",
+      "domainRenewalCycle": "Yearly",
+      "sequence": 1
+  }
+}
+
+settings {
+  encodeUrl: true
+}

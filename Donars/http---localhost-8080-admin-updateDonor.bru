@@ -1,0 +1,69 @@
+meta {
+  name: http://localhost:8080/admin/updateDonor
+  type: http
+  seq: 11
+}
+
+put {
+  url: http://localhost:8080/admin/updateDonor
+  body: json
+  auth: bearer
+}
+
+auth:bearer {
+  token: {{bearerToken}}
+}
+
+body:json {
+  {
+      "donorId": "ac19f001-9a91-108c-819a-91840e230004",
+      "adminId": "ac149001-9a76-1887-819a-76fc7d720001",
+      "employeeId": null,
+      "createdBy": "Kartik",
+      "createdDateTime": 0,
+      "name": "Dinesh Pandit",
+      "age": 30,
+      "dateOfBirth": "1995-05-10",
+      "address": "123 Main Street, Sample City",
+      "phoneNumber": "9876543210",
+      "adharCardNo": "1234-5678-9012",
+      "marriedStatus": "Yes",
+      "maleKidsCount": 1,
+      "femaleKidsCount": 1,
+      "height": 175.5,
+      "weight": 70.2,
+      "religion": "Hindu",
+      "booldGroup": "O+",
+      "bsl": "Normal",
+      "brotherAge": 35,
+      "brotherProfession": "Engineer",
+      "brotherKidsCount": 2,
+      "brotherIllness": "None",
+      "sisterAge": 28,
+      "sisterProfession": "Teacher",
+      "sisterKidsCount": "1",
+      "sisterIllness": "None",
+      "hospitalAdmissionStatus": true,
+      "hospitalAdmissionReason": "oopp",
+      "surgeryStatus": true,
+      "surgeryReason": "TTT",
+      "bloodDonationStatus": true,
+      "bloodDonationReason": "Donated 3 times",
+      "prolongedIllnessStatus": true,
+      "prolongedIllnessReason": "ddd",
+      "status": "New Donor",
+      "city": "Pune",
+      "pincode": "45552",
+      "srcreatinine": "oopp",
+      "hbsag": "oopp",
+      "vdrl": "oopp",
+      "cmv": "oopp",
+      "hiv": "oopp",
+      "hcv": "oopp",
+      "hbelectrophoresis": "oopp"
+  }
+}
+
+settings {
+  encodeUrl: true
+}

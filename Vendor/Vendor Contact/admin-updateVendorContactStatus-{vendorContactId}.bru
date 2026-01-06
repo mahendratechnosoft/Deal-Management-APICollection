@@ -1,0 +1,19 @@
+meta {
+  name: /admin/updateVendorContactStatus/{vendorContactId}
+  type: http
+  seq: 6
+}
+
+put {
+  url: {{baseUrl}}/admin/updateVendorContactStatus/c0a800ef-9b25-187a-819b-30012294003f?active=false
+  body: none
+  auth: inherit
+}
+
+params:query {
+  active: false
+}
+
+settings {
+  encodeUrl: true
+}

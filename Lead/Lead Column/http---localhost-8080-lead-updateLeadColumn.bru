@@ -1,0 +1,31 @@
+meta {
+  name: http://localhost:8080/lead/updateLeadColumn
+  type: http
+  seq: 2
+}
+
+post {
+  url: http://localhost:8080/lead/updateLeadColumn
+  body: json
+  auth: bearer
+}
+
+auth:bearer {
+  token: eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJkZW1vQGdtYWlsLmNvbSIsImlhdCI6MTc2MTYzMDEwNywiZXhwIjoxNzYxODEwMTA3fQ.ihd1OnkUB9AQE6qkaGmUNJ6Ah247dYoVd4a-IiEMD9nHH8nzOEIT2uFKsnwGGDU-Dp84IesFvzwAvf5jw7BeFw
+}
+
+body:json {
+  {
+    "columns": [
+      { "name": "Column 1", "sequence": 1 },
+      { "name": "Column 2", "sequence": 2 },
+      { "name": "Column 3", "sequence": 3 },
+      { "name": "Column 4", "sequence": 4 }
+    ]
+  }
+  
+}
+
+settings {
+  encodeUrl: true
+}

@@ -1,0 +1,26 @@
+meta {
+  name: http://localhost:8080/admin/updateLeadStatus
+  type: http
+  seq: 8
+}
+
+put {
+  url: http://localhost:8080/admin/updateLeadStatus
+  body: json
+  auth: bearer
+}
+
+auth:bearer {
+  token: eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhZG1pbjNAZ21pbC5jb20iLCJpYXQiOjE3NjE3OTg5NTUsImV4cCI6MTc2MTk3ODk1NX0.XOZ9qcG_T8MxY8vRalMUGM_YGkO68H6xS5OJ6yZJyLuy2yR2ORxWcYarmXDIjQy-HuvRjRjHensC8dHgk1d5aQ
+}
+
+body:json {
+  {
+      "leadId":"c0a800b0-9a2f-1dbb-819a-2fa1022f0007",
+      "status":"Contacted"
+  }
+}
+
+settings {
+  encodeUrl: true
+}

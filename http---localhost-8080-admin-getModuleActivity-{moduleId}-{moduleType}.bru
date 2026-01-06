@@ -1,0 +1,19 @@
+meta {
+  name: http://localhost:8080/admin/getModuleActivity/{moduleId}/{moduleType}
+  type: http
+  seq: 24
+}
+
+get {
+  url: http://localhost:8080/admin/getModuleActivity/c0a800b0-9a4e-1439-819a-4ea0f4ce0007/lead
+  body: none
+  auth: bearer
+}
+
+auth:bearer {
+  token: {{bearerToken}}
+}
+
+settings {
+  encodeUrl: true
+}

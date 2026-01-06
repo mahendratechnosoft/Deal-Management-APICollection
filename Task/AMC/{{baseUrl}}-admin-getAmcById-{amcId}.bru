@@ -1,0 +1,15 @@
+meta {
+  name: {{baseUrl}}/admin/getAmcById/{amcId}
+  type: http
+  seq: 8
+}
+
+get {
+  url: {{baseUrl}}/admin/getAmcById/{amcId}
+  body: none
+  auth: inherit
+}
+
+settings {
+  encodeUrl: true
+}

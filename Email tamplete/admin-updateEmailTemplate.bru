@@ -1,0 +1,30 @@
+meta {
+  name: /admin/updateEmailTemplate
+  type: http
+  seq: 2
+}
+
+put {
+  url: {{baseUrl}}/admin/updateEmailTemplate
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+      "emailTemplateId": "0a390914-9b73-1db0-819b-73cec05b0000",
+      "templateName": "Rich Text Proposal",
+      "adminId": "ac110005-9a7c-14bd-819a-7cb6a01f0001",
+      "subject": "Proposal for {{projectName}}",
+      "emailBody": "<div style='font-family: Arial, sans-serif; color: #333;'><h1>Hello {{customerName}},</h1><p>We are pleased to submit our proposal.</p><p><b>Highlights:</b></p><ul><li>Feature A</li><li>Feature B</li></ul><br><p style='color: blue;'>Click here to view.</p></div>",
+      "category": "SALES",
+      "triggerEvent": "PROPOSAL_SEND",
+      "createdAt": "2025-12-31T15:18:08.156947",
+      "default": false,
+      "active": true
+  }
+}
+
+settings {
+  encodeUrl: true
+}

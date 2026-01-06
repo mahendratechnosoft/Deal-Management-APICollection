@@ -1,0 +1,72 @@
+meta {
+  name: http://localhost:8080/admin/createEmployee
+  type: http
+  seq: 1
+}
+
+post {
+  url: http://91.203.133.210:9091/admin/createEmployee
+  body: json
+  auth: bearer
+}
+
+auth:bearer {
+  token: {{bearerToken}}}
+}
+
+body:json {
+  {
+      "loginEmail": "test9@gmail.com",
+      "password": "1234",
+      "name": "emp2",
+      "phone": "+91-9876543210",
+      "country": "India",
+      "state": "Maharashtra",
+      "city": "Pune",
+      "address": "123, Green Park, Mumbai, India",
+      "gender": "Male",
+      "description": "Passionate full-stack developer with experience in CRM systems and API integrations.",
+      "profileImageBase64": null,
+      "moduleAccess": {
+          "leadAccess": true,
+          "leadViewAll": true,
+          "leadCreate": true,
+          "leadDelete": true,
+          "leadEdit": true,
+          "customerAccess": true,
+          "customerViewAll": true,
+          "customerCreate": true,
+          "customerDelete": true,
+          "customerEdit": true,
+          "proposalAccess": true,
+          "proposalViewAll": true,
+          "proposalCreate": true,
+          "proposalDelete": true,
+          "proposalEdit": true,
+          "proformaInvoiceAccess": true,
+          "proformaInvoiceViewAll": true,
+          "proformaInvoiceCreate": true,
+          "proformaInvoiceDelete": true,
+          "proformaInvoiceEdit": true,
+          "invoiceAccess": true,
+          "invoiceViewAll": true,
+          "invoiceCreate": true,
+          "invoiceDelete": true,
+          "invoiceEdit": true,
+          "paymentAccess": true,
+          "paymentViewAll": true,
+          "paymentcreate": true,
+          "paymentDelete": true,
+          "paymentEdit": true,
+          "timeSheetAccess": true,
+          "timeSheetViewAll": true,
+          "timeSheetCreate": true,
+          "timeSheetDelete": true,
+          "timeSheetEdit": true
+      }
+  }
+}
+
+settings {
+  encodeUrl: true
+}

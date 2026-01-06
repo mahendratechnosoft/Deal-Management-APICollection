@@ -1,0 +1,52 @@
+meta {
+  name: http://localhost:8080/admin/updateCustomer
+  type: http
+  seq: 2
+}
+
+put {
+  url: {{baseUrl}}/admin/updateCustomer
+  body: json
+  auth: bearer
+}
+
+auth:bearer {
+  token: {{bearerToken}}
+}
+
+body:json {
+  {
+      "customerId": "c0a800ef-9b44-1c7a-819b-45e90f4e001a",
+      "adminId": "ac110005-9a7c-14bd-819a-7cb6a01f0001",
+      "employeeId": null,
+      "companyName": "ADITYA Technologies Pvt Ltd",
+      "phone": "01123456789",
+      "mobile": "9876543210",
+      "email": null,
+      "website": "https://salesoptim.com",
+      "industry": "Software Development",
+      "revenue": "5000000",
+      "gstin": null,
+      "panNumber": null,
+      "billingStreet": "123 MG Road",
+      "billingCity": "Bengaluru",
+      "billingState": "Karnataka",
+      "billingCountry": "India",
+      "billingZipCode": "560001",
+      "shippingStreet": "45 Residency Road",
+      "shippingCity": "Bengaluru",
+      "shippingState": "Karnataka",
+      "shippingCountry": "India",
+      "shippingZipCode": "560025",
+      "description": "Long-term enterprise customer for CRM and automation solutions.",
+      "status": false,
+      "userId": "c0a800ef-9b44-1c7a-819b-45e90f51001b",
+      "password": 1234,
+      "loginEmail": "customerQA1@gmail.com",
+      "active":true
+  }
+}
+
+settings {
+  encodeUrl: true
+}

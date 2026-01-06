@@ -1,0 +1,25 @@
+meta {
+  name: http://localhost:8080/employee/getAttendanceBetween?fromDate=2025-11-10&toDate=2025-11-13
+  type: http
+  seq: 3
+}
+
+get {
+  url: http://localhost:8080/admin/getAttendanceBetween?employeeId=ac110002-9a58-1513-819a-588d4e640005&toDate=2025-11-30&fromDate=2025-11-01
+  body: none
+  auth: bearer
+}
+
+params:query {
+  employeeId: ac110002-9a58-1513-819a-588d4e640005
+  toDate: 2025-11-30
+  fromDate: 2025-11-01
+}
+
+auth:bearer {
+  token: {{bearerToken}}
+}
+
+settings {
+  encodeUrl: true
+}

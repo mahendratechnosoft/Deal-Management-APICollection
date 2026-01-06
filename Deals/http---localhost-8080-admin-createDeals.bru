@@ -1,0 +1,40 @@
+meta {
+  name: http://localhost:8080/admin/createDeals
+  type: http
+  seq: 1
+}
+
+post {
+  url: http://localhost:8080/employee/createDeals
+  body: json
+  auth: bearer
+}
+
+auth:bearer {
+  token: eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJlbXBAZ21haWwuY29tIiwiaWF0IjoxNzYxNzE2ODQxLCJleHAiOjE3NjE4OTY4NDF9.Y3O4SZbULaAeoCQKYXPe_ioEZqinDH97IU89uquZWftH48SUQmZtSXMtav_ffIICtZuXHLuGoop06V-QjmH0gQ
+}
+
+body:json {
+  {
+   
+    "employeeId": "e101112",
+    "createdBy": "Admin User",
+    "createdDateTime": "2025-10-28T12:30:00",
+    "dealName": "Enterprise CRM Project",
+    "companyName": "Tech Innovators Pvt Ltd",
+    "customerId": "c999888",
+    "expectedRevenue": 120000.50,
+    "acctualRevenue": 100000.00,
+    "startDate": "2025-10-01",
+    "closingDate": "2025-12-31",
+    "type": "New Business",
+    "source": "Referral",
+    "stage": "Negotiation",
+    "description": "Deal for enterprise-level CRM customization and deployment."
+  }
+  
+}
+
+settings {
+  encodeUrl: true
+}

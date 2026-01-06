@@ -1,0 +1,19 @@
+meta {
+  name: {{baseUrl}}/admin/getAllAMCHistoy/{amcId}
+  type: http
+  seq: 1
+}
+
+get {
+  url: {{baseUrl}}/admin/getAllAMCHistoy/c0a800ef-9b25-187a-819b-25af88a40015
+  body: none
+  auth: bearer
+}
+
+auth:bearer {
+  token: {{bearerToken}}
+}
+
+settings {
+  encodeUrl: true
+}

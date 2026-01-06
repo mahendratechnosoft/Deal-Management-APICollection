@@ -1,0 +1,72 @@
+meta {
+  name: http://localhost:8080/admin/createProposal
+  type: http
+  seq: 2
+}
+
+post {
+  url: {{baseUrl}}/admin/createProposal
+  body: json
+  auth: bearer
+}
+
+auth:bearer {
+  token: {{bearerToken}}
+}
+
+body:json {
+  {
+    "proposalInfo": {
+     
+  
+      "assignTo": "Emp1",
+      "proposalNumber": "001",
+      "currencyType": "INR",
+      "discount": 10.5,
+      "taxType": "GST 18%",
+      "dueDate": "2025-11-15",
+      "proposalDate": "2025-10-30",
+      "totalAmmount": 25000.75,
+      "status": "Pending",
+      "subject": "Website Development Proposal",
+      "relatedTo": "lead",
+      "relatedId": "lead-1122",
+      "companyName": "Tech Solutions Pvt Ltd",
+      "mobileNumber": "9876543210",
+      "email": "contact@techsolutions.com",
+      "street": "123 MG Road",
+      "city": "Bangalore",
+      "state": "Karnataka",
+      "country": "India",
+      "zipCode": "560001",
+      "paymentProfileIds": [
+              "c0a800ef-9b25-187a-819b-302f4dc70045",
+          ]
+    },
+    "proposalContent": [
+      {
+        "item": "Website Design",
+        "description": "Responsive design for landing pages, forms, and dashboards.",
+        "quantity": 1,
+        "rate": 10000.0
+      },
+      {
+        "item": "Backend Development",
+        "description": "Spring Boot REST APIs with JWT security and MySQL integration.",
+        "quantity": 1,
+        "rate": 12000.0
+      },
+      {
+        "item": "Testing & Deployment",
+        "description": "Comprehensive QA testing and deployment on cloud server.",
+        "quantity": 1,
+        "rate": 3000.75
+      }
+    ]
+  }
+  
+}
+
+settings {
+  encodeUrl: true
+}

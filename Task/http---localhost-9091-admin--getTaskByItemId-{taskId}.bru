@@ -1,0 +1,19 @@
+meta {
+  name: http://localhost:9091/admin//getTaskByItemId/{taskId}
+  type: http
+  seq: 8
+}
+
+get {
+  url: {{baseUrl}}/admin/getTaskByItemId/c0a800ef-9b02-13bd-819b-02d673ac0001
+  body: none
+  auth: bearer
+}
+
+auth:bearer {
+  token: {{bearerToken}}
+}
+
+settings {
+  encodeUrl: true
+}

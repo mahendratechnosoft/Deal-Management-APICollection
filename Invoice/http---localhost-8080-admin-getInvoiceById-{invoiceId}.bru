@@ -1,0 +1,19 @@
+meta {
+  name: http://localhost:8080/admin/getInvoiceById/{invoiceId}
+  type: http
+  seq: 2
+}
+
+get {
+  url: http://localhost:8080/admin/getInvoiceById/{invoiceId}
+  body: none
+  auth: bearer
+}
+
+auth:bearer {
+  token: eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJkZW1vQGdtYWlsLmNvbSIsImlhdCI6MTc2MjE0NTEyOSwiZXhwIjoxNzYyMzI1MTI5fQ.svkzoBaFOsrT8H8EFZL-QtcldtgUYewbnD-rxbeoYjpvqe3GsmsUl1KSGpewOdHowvnz9VO9YwOAaMwd0gwR5g
+}
+
+settings {
+  encodeUrl: true
+}

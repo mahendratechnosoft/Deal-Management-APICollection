@@ -1,0 +1,21 @@
+meta {
+  name: /admin/getAllVendors
+  type: http
+  seq: 5
+}
+
+get {
+  url: {{baseUrl}}/admin/getAllVendors?page=0&size=5&search=check
+  body: none
+  auth: inherit
+}
+
+params:query {
+  page: 0
+  size: 5
+  search: check
+}
+
+settings {
+  encodeUrl: true
+}

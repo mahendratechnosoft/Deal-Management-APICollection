@@ -1,0 +1,26 @@
+meta {
+  name: /admin/createEmailTemplate
+  type: http
+  seq: 1
+}
+
+post {
+  url: {{baseUrl}}/admin/createEmailTemplate
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+      "templateName": "Update Task Status Notification",
+      "subject": "Task Status Updated: {{taskSubject}}",
+      "emailBody": "<p>Hello,</p><p>Task status is get updated please take attendsion: {{taskSubject}}. Please review the details below:</p><p><strong>Description:</strong><br>{{taskDescription}}</p><p>Best Regards,<br>{{myCompanyName}}</p>",
+      "category": "TASK",
+      "triggerEvent": "TASK_STATUS_CHANGE",
+      "isActive": true
+  }
+}
+
+settings {
+  encodeUrl: true
+}

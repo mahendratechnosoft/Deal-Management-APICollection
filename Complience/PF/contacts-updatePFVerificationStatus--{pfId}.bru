@@ -1,0 +1,19 @@
+meta {
+  name: /contacts/updatePFVerificationStatus//{pfId}
+  type: http
+  seq: 7
+}
+
+put {
+  url: {{baseUrl}}/contacts/updatePFVerificationStatus/c0a800ef-9b4a-19a9-819b-4f9bf7b7001e?status=true
+  body: none
+  auth: inherit
+}
+
+params:query {
+  status: true
+}
+
+settings {
+  encodeUrl: true
+}

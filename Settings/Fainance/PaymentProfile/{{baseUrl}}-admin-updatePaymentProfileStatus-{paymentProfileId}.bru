@@ -1,0 +1,19 @@
+meta {
+  name: {{baseUrl}}/admin/updatePaymentProfileStatus/{paymentProfileId}
+  type: http
+  seq: 6
+}
+
+put {
+  url: {{baseUrl}}/admin/updatePaymentProfileStatus/c0a800ef-9b25-187a-819b-2727d355001e?active=true
+  body: json
+  auth: inherit
+}
+
+params:query {
+  active: true
+}
+
+settings {
+  encodeUrl: true
+}

@@ -1,0 +1,26 @@
+meta {
+  name: http://localhost:8080/lead/addLeadStatus
+  type: http
+  seq: 1
+}
+
+post {
+  url: http://localhost:8080/lead/addLeadStatus
+  body: json
+  auth: bearer
+}
+
+auth:bearer {
+  token: {{bearerToken}}
+}
+
+body:json {
+  {
+     "leadStatus":"New Ittem",
+     "sequence" : "1"
+  }
+}
+
+settings {
+  encodeUrl: true
+}

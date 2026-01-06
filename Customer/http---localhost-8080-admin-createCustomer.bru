@@ -1,0 +1,43 @@
+meta {
+  name: http://localhost:8080/admin/createCustomer
+  type: http
+  seq: 1
+}
+
+post {
+  url: {{baseUrl}}/admin/createCustomer
+  body: json
+  auth: bearer
+}
+
+auth:bearer {
+  token: {{bearerToken}}
+}
+
+body:json {
+  {
+      "companyName": "HR Company",
+      "phone": "01123456789",
+      "mobile": "9876543210",
+      "website": "https://salesoptim.com",
+      "industry": "Software Development",
+      "revenue": "5000000",
+      "billingStreet": "123 MG Road",
+      "billingCity": "Bengaluru",
+      "billingState": "Karnataka",
+      "billingCountry": "India",
+      "billingZipCode": "560001",
+      "shippingStreet": "45 Residency Road",
+      "shippingCity": "Bengaluru",
+      "shippingState": "Karnataka",
+      "shippingCountry": "India",
+      "shippingZipCode": "560025",
+      "description": "Long-term enterprise customer for CRM and automation solutions.",
+      "password": "1234",
+      "loginEmail": "hrCompany@gmail.com"
+  }
+}
+
+settings {
+  encodeUrl: true
+}

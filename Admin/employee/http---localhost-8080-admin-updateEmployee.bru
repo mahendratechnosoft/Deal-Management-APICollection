@@ -1,0 +1,107 @@
+meta {
+  name: http://localhost:8080/admin/updateEmployee
+  type: http
+  seq: 2
+}
+
+put {
+  url: {{baseUrl}}/admin/updateEmployee
+  body: json
+  auth: bearer
+}
+
+auth:bearer {
+  token: {{bearerToken}}
+}
+
+body:json {
+  {
+      "loginEmail": "empQA6@gmail.com",
+      "name": "empQA6",
+      "phone": "+91987564132",
+      "address": "",
+      "country": "",
+      "state": "",
+      "city": "",
+      "gender": "Male",
+      "description": "",
+      "departmentId": "ac110005-9b06-10b3-819b-06e3c75e0002",
+      "roleId": "ac110005-9b06-10b3-819b-06e4131e0003",
+      "departmentName": "Task",
+      "roleName": "Task",
+      "profileImage": "",
+      "employeeId": "ac110005-9b0b-1532-819b-0c104873000a",
+      "moduleAccess": {
+          "moduleAccessId": "ac110005-9b0b-1532-819b-0c104873000b",
+          "adminId": "ac110005-9a7c-14bd-819a-7cb6a01f0001",
+          "employeeId": "ac110005-9b0b-1532-819b-0c104873000a",
+          "leadAccess": false,
+          "leadViewAll": false,
+          "leadCreate": false,
+          "leadDelete": false,
+          "leadEdit": false,
+          "customerAccess": false,
+          "customerViewAll": false,
+          "customerCreate": false,
+          "customerDelete": false,
+          "customerEdit": false,
+          "proposalAccess": false,
+          "proposalViewAll": false,
+          "proposalCreate": false,
+          "proposalDelete": false,
+          "proposalEdit": false,
+          "proformaInvoiceAccess": false,
+          "proformaInvoiceViewAll": false,
+          "proformaInvoiceCreate": false,
+          "proformaInvoiceDelete": false,
+          "proformaInvoiceEdit": false,
+          "invoiceAccess": false,
+          "invoiceViewAll": false,
+          "invoiceCreate": false,
+          "invoiceDelete": false,
+          "invoiceEdit": false,
+          "paymentAccess": false,
+          "paymentViewAll": false,
+          "paymentCreate": false,
+          "paymentDelete": false,
+          "paymentEdit": false,
+          "timeSheetAccess": false,
+          "timeSheetViewAll": false,
+          "timeSheetCreate": false,
+          "timeSheetDelete": false,
+          "timeSheetEdit": false,
+          "donorAccess": false,
+          "donorViewAll": false,
+          "donorCreate": false,
+          "donorDelete": false,
+          "donorEdit": false,
+          "itemAccess": false,
+          "itemViewAll": false,
+          "itemCreate": false,
+          "itemDelete": false,
+          "itemEdit": false,
+          "taskAccess": true,
+          "taskViewAll": true,
+          "taskCreate": true,
+          "taskDelete": true,
+          "taskEdit": true,
+          "employeeAccess": false,
+          "settingAccess": false,
+          "amcAccess": true,
+          "amcViewAll": true,
+          "amcCreate": true,
+          "amcDelete": true,
+          "amcEdit": true,
+          "vendorAccess": false,
+          "vendorViewAll": false,
+          "vendorCreate": false,
+          "vendorDelete": false,
+          "vendorEdit": false,
+          "taskLogAccess": true
+      }
+  }
+}
+
+settings {
+  encodeUrl: true
+}

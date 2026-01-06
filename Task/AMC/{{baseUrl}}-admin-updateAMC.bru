@@ -1,0 +1,37 @@
+meta {
+  name: {{baseUrl}}/admin/updateAMC
+  type: http
+  seq: 7
+}
+
+put {
+  url: {{baseUrl}}/admin/updateAMC
+  body: json
+  auth: bearer
+}
+
+auth:bearer {
+  token: {{bearerToken}}
+}
+
+body:json {
+  {
+      "amcId": "ac16d001-9b07-1f9b-819b-07ad60e10009",
+      "adminId": "ac149001-9a76-1887-819a-76fc7d720001",
+      "employeeId": "EMP456",
+      "assingedTo": "EMP789",
+      "clinetName": "John Doe",
+      "companyName": "Tech Solutions Pvt Ltd",
+      "contactPersonName": "Sarah Johnson",
+      "email": "support@techsolutions.com",
+      "phoneNumber": "9876543210",
+      "websiteURL": "https://www.techsolutions.com",
+      "technology": "Java Spring Boot",
+      "hostingProvider": "AWS",
+      "domainProvider": "GoDaddy"
+  }
+}
+
+settings {
+  encodeUrl: true
+}

@@ -1,0 +1,21 @@
+meta {
+  name: /admin/getAllVendorContacts/{vendorId}
+  type: http
+  seq: 4
+}
+
+get {
+  url: {{baseUrl}}/admin/getAllVendorContacts/c0a800ef-9b25-187a-819b-2c3f2a940039?page=0&size=5&search=
+  body: none
+  auth: inherit
+}
+
+params:query {
+  page: 0
+  size: 5
+  search: 
+}
+
+settings {
+  encodeUrl: true
+}

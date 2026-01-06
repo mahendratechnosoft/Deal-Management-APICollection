@@ -1,0 +1,35 @@
+meta {
+  name: http://localhost:8080/super/createAdmin
+  type: http
+  seq: 1
+}
+
+post {
+  url: http://91.203.133.210:9091/super/createAdmin
+  body: json
+  auth: bearer
+}
+
+auth:bearer {
+  token: {{bearerToken}}
+}
+
+body:json {
+  {
+    "adminId": "ac110005-9ac9-13af-819a-ca3133970004",
+    "loginEmail": "aditya6@gmail.com",
+    "companyEmail": "info@example.com",
+    "name": "John Doe",
+    "phone": "9876543210",
+    "address": "123, Main Street, Mumbai",
+    "companyName": "Tech Solutions Pvt Ltd",
+    "gstNumber": "27ABCDE1234F1Z5",
+    "password": "Admin@123",
+    "expiryDate": "2025-12-31T23:59:59"
+  }
+  
+}
+
+settings {
+  encodeUrl: true
+}

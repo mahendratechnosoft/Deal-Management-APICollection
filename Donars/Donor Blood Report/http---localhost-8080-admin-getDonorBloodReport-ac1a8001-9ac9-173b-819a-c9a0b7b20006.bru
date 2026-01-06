@@ -1,0 +1,23 @@
+meta {
+  name: http://localhost:8080/admin/getDonorBloodReport/ac1a8001-9ac9-173b-819a-c9a0b7b20006
+  type: http
+  seq: 1
+}
+
+get {
+  url: http://localhost:8080/admin/getDonorBloodReport/ac1a8001-9ac9-173b-819a-c9a0b7b20006
+  body: none
+  auth: bearer
+}
+
+params:query {
+  ~search: jo
+}
+
+auth:bearer {
+  token: {{bearerToken}}
+}
+
+settings {
+  encodeUrl: true
+}

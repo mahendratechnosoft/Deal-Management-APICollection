@@ -1,0 +1,24 @@
+meta {
+  name: http://localhost:8080/employee/getAttendanceBetweenForParticalurEmployee?fromDate=2025-11-10&toDate=2025-11-13
+  type: http
+  seq: 4
+}
+
+get {
+  url: http://91.203.133.210:9091/admin/getAttendanceBetweenForParticalurEmployee
+  body: none
+  auth: bearer
+}
+
+params:query {
+  ~fromDate: 2025-11-01
+  ~toDate: 2025-11-30
+}
+
+auth:bearer {
+  token: {{bearerToken}}
+}
+
+settings {
+  encodeUrl: true
+}

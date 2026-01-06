@@ -1,0 +1,21 @@
+meta {
+  name: {{baseUrl}}/verify-otp-and-reset
+  type: http
+  seq: 4
+}
+
+post {
+  url: {{baseUrl}}/verify-otp-and-reset?email=kartikdemo5@gmail.com&otp=669314&newPassword=1234
+  body: json
+  auth: inherit
+}
+
+params:query {
+  email: kartikdemo5@gmail.com
+  otp: 669314
+  newPassword: 1234
+}
+
+settings {
+  encodeUrl: true
+}

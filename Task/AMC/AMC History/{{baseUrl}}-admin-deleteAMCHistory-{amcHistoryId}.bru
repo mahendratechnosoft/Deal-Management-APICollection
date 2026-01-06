@@ -1,0 +1,19 @@
+meta {
+  name: {{baseUrl}}/admin/deleteAMCHistory/{amcHistoryId}
+  type: http
+  seq: 3
+}
+
+delete {
+  url: {{baseUrl}}/employee/deleteAMCHistory/c0a800ef-9b25-187a-819b-315b600e004c
+  body: none
+  auth: bearer
+}
+
+auth:bearer {
+  token: {{bearerToken}}
+}
+
+settings {
+  encodeUrl: true
+}

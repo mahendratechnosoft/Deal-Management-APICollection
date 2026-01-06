@@ -1,0 +1,19 @@
+meta {
+  name: http://localhost:8080/admin/getEmployeeById/c0a80090-9a29-16b7-819a-297783ac0004
+  type: http
+  seq: 4
+}
+
+get {
+  url: http://localhost:9091/admin/getEmployeeById/c0a800ef-9aa4-10d4-819a-a4d8276e0018
+  body: none
+  auth: bearer
+}
+
+auth:bearer {
+  token: {{bearerToken}}
+}
+
+settings {
+  encodeUrl: true
+}

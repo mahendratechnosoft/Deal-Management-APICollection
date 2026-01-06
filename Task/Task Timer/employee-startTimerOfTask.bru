@@ -1,0 +1,21 @@
+meta {
+  name: /employee/startTimerOfTask
+  type: http
+  seq: 1
+}
+
+post {
+  url: {{baseUrl}}/employee/startTimerOfTask
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+      "taskId":"c0a800ef-9afd-1b9e-819a-fdd15de2000c"
+  }
+}
+
+settings {
+  encodeUrl: true
+}

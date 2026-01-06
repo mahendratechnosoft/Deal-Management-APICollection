@@ -1,0 +1,19 @@
+meta {
+  name: http://localhost:9090/admin/getPaymentsByProformaInvoice/{proformaInvocieId}
+  type: http
+  seq: 5
+}
+
+get {
+  url: http://localhost:9091/admin/getPaymentsByProformaInvoice/c0a800ef-9a90-103e-819a-90989e8f000d
+  body: none
+  auth: bearer
+}
+
+auth:bearer {
+  token: {{bearerToken}}
+}
+
+settings {
+  encodeUrl: true
+}

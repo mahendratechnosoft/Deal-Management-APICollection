@@ -1,0 +1,23 @@
+meta {
+  name: http://localhost:8080/admin/getAllInvoice/0/10?search=xpert
+  type: http
+  seq: 4
+}
+
+get {
+  url: http://localhost:9091/admin/getAllInvoice/0/10
+  body: multipartForm
+  auth: bearer
+}
+
+params:query {
+  ~search: Google
+}
+
+auth:bearer {
+  token: {{bearerToken}}
+}
+
+settings {
+  encodeUrl: true
+}

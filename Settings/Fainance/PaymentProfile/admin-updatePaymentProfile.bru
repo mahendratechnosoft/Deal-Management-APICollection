@@ -1,0 +1,33 @@
+meta {
+  name: /admin/updatePaymentProfile
+  type: http
+  seq: 2
+}
+
+put {
+  url: {{baseUrl}}/admin/updatePaymentProfile
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+      "paymentProfileId": "c0a800ef-9b20-1e60-819b-21a5cb360014",
+      "profileName": "GooglePay Business check",
+      "type": "UPI",
+      "accountHolderName": null,
+      "bankName": null,
+      "accountNumber": null,
+      "ifscCode": null,
+      "branchName": null,
+      "upiId": "mateindustries@oksbi",
+      "qrCodeImage": "iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mP8z8BQDwAEhQGAhKmMIQAAAABJRU5ErkJggg==",
+      "forInvoice": true,
+      "forExpense": false,
+      "default": false
+  }
+}
+
+settings {
+  encodeUrl: true
+}

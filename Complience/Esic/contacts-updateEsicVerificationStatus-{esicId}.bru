@@ -1,0 +1,19 @@
+meta {
+  name: /contacts/updateEsicVerificationStatus/{esicId}
+  type: http
+  seq: 8
+}
+
+put {
+  url: {{baseUrl}}/contacts/updateEsicVerificationStatus/c0a800ef-9b4a-19a9-819b-54010445002e?status=true
+  body: none
+  auth: inherit
+}
+
+params:query {
+  status: true
+}
+
+settings {
+  encodeUrl: true
+}

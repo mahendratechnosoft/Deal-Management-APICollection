@@ -1,0 +1,32 @@
+meta {
+  name: http://localhost:8080/admin/updateItem
+  type: http
+  seq: 2
+}
+
+put {
+  url: http://localhost:8080/admin/updateItem
+  body: json
+  auth: bearer
+}
+
+auth:bearer {
+  token: {{bearerToken}}
+}
+
+body:json {
+  {
+      "itemId": "c0a800d0-9aa4-1f9e-819a-a5178a620001",
+      "adminId": "ac149001-9a76-1887-819a-76fc7d720001",
+      "employeeId": "yryrir-rruhrr-r9898989",
+      "name": "Sample Item Name",
+      "description": "This is a sample item description with detailed information.",
+      "code": "ITEM-001",
+      "quantity": 10,
+      "rate": 250.75
+  }
+}
+
+settings {
+  encodeUrl: true
+}

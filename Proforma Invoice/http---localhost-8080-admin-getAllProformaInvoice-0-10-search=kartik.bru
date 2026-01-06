@@ -1,0 +1,24 @@
+meta {
+  name: http://localhost:8080/admin/getAllProformaInvoice/0/10?search=kartik
+  type: http
+  seq: 4
+}
+
+get {
+  url: http://91.203.133.210:9091/admin/getAllProformaInvoice/0/10
+  body: none
+  auth: bearer
+}
+
+params:query {
+  ~search: kartik
+  ~proformaType: REIMBURSEMENT
+}
+
+auth:bearer {
+  token: {{bearerToken}}
+}
+
+settings {
+  encodeUrl: true
+}

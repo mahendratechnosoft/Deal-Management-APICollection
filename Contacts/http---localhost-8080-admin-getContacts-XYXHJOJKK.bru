@@ -1,0 +1,23 @@
+meta {
+  name: http://localhost:8080/admin/getContacts/XYXHJOJKK
+  type: http
+  seq: 3
+}
+
+get {
+  url: {{baseUrl}}/admin/getContacts/c0a800ef-9b4a-19a9-819b-4f98e7490015
+  body: none
+  auth: bearer
+}
+
+params:query {
+  ~name: KaritK4
+}
+
+auth:bearer {
+  token: {{bearerToken}}
+}
+
+settings {
+  encodeUrl: true
+}

@@ -1,0 +1,44 @@
+meta {
+  name: http://localhost:8080/admin/updateDonorFamilyInfo
+  type: http
+  seq: 2
+}
+
+put {
+  url: http://localhost:8080/admin/updateDonorFamilyInfo
+  body: json
+  auth: bearer
+}
+
+auth:bearer {
+  token: {{bearerToken}}
+}
+
+body:json {
+  [
+      {
+          "brotherAge": 28,
+          "brotherProfession": "Teacher",
+          "brotherKidsCount": 1,
+          "brotherIllness": "None",
+          "sisterAge": 25,
+          "sisterProfession": "Nurse",
+          "sisterKidsCount": "0",
+          "sisterIllness": "None"
+      },
+      {
+          "brotherAge": 28,
+          "brotherProfession": "Teacher",
+          "brotherKidsCount": 1,
+          "brotherIllness": "None",
+          "sisterAge": 25,
+          "sisterProfession": "Nurse",
+          "sisterKidsCount": "0",
+          "sisterIllness": "None"
+      }
+  ]
+}
+
+settings {
+  encodeUrl: true
+}

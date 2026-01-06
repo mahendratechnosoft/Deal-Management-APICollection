@@ -1,0 +1,37 @@
+meta {
+  name: http://localhost:9090/admin/getPaymentById/c0a800bc-9a58-172b-819a-590427610006
+  type: http
+  seq: 3
+}
+
+get {
+  url: http://localhost:9090/admin/getPaymentById/{paymentId}
+  body: text
+  auth: bearer
+}
+
+auth:bearer {
+  token: {{bearerToken}}
+}
+
+body:text {
+  {
+      "paymentId": "c0a800bc-9a58-172b-819a-590427610006",
+      "adminId": "c0a800bb-9a29-156a-819a-295619560001",
+      "employeeId": null,
+      "createdBy": "MTech",
+      "proformaInvoiceNo": "PROF-2025-001",
+      "proformaInvoiceId": "c0a800bc-9a53-108a-819a-53721e970008",
+      "transactionId": "TXN-987654321",
+      "companyName": "Mahendra Technosoft Pvt Ltd",
+      "customerId": "CUST001",
+      "amount": 25000.75,
+      "paymentDate": "2025-11-06",
+      "createdDateTime": "2025-11-06T17:23:55.808729",
+      "totalProformaInvoicePaidAmount": 8000
+  }
+}
+
+settings {
+  encodeUrl: true
+}

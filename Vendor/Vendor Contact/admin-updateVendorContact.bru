@@ -1,0 +1,30 @@
+meta {
+  name: /admin/updateVendorContact
+  type: http
+  seq: 2
+}
+
+put {
+  url: {{baseUrl}}/admin/updateVendorContact
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+      "vendorContactId": "c0a800ef-9b25-187a-819b-30019c700040",
+      "vendorId": "c0a800ef-9b25-187a-819b-2c3f2a940039",
+      "employeeId": null,
+      "contactPersonName": "Rohan Patil 3",
+      "emailAddress": "rohan@techworld.com",
+      "phone": "9988776655",
+      "position": "Sales Manager",
+      "isActive": true,
+      "createdAt": "2025-12-18T11:19:30.6089949",
+      "createdBy": "Ritesh Thete"
+  }
+}
+
+settings {
+  encodeUrl: true
+}

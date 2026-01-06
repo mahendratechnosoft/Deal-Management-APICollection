@@ -1,0 +1,25 @@
+meta {
+  name: http://localhost:8080/lead/deleteColumn
+  type: http
+  seq: 4
+}
+
+delete {
+  url: http://localhost:8080/lead/deleteColumn
+  body: json
+  auth: bearer
+}
+
+auth:bearer {
+  token: eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJkZW1vQGdtYWlsLmNvbSIsImlhdCI6MTc2MTYzMDEwNywiZXhwIjoxNzYxODEwMTA3fQ.ihd1OnkUB9AQE6qkaGmUNJ6Ah247dYoVd4a-IiEMD9nHH8nzOEIT2uFKsnwGGDU-Dp84IesFvzwAvf5jw7BeFw
+}
+
+body:json {
+  {
+      "columnName" :"Column 2"
+  }
+}
+
+settings {
+  encodeUrl: true
+}

@@ -1,0 +1,15 @@
+meta {
+  name: /admin/getNextVendorNumber
+  type: http
+  seq: 9
+}
+
+get {
+  url: {{baseUrl}}/employee/getNextVendorNumber
+  body: none
+  auth: inherit
+}
+
+settings {
+  encodeUrl: true
+}

@@ -1,0 +1,15 @@
+meta {
+  name: /admin//updateTaskStatus/{taskId}/{status}
+  type: http
+  seq: 14
+}
+
+put {
+  url: {{baseUrl}}/employee/updateTaskStatus/ac110005-9b07-11bb-819b-0763fe390001/AWAITING_FEEDBACK
+  body: none
+  auth: inherit
+}
+
+settings {
+  encodeUrl: true
+}

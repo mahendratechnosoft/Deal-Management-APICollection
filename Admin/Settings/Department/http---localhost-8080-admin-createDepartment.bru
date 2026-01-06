@@ -1,0 +1,25 @@
+meta {
+  name: http://localhost:8080/admin/createDepartment
+  type: http
+  seq: 1
+}
+
+post {
+  url: http://localhost:8080/admin/createDepartment
+  body: json
+  auth: bearer
+}
+
+auth:bearer {
+  token: {{bearerToken}}
+}
+
+body:json {
+  {
+      "name":"Sales"
+  }
+}
+
+settings {
+  encodeUrl: true
+}

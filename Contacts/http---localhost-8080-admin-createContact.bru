@@ -1,0 +1,31 @@
+meta {
+  name: http://localhost:8080/admin/createContact
+  type: http
+  seq: 1
+}
+
+post {
+  url: {{baseUrl}}/admin/createContact
+  body: json
+  auth: bearer
+}
+
+auth:bearer {
+  token: {{bearerToken}}
+}
+
+body:json {
+  {
+      "customerId" :"c0a800ef-9b4a-19a9-819b-4f98e7490015",
+      "name" : "HR3",
+      "email" : "hr3@gmail.com",
+      "phone":"89705053147",
+      "position":"next level",
+      "loginEmail":"hr3@gmail.com",
+      "password":"1234"
+  }
+}
+
+settings {
+  encodeUrl: true
+}

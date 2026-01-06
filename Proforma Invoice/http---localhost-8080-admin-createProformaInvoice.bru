@@ -1,0 +1,106 @@
+meta {
+  name: http://localhost:8080/admin/createProformaInvoice
+  type: http
+  seq: 1
+}
+
+post {
+  url: {{baseUrl}}/admin/createProformaInvoice
+  body: json
+  auth: bearer
+}
+
+auth:bearer {
+  token: {{bearerToken}}
+}
+
+body:json {
+  {
+      "proformaInvoiceInfo": {
+          "proformaInvoiceId": "c0a800ef-9b25-187a-819b-2aefc254002f",
+          "adminId": "ac110005-9a7c-14bd-819a-7cb6a01f0001",
+          "employeeId": null,
+          "proposalId": null,
+          "assignTo": "John Doe",
+          "proformaInvoiceNumber": 5,
+          "currencyType": "INR",
+          "discount": 5.0,
+          "taxType": "GST 18%",
+          "taxPercentage": 0.0,
+          "dueDate": "2025-11-15",
+          "proformaInvoiceDate": null,
+          "totalAmount": 1000.0,
+          "paidAmount": 0.0,
+          "status": "PARTIALLY_PAID",
+          "relatedTo": "lead",
+          "relatedId": "LEAD101",
+          "companyName": "Shital EMp",
+          "mobileNumber": "9876543210",
+          "gstin": "29ABCDE1234F1Z5",
+          "panNumber": "ABCDE1234F",
+          "email": "billing@xpertbiz.com",
+          "billingStreet": "123 MG Road",
+          "billingCity": "Bengaluru",
+          "billingState": "Karnataka",
+          "billingCountry": "India",
+          "billingZipCode": "560001",
+          "shippingStreet": "456 Brigade Road",
+          "shippingCity": "Bengaluru",
+          "shippingState": "Karnataka",
+          "shippingCountry": "India",
+          "shippingZipCode": "560002",
+          "notes": null,
+          "termsAndConditions": null,
+          "companySignature": null,
+          "companyStamp": null,
+          "createdAt": "2025-12-17T11:41:54.5812548",
+          "invoiceNumber": 0,
+          "invoiceDate": "2025-11-05",
+          // "amcHistoryId":"c0a800ef-9b25-187a-819b-361d54db0074",
+          // "amcDomainHistoryId":"ac110005-9b35-11ae-819b-3611fd2b000b",
+          "amcGsuitHistoryId":"c0a800ef-9b25-187a-819b-361d56090076",
+          "paymentProfileIds": [
+              "c0a800ef-9b25-187a-819b-2727d355001e"
+          ]
+      },
+      "proformaInvoiceContents": [
+          {
+              "proformaInvoiceContentId": "c0a800ef-9b25-187a-819b-2aefc3100030",
+              "proformaInvoiceId": "c0a800ef-9b25-187a-819b-2aefc254002f",
+              "item": "Website Development",
+              "description": "Complete website design and development including frontend, backend, and deployment.",
+              "quantity": 1,
+              "rate": 25000.0,
+              "sacCode": "998314",
+              "itemId": null,
+              "createdAt": "2025-12-17T11:41:54.7685772"
+          },
+          {
+              "proformaInvoiceContentId": "c0a800ef-9b25-187a-819b-2aefc3100031",
+              "proformaInvoiceId": "c0a800ef-9b25-187a-819b-2aefc254002f",
+              "item": "Website Development",
+              "description": "Complete website design and development including frontend, backend, and deployment.",
+              "quantity": 1,
+              "rate": 25000.0,
+              "sacCode": "998314",
+              "itemId": null,
+              "createdAt": "2025-12-17T11:41:54.7685772"
+          },
+          {
+              "proformaInvoiceContentId": "c0a800ef-9b25-187a-819b-2aefc3110032",
+              "proformaInvoiceId": "c0a800ef-9b25-187a-819b-2aefc254002f",
+              "item": "Website Development",
+              "description": "Complete website design and development including frontend, backend, and deployment.",
+              "quantity": 1,
+              "rate": 25000.0,
+              "sacCode": "998314",
+              "itemId": null,
+              "createdAt": "2025-12-17T11:41:54.7696647"
+          }
+      ]
+  }
+}
+
+settings {
+  encodeUrl: true
+}

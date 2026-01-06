@@ -1,0 +1,77 @@
+meta {
+  name: http://localhost:9090/generateLeads
+  type: http
+  seq: 25
+}
+
+post {
+  url: http://91.203.133.210:9091/generateLeads
+  body: json
+  auth: none
+}
+
+body:json {
+  {
+      "columns": [
+          {
+              "name": "Column 1",
+              "sequence": 1
+          },
+          {
+              "name": "Column 2",
+              "sequence": 2
+          },
+          {
+              "name": "Column 3",
+              "sequence": 3
+          },
+          {
+              "name": "Column 4",
+              "sequence": 4
+          },
+          {
+              "name": "Column 5",
+              "sequence": 5
+          },
+             {
+              "name": "Column 6",
+              "sequence": 6
+          }
+      ],
+      "fields": {
+          
+          "Column 1": " value 1",
+          "Column 2": "value 2",
+          "Column 3": "value 3",
+          "Column 4": "value 4",
+          "Column 5":"value 5",
+          "Column 6":"value 6"
+      },
+      "adminId": "ac110002-9a58-1f8f-819a-58a224020001",
+      "employeeId": "EMP001",
+      "assignTo": "ADMIN001",
+       "status": "Won",
+      "source": "Instagram",
+      "clientName": " Tata 25",
+      "companyName": "Sumo",
+      "customerId":"90090jjiijijj",
+      "revenue":3000.22,
+      "mobileNumber": 89750,
+      "phoneNumber": 8585,
+      "email": "kartik@gmail.com",    
+      "website": "kartik.com",
+      "industry": "IT",
+      "priority": "High",
+      "street":"home street",
+      "country":"India",
+      "state":"MH",
+      "city":"akola",
+      "zipCode":"445505",
+      "description":"5000"
+  
+  }
+}
+
+settings {
+  encodeUrl: true
+}

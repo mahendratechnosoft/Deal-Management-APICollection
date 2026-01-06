@@ -1,0 +1,22 @@
+meta {
+  name: /employee/stopTimerOfTask
+  type: http
+  seq: 2
+}
+
+post {
+  url: {{baseUrl}}/employee/stopTimerOfTask
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+      "taskId":"c0a800ef-9afd-1b9e-819a-fdd15de2000c",
+      "endNote":"task completed...."
+  }
+}
+
+settings {
+  encodeUrl: true
+}

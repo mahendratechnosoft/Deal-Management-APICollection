@@ -1,0 +1,35 @@
+meta {
+  name: http://localhost:8080/admin/updateContact
+  type: http
+  seq: 2
+}
+
+put {
+  url: {{baseUrl}}/admin/updateContact
+  body: json
+  auth: bearer
+}
+
+auth:bearer {
+  token: {{bearerToken}}
+}
+
+body:json {
+  {
+      "id": "c0a800ef-9b4a-19a9-819b-4f9a458c001c",
+      "customerId": "c0a800ef-9b4a-19a9-819b-4f98e7490015",
+      "name": "HR3",
+      "email": "hr3@gmail.com",
+      "phone": "89705053147",
+      "position": "next level",
+      "status": false,
+      "userId": "c0a800ef-9b4a-19a9-819b-4f9a44e1001b",
+      "password": null,
+      "loginEmail": "hr3@gmail.com",
+      "active": true
+  }
+}
+
+settings {
+  encodeUrl: true
+}

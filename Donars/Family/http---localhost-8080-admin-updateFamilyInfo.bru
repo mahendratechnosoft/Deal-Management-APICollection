@@ -1,0 +1,56 @@
+meta {
+  name: http://localhost:8080/admin/updateFamilyInfo
+  type: http
+  seq: 2
+}
+
+post {
+  url: http://localhost:8080/admin/updateFamilyInfo
+  body: json
+  auth: bearer
+}
+
+auth:bearer {
+  token: {{bearerToken}}
+}
+
+body:json {
+  {
+      "familyInfoId": "ac18f001-9acd-1805-819a-cf148f520017",
+      "adminId": "ac1a8001-9ac8-1e18-819a-c90358e00006",
+      "employeeId": "EMP456",
+      "uin": "UIN789",
+      "referHospital": "City Hospital",
+      "referHospitalAddress": "MG Road, Bangalore",
+      "referDoctor": "Dr. John Doe",
+      "referDoctorContactNumber": "9876543210",
+      "husbandName": "Raj Kumar",
+      "husbandMobile": "9623458734",
+      "husbandHeight": "5.8",
+      "husbandWeight": "72kg",
+      "husbandBloodGroup": "O+",
+      "husbandSkinColor": "Fair",
+      "husbandEyeColor": "Brown",
+      "husbandReligion": "Hindu",
+      "husbandEducation": "MBA",
+      "husbandDistrict": "Pune",
+      "husbandCountry": "India",
+      "husbandGenticIllness": "None",
+      "wifeName": "Priya Raj",
+      "wifeMobile": "9845236741",
+      "wifeHeight": "5.4",
+      "wifeWeight": "60kg",
+      "wifeBloodGroup": "B+",
+      "wifeSkinColor": "Wheatish",
+      "wifeEyeColor": "Black",
+      "wifeReligion": "Hindu",
+      "wifeEducation": "MCA",
+      "wifeDistrict": "Pune",
+      "wifeCountry": "India",
+      "wifeGenticIllness": "None"
+  }
+}
+
+settings {
+  encodeUrl: true
+}

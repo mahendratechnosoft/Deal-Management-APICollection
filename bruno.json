@@ -1,0 +1,9 @@
+{
+  "version": "1",
+  "name": "Deal-Management-Service",
+  "type": "collection",
+  "ignore": [
+    "node_modules",
+    ".git"
+  ]
+}

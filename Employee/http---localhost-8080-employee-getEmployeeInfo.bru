@@ -1,0 +1,19 @@
+meta {
+  name: http://localhost:8080/employee/getEmployeeInfo
+  type: http
+  seq: 3
+}
+
+get {
+  url: http://91.203.133.210:9091/employee/getEmployeeInfo
+  body: none
+  auth: bearer
+}
+
+auth:bearer {
+  token: {{bearerToken}}
+}
+
+settings {
+  encodeUrl: true
+}

@@ -1,0 +1,20 @@
+meta {
+  name: /admin/exportTasks
+  type: http
+  seq: 16
+}
+
+get {
+  url: {{baseUrl}}/admin/exportTasks?status=IN_PROGRESS&listType=ASSIGNED
+  body: none
+  auth: inherit
+}
+
+params:query {
+  status: IN_PROGRESS
+  listType: ASSIGNED
+}
+
+settings {
+  encodeUrl: true
+}

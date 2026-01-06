@@ -1,0 +1,69 @@
+meta {
+  name: /admin/updateEsic
+  type: http
+  seq: 4
+}
+
+put {
+  url: {{baseUrl}}/contacts/updateEsic
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+      "esic": {
+          "esicId": "c0a800ef-9b4a-19a9-819b-54009aaa002b",
+          "adminId": "ac110005-9a7c-14bd-819a-7cb6a01f0001",
+          "employeeId": null,
+          "customerId": "c0a800ef-9b4a-19a9-819b-4f98e7490015",
+          "contactId": "c0a800ef-9b4a-19a9-819b-4f99ec0d0018",
+          "name": "Rajesh Kumar",
+          "dateOfJoining": "2023-04-01",
+          "esicNumber": "37001234560001001",
+          "dateOfBirth": "1990-08-15",
+          "fatherName": "Suresh Kumar",
+          "phone": "9876543210",
+          "gender": "Male",
+          "aadhaarNumber": "123456789012",
+          "accountHolderName": "Rajesh Kumar",
+          "bankName": "HDFC Bank",
+          "accountNumber": "50100234567890",
+          "ifsc": "HDFC0001234",
+          "presentAddress": "Flat 101, MG Road, Pune, Maharashtra",
+          "permantAddress": "House 22, Gandhi Nagar, Nagpur, Maharashtra",
+          "nomineeName": "Priya Kumar",
+          "nomineeRelation": "Wife",
+          "nomineeAdhaar": "901234567890",
+          "aadhaarPhoto": null,
+          "passportPhoto": null,
+          "createdAt": "2025-12-25T11:04:44.396271",
+          "married": false
+      },
+      "esicContents": [
+          
+          {
+              "esicContentId": "c0a800ef-9b4a-19a9-819b-54009aae002d",
+              "esicId": "c0a800ef-9b4a-19a9-819b-54009aaa002b",
+              "name": "Rohan Kumar",
+              "relation": "Son",
+              "aadhaarPhoto": null,
+              "passportPhoto": null,
+              "createdAt": "2025-12-25T11:04:44.398481"
+          },
+          {
+              "esicContentId": null,
+              "esicId": "c0a800ef-9b4a-19a9-819b-54009aaa002b",
+              "name": "Rohan Kumar",
+              "relation": "Son",
+              "aadhaarPhoto": null,
+              "passportPhoto": null,
+              "createdAt": "2025-12-25T11:04:44.398481"
+          }
+      ]
+  }
+}
+
+settings {
+  encodeUrl: true
+}

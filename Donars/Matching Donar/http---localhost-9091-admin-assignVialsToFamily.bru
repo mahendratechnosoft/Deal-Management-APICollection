@@ -1,0 +1,25 @@
+meta {
+  name: http://localhost:9091/admin/assignVialsToFamily
+  type: http
+  seq: 1
+}
+
+post {
+  url: http://localhost:9091/employee/assignVialsToFamily
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+      "familyInfoId":"c0a800ef-9ae2-11ba-819a-e289cf600009",
+      "donorId":"c0a800ef-9ae7-1cad-819a-e888e6390007",
+      "vialsAssignedCount":"2",
+      "donarName": "mahesh",
+      "donarUin": "kjh ksd kds"
+  }
+}
+
+settings {
+  encodeUrl: true
+}

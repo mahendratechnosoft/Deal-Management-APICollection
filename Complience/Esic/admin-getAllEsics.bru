@@ -1,0 +1,23 @@
+meta {
+  name: /admin/getAllEsics
+  type: http
+  seq: 2
+}
+
+get {
+  url: {{baseUrl}}/contacts/getAllEsics
+  body: none
+  auth: inherit
+}
+
+params:query {
+  ~contactId: c0a800ef-9b4a-19a9-819b-4f99ec0d0018
+  ~customerId: c0a800ef-9b4a-19a9-819b-4f98e7490015
+  ~page: 0
+  ~size: 1
+  ~search: x
+}
+
+settings {
+  encodeUrl: true
+}

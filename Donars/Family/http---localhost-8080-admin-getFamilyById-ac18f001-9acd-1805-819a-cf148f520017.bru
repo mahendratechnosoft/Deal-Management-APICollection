@@ -1,0 +1,19 @@
+meta {
+  name: http://localhost:8080/admin/getFamilyById/ac18f001-9acd-1805-819a-cf148f520017
+  type: http
+  seq: 4
+}
+
+get {
+  url: http://localhost:8080/admin/getFamilyById/ac18f001-9acd-1805-819a-cf148f520017
+  body: none
+  auth: bearer
+}
+
+auth:bearer {
+  token: {{bearerToken}}
+}
+
+settings {
+  encodeUrl: true
+}

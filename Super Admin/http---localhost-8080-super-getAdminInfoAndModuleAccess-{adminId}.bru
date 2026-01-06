@@ -1,0 +1,19 @@
+meta {
+  name: http://localhost:8080/super/getAdminInfoAndModuleAccess/{adminId}
+  type: http
+  seq: 2
+}
+
+get {
+  url: {{baseUrl}}/super/getAdminInfoAndModuleAccess/ac110005-9a7c-14bd-819a-7cb6a01f0001
+  body: none
+  auth: bearer
+}
+
+auth:bearer {
+  token: {{bearerToken}}
+}
+
+settings {
+  encodeUrl: true
+}

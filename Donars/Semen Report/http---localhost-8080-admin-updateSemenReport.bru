@@ -1,0 +1,38 @@
+meta {
+  name: http://localhost:8080/admin/updateSemenReport
+  type: http
+  seq: 1
+}
+
+put {
+  url: http://localhost:8080/admin/updateSemenReport
+  body: json
+  auth: bearer
+}
+
+auth:bearer {
+  token: {{bearerToken}}
+}
+
+body:json {
+  {
+   "sampleReportId": "ac1a8001-9ac9-173b-819a-c9ec4db9000b",
+    "donorId": "ac19f001-9a91-108c-819a-91840e230004",
+    "sampleId": "SMP-001",
+    "dateAndTime": "2025-11-28T14:45:00",
+    "media": "Media A",
+    "volumne": 2.5,
+    "spermConcentration": "High",
+    "million": 60.0,
+    "progressiveMotilityA": 30.0,
+    "progressiveMotilityB": 25.0,
+    "progressiveMotilityC": 15.0,
+    "morphology": "Normal",
+    "abnormality": "None"
+  }
+  
+}
+
+settings {
+  encodeUrl: true
+}

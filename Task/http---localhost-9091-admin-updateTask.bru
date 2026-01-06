@@ -1,0 +1,68 @@
+meta {
+  name: http://localhost:9091/admin/updateTask
+  type: http
+  seq: 7
+}
+
+put {
+  url: {{baseUrl}}/employee/updateTask
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+          "taskId": "ac110005-9b12-1922-819b-125b2ed90000",
+          "adminId": "ac110005-9acd-16bc-819a-ce64407a0018",
+          "employeeId": "ac110005-9b03-14ae-819b-031ce1ff0001",
+          "subject": "Task By UPDATEd",
+          "startDate": "2025-12-01",
+          "endDate": null,
+          "priority": "Medium",
+          "relatedTo": "lead",
+          "relatedToId": "ac110005-9afd-16ad-819b-01988ad2000c",
+          "relatedToName": "asdnhakjshd",
+          "hourlyRate": 0.0,
+          "estimatedHours": 0.0,
+          "description": "asdasd",
+          "status": "NOT_STARTED",
+          "assignedEmployees": [
+              {
+                  "employeeId": "ac110005-9ad8-1119-819a-d8a427670001",
+                  "name": "aditya14Emp14"
+              },
+              {
+                  "employeeId": "ac110005-9ae8-1af5-819a-e81ec9910002",
+                  "name": "aditya13emp4"
+              },
+              {
+                  "employeeId": "ac110005-9ad9-1e7d-819a-d9d007180004",
+                  "name": "aditya14emp3"
+              },
+              {
+                  "employeeId": "ac110005-9b03-14ae-819b-031ce1ff0001",
+                  "name": "aditya14EMP15"
+              },
+              {
+                  "employeeId": "ac110005-9ad9-1e6b-819a-d9af203a0006",
+                  "name": "aditya14Emp2"
+              }
+          ],
+          "followersEmployees": [
+              {
+                  "employeeId": "ac110005-9ae8-1af5-819a-e81f2c280005",
+                  "name": "aditya13emp5"
+              },
+              {
+                  "employeeId": "ac110005-9ae8-1af5-819a-e81fa0990008",
+                  "name": "aditya13emp6"
+              }
+          ],
+          "createdAt": "2025-12-12T17:08:44.31518",
+          "createdBy": "aditya14EMP15"
+      }
+}
+
+settings {
+  encodeUrl: true
+}

@@ -1,0 +1,53 @@
+meta {
+  name: http://localhost:8080/signin
+  type: http
+  seq: 2
+}
+
+post {
+  url: {{baseUrl}}/signin
+  body: json
+  auth: none
+}
+
+body:json {
+  {
+      "username": "riteshQACloud@gmail.com",
+      "password": "1234"
+  
+  }
+  
+}
+
+script:post-response {
+  // 1. Parse the response body as JSON
+  var jsonData = res.getBody();
+  
+  // 2. Get the token from the JSON data
+  var token = jsonData.jwtToken; 
+  var roleResponce = jsonData.role; // e.g., "ROLE_ADMIN"
+  
+  // 3. Logic to map the role
+  var role = "";
+  
+  // FIX: We must check 'roleResponce' (the data from API), not 'role' (the empty variable)
+  if(roleResponce === "ROLE_ADMIN"){
+      role = "admin";
+  } else if (roleResponce === "ROLE_EMPLOYEE") {
+      role = "employee";
+  }
+  
+  // 4. Set the environment variables
+  // This makes {{bearerToken}} and {{role}} available for the next request
+  bru.setEnvVar("bearerToken", token);
+  bru.setEnvVar("role", role);
+  
+  // 5. Logs for debugging
+  console.log("Token set to: " + bru.getEnvVar("bearerToken"));
+  console.log("Role set to: " + bru.getEnvVar("role"));
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}

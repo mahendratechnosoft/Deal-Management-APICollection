@@ -1,0 +1,41 @@
+meta {
+  name: /admin/createProfile
+  type: http
+  seq: 1
+}
+
+post {
+  url: {{baseUrl}}/admin/createPaymentProfile
+  body: json
+  auth: inherit
+}
+
+body:json {
+  // {
+  //   "profileName": "HDFC Corporate A/C",
+  //   "type": "BANK",
+  //   "accountHolderName": "Mate Industries Pvt Ltd",
+  //   "bankName": "HDFC Bank",
+  //   "accountNumber": "502000341122",
+  //   "ifscCode": "HDFC0001234",
+  //   "branchName": "Nashik Road Branch",
+  //   "isDefault": true,
+  //   "forInvoice": true,
+  //   "forExpense": false
+  // }
+  
+  
+  {
+    "profileName": "GooglePay Business",
+    "type": "UPI",
+    "upiId": "mateindustries@oksbi",
+    "qrCodeImage": "iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mP8z8BQDwAEhQGAhKmMIQAAAABJRU5ErkJggg==",
+    "isDefault": false,
+    "forInvoice": true,
+    "forExpense": false
+  }
+}
+
+settings {
+  encodeUrl: true
+}

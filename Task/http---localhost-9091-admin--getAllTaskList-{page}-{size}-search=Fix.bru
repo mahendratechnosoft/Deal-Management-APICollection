@@ -1,0 +1,21 @@
+meta {
+  name: http://localhost:9091/admin//getAllTaskList/{page}/{size}?search=Fix
+  type: http
+  seq: 6
+}
+
+get {
+  url: {{baseUrl}}/admin/getAllTaskList/0/10?status=IN_PROGRESS&listType=ASSIGNED
+  body: none
+  auth: inherit
+}
+
+params:query {
+  status: IN_PROGRESS
+  listType: ASSIGNED
+  ~search: Fix
+}
+
+settings {
+  encodeUrl: true
+}

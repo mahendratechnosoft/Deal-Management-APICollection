@@ -1,0 +1,31 @@
+meta {
+  name: http://localhost:8080/admin/updateSampleReport
+  type: http
+  seq: 1
+}
+
+put {
+  url: http://localhost:8080/admin/updateSampleReport
+  body: json
+  auth: bearer
+}
+
+auth:bearer {
+  token: {{bearerToken}}
+}
+
+body:json {
+  {
+      "sampleReportId": "ac1a8001-9ac9-173b-819a-c9ef7e8b000c",
+      "donorId": "DNR-00123",
+      "tankNo": "Tank-01",
+      "caneNo": "Cane-05",
+      "canisterNo": "Canister-03",
+      "numberOfVials": 12,
+      "remarks": "Stored at -196°C, All vials in good condition"
+  }
+}
+
+settings {
+  encodeUrl: true
+}

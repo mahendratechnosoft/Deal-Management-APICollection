@@ -1,0 +1,19 @@
+meta {
+  name: http://localhost:8080/admin/getProposalByLeadId/{leadId}/{moduleType}
+  type: http
+  seq: 5
+}
+
+get {
+  url: http://localhost:8080/admin/getProposalByModuleType/c0a800b0-9a2f-1807-819a-2ffacea30000/lead
+  body: none
+  auth: bearer
+}
+
+auth:bearer {
+  token: {{bearerToken}}
+}
+
+settings {
+  encodeUrl: true
+}

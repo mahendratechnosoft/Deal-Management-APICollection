@@ -1,0 +1,25 @@
+meta {
+  name: {{baseUrl}}/admin/getAllAMC/0/2
+  type: http
+  seq: 5
+}
+
+get {
+  url: {{baseUrl}}/admin/getAllAMC/0/10
+  body: none
+  auth: bearer
+}
+
+params:query {
+  ~search: Pvt
+  ~expiryFromDate: 2025-02-02
+  ~expiryToDate: 2026-02-02
+}
+
+auth:bearer {
+  token: {{bearerToken}}
+}
+
+settings {
+  encodeUrl: true
+}

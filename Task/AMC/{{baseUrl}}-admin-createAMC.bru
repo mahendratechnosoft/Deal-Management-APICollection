@@ -1,0 +1,62 @@
+meta {
+  name: {{baseUrl}}/admin/createAMC
+  type: http
+  seq: 4
+}
+
+post {
+  url: {{baseUrl}}/admin/createAMC
+  body: json
+  auth: bearer
+}
+
+auth:bearer {
+  token: {{bearerToken}}
+}
+
+body:json {
+  {
+      "amcInfo": {
+          "adminId": "ADMIN123",
+          "employeeId": "",
+          "clinetName": "John Doe",
+          "companyName": "Tech Solutions Pvt Ltd",
+          "contactPersonName": "Sarah Johnson",
+          "email": "support@techsolutions.com",
+          "phoneNumber": "9876543210",
+          "websiteURL": "https://www.techsolutions.com",
+          "technology": "Java Spring Boot",
+          "hostingProvider": "AWS",
+          "domainProvider": "GoDaddy",
+          "assingedTo": "EMP789"
+      },
+      "amcHistoryInfo": {
+          "amcStartDate": "2025-01-01",
+          "amcEndDate": "2025-02-01",
+          "amcAmount": 25000,
+          "amcScope": "Full website maintenance, bug fixes, security patches",
+          "amcRecycleType": "Yearly",
+          "sequence": 1
+      },
+      "amcDomainHistoryInfo" : null,
+      "amcGsuitHistory": {
+          "domainName": "examplecompany.com",
+          "platform": "Google Workspace",
+          "gsuitStartDate": "2025-01-01",
+          "gsuitRenewalDate": "2026-01-01",
+          "adminEmail": "admin@examplecompany.com",
+          "adminPassword": "Admin@123",
+          "totalLicenses": 25,
+          "gsuitAmount": "45000",
+          "paidBy": "ADMIN",
+          "purchasedViaReseller": true,
+          "resellerName": "Google Authorized Partner Pvt Ltd",
+          "gsuitRenewalCycle": "YEARLY",
+          "sequence": 1
+      }
+  }
+}
+
+settings {
+  encodeUrl: true
+}

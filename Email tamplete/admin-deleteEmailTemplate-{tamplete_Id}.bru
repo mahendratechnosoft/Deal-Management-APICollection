@@ -1,0 +1,15 @@
+meta {
+  name: /admin/deleteEmailTemplate/{tamplete_Id}
+  type: http
+  seq: 7
+}
+
+delete {
+  url: {{baseUrl}}/admin/deleteEmailTemplate/{tamplete_Id}
+  body: none
+  auth: inherit
+}
+
+settings {
+  encodeUrl: true
+}

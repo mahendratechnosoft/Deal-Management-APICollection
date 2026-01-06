@@ -1,0 +1,94 @@
+meta {
+  name: http://localhost:8080/admin/updateInvoice
+  type: http
+  seq: 3
+}
+
+put {
+  url: http://localhost:8080/admin/updateInvoice
+  body: json
+  auth: bearer
+}
+
+auth:bearer {
+  token: eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJkZW1vQGdtYWlsLmNvbSIsImlhdCI6MTc2MjE0NTEyOSwiZXhwIjoxNzYyMzI1MTI5fQ.svkzoBaFOsrT8H8EFZL-QtcldtgUYewbnD-rxbeoYjpvqe3GsmsUl1KSGpewOdHowvnz9VO9YwOAaMwd0gwR5g
+}
+
+body:json {
+  {
+      "invoiceInfo": {
+          "invoiceId": "c0a800bc-9a48-1c0e-819a-4893655a0014",
+          "adminId": "c0a800bb-9a29-156a-819a-295619560001",
+          "employeeId": "EMP-456",
+          "proposalId": "PRO-789",
+          "assignTo": "EMP-456",
+          "invoiceNumber": "INV2025-001",
+          "currencyType": "INR",
+          "discount": 10.5,
+          "taxType": "GST",
+          "dueDate": "2025-11-10",
+          "invoiceDate": "2025-11-03",
+          "totalAmmount": 12500.75,
+          "status": "Pending",
+          "relatedTo": "lead",
+          "relatedId": "LEAD-321",
+          "companyName": "XpertBiz Solutions Pvt Ltd",
+          "mobileNumber": "9876543210",
+          "gstin": "29ABCDE1234F1Z5",
+          "panNumber": "ABCDE1234F",
+          "email": "info@xpertbizsolutions.com",
+          "billingStreet": "123 MG Road",
+          "billingCity": "Bangalore",
+          "billingState": "Karnataka",
+          "billingCountry": "India",
+          "billingZipCode": "560001",
+          "shippingStreet": "456 Residency Road",
+          "shippingCity": "Bangalore",
+          "shippingState": "Karnataka",
+          "shippingCountry": "India",
+          "shippingZipCode": "560002"
+      },
+      "invoiceContent": [
+          {
+              "proposalContentId": "c0a800bc-9a48-1c0e-819a-489365660015",
+              "invoiceId": "c0a800bc-9a48-1c0e-819a-4893655a0014",
+              "item": "Website Development Service",
+              "description": "Full-stack web development including frontend (React) and backend (Spring Boot) integration with deployment support.",
+              "quantity": 1,
+              "rate": 12000.0,
+              "sacCode": "998313"
+          },
+          {
+              "proposalContentId": "c0a800bc-9a48-1c0e-819a-489365660016",
+              "invoiceId": "c0a800bc-9a48-1c0e-819a-4893655a0014",
+              "item": "Website Development Service",
+              "description": "Full-stack web development including frontend (React) and backend (Spring Boot) integration with deployment support.",
+              "quantity": 1,
+              "rate": 12000.0,
+              "sacCode": "998313"
+          },
+          {
+              "proposalContentId": "c0a800bc-9a48-1c0e-819a-489365660017",
+              "invoiceId": "c0a800bc-9a48-1c0e-819a-4893655a0014",
+              "item": "Website Development Service",
+              "description": "Full-stack web development including frontend (React) and backend (Spring Boot) integration with deployment support.",
+              "quantity": 1,
+              "rate": 12000.0,
+              "sacCode": "998313"
+          },
+          {
+              "proposalContentId": "c0a800bc-9a48-1c0e-819a-489365670018",
+              "invoiceId": "c0a800bc-9a48-1c0e-819a-4893655a0014",
+              "item": "Website Development Service",
+              "description": "Full-stack web development including frontend (React) and backend (Spring Boot) integration with deployment support.",
+              "quantity": 1,
+              "rate": 12000.0,
+              "sacCode": "998313"
+          }
+      ]
+  }
+}
+
+settings {
+  encodeUrl: true
+}

@@ -1,0 +1,61 @@
+meta {
+  name: http://localhost:8080/admin/createRole
+  type: http
+  seq: 1
+}
+
+post {
+  url: http://91.203.133.210:9091/admin/createRole
+  body: json
+  auth: bearer
+}
+
+auth:bearer {
+  token: {{bearerToken}}
+}
+
+body:json {
+  {
+      "name":"Sales Manager",
+      "departmentId":"c0a80090-9a2f-1c8c-819a-2fda4adc0001",
+      "leadAccess": false,
+      "leadViewAll": false,
+      "leadCreate": false,
+      "leadDelete": false,
+      "leadEdit": false,
+      "customerAccess": false,
+      "customerViewAll": false,
+      "customerCreate": false,
+      "customerDelete": false,
+      "customerEdit": false,
+      "proposalAccess": false,
+      "proposalViewAll": false,
+      "proposalCreate": false,
+      "proposalDelete": false,
+      "proposalEdit": false,
+      "proformaInvoiceAccess": false,
+      "proformaInvoiceViewAll": false,
+      "proformaInvoiceCreate": false,
+      "proformaInvoiceDelete": false,
+      "proformaInvoiceEdit": false,
+      "invoiceAccess": false,
+      "invoiceViewAll": false,
+      "invoiceCreate": false,
+      "invoiceDelete": false,
+      "invoiceEdit": false,
+      "paymentAccess": false,
+      "paymentViewAll": false,
+      "paymentcreate": false,
+      "paymentDelete": false,
+      "paymentEdit": false,
+      "timeSheetAccess": false,
+      "timeSheetViewAll": false,
+      "timeSheetCreate": false,
+      "timeSheetDelete": false,
+      "timeSheetEdit": false
+  }
+}
+
+settings {
+  encodeUrl: true
+}

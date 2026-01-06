@@ -1,0 +1,15 @@
+meta {
+  name: http://localhost:8080/employee/addAttendance/{status}
+  type: http
+  seq: 1
+}
+
+post {
+  url: http://91.203.133.210:9091/admin/addAttendance/true
+  body: json
+  auth: inherit
+}
+
+settings {
+  encodeUrl: true
+}

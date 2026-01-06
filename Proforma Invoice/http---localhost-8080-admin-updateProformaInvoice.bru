@@ -1,0 +1,86 @@
+meta {
+  name: http://localhost:8080/admin/updateProformaInvoice
+  type: http
+  seq: 2
+}
+
+put {
+  url: http://localhost:8080/admin/updateProformaInvoice
+  body: json
+  auth: bearer
+}
+
+auth:bearer {
+  token: eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJkZW1vQGdtYWlsLmNvbSIsImlhdCI6MTc2MjMzNDY4NywiZXhwIjoxNzYyNTE0Njg3fQ.BsHDPOJFForDUd8rSrTbQuJmF4DPW93uAQoHyZVWuWUxnwcQ7OLtGhMbQZC6Au35dwFLFBnVyRF_aSiP870ssQ
+}
+
+body:json {
+  {
+      "proformaInvoiceInfo": {
+          "proformaInvoiceId": "c0a800bc-9a53-108a-819a-53611ffa0004",
+          "adminId": "c0a800bb-9a29-156a-819a-295619560001",
+          "employeeId": null,
+          "proposalId": "PRO789",
+          "assignTo": "John Doe",
+          "invoiceNumber": "INV-2025-001",
+          "currencyType": "INR",
+          "discount": 5.0,
+          "taxType": "GST 18%",
+          "dueDate": "2025-11-15",
+          "invoiceDate": "2025-11-05",
+          "totalAmount": 15000.5,
+          "paidAmount": 5000.0,
+          "status": "PARTIALLY_PAID",
+          "relatedTo": "lead",
+          "relatedId": "LEAD101",
+          "companyName": "XpertBiz Solutions Pvt. Ltd.",
+          "mobileNumber": "9876543210",
+          "gstin": "29ABCDE1234F1Z5",
+          "panNumber": "ABCDE1234F",
+          "email": "billing@xpertbiz.com",
+          "billingStreet": "123 MG Road",
+          "billingCity": "Bengaluru",
+          "billingState": "Karnataka",
+          "billingCountry": "India",
+          "billingZipCode": "560001",
+          "shippingStreet": "456 Brigade Road",
+          "shippingCity": "Bengaluru",
+          "shippingState": "Karnataka",
+          "shippingCountry": "India",
+          "shippingZipCode": "560002"
+      },
+      "proformaInvoiceContents": [
+          {
+              "proformaInvoiceContentId": "c0a800bc-9a53-108a-819a-536120090005",
+              "proformaInvoiceId": "c0a800bc-9a53-108a-819a-53611ffa0004",
+              "item": "Website Development",
+              "description": "Complete website design and development including frontend, backend, and deployment.",
+              "quantity": 1,
+              "rate": 25000.0,
+              "sacCode": "998314"
+          },
+          {
+              "proformaInvoiceContentId": "c0a800bc-9a53-108a-819a-5361200a0006",
+              "proformaInvoiceId": "c0a800bc-9a53-108a-819a-53611ffa0004",
+              "item": "Website Development",
+              "description": "Complete website design and development including frontend, backend, and deployment.",
+              "quantity": 1,
+              "rate": 25000.0,
+              "sacCode": "998314"
+          },
+          {
+              "proformaInvoiceContentId": "c0a800bc-9a53-108a-819a-5361200a0007",
+              "proformaInvoiceId": "c0a800bc-9a53-108a-819a-53611ffa0004",
+              "item": "Website Development",
+              "description": "Complete website design and development including frontend, backend, and deployment.",
+              "quantity": 1,
+              "rate": 25000.0,
+              "sacCode": "998314"
+          }
+      ]
+  }
+}
+
+settings {
+  encodeUrl: true
+}

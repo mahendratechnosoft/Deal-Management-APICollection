@@ -1,0 +1,52 @@
+meta {
+  name: http://localhost:8080/admin/createFamilyInfo
+  type: http
+  seq: 1
+}
+
+post {
+  url: http://localhost:9091/createFamilyInfo
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+    "uin": "UIN-998877",
+    "referHospital": "City Care Hospital",
+    "referHospitalAddress": "123 Main Street, Pune",
+    "referDoctor": "Dr. Amit Sharma",
+    "referDoctorContactNumber": "9876543210",
+  
+    "husbandName": "Rahul Sharma",
+    "husbandMobile": "9123456780",
+    "husbandHeight": "175 cm",
+    "husbandWeight": "72 kg",
+    "husbandBloodGroup": "B+",
+    "husbandSkinColor": "Fair",
+    "husbandEyeColor": "Brown",
+    "husbandReligion": "Hindu",
+    "husbandEducation": "MBA",
+    "husbandDistrict": "Pune",
+    "husbandCountry": "India",
+    "husbandGenticIllness": "None",
+  
+    "wifeName": "Priya Sharma",
+    "wifeMobile": "9822334455",
+    "wifeHeight": "160 cm",
+    "wifeWeight": "58 kg",
+    "wifeBloodGroup": "O+",
+    "wifeSkinColor": "Fair",
+    "wifeEyeColor": "Black",
+    "wifeReligion": "Hindu",
+    "wifeEducation": "B.Com",
+    "wifeDistrict": "Mumbai",
+    "wifeCountry": "India",
+    "wifeGenticIllness": "None"
+  }
+  
+}
+
+settings {
+  encodeUrl: true
+}

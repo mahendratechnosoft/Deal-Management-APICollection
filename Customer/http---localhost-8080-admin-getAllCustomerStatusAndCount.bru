@@ -1,0 +1,19 @@
+meta {
+  name: http://localhost:8080/admin/getAllCustomerStatusAndCount
+  type: http
+  seq: 7
+}
+
+get {
+  url: http://localhost:8080/admin/getAllCustomerStatusAndCount
+  body: none
+  auth: bearer
+}
+
+auth:bearer {
+  token: eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJkZW1vQGdtYWlsLmNvbSIsImlhdCI6MTc2MjE3NDUxNywiZXhwIjoxNzYyMzU0NTE3fQ.rCk_uC3E2Iz60xkPotkxeq7BJVpJ2GXHBhog59dsgU0-MJZry0BYJxgOA3x_DotmQ8EJ1fPC7BaUE2AfKrsv3Q
+}
+
+settings {
+  encodeUrl: true
+}

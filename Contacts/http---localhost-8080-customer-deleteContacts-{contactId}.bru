@@ -1,0 +1,19 @@
+meta {
+  name: http://localhost:8080/customer/deleteContacts/{contactId}
+  type: http
+  seq: 4
+}
+
+delete {
+  url: http://localhost:8080/admin/deleteContacts/{contactId}
+  body: none
+  auth: bearer
+}
+
+auth:bearer {
+  token: {{bearerToken}}
+}
+
+settings {
+  encodeUrl: true
+}

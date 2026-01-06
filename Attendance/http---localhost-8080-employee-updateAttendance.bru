@@ -1,0 +1,29 @@
+meta {
+  name: http://localhost:8080/employee/updateAttendance
+  type: http
+  seq: 5
+}
+
+put {
+  url: http://91.203.133.210:9091/admin/updateAttendance
+  body: json
+  auth: bearer
+}
+
+auth:bearer {
+  token: {{bearerToken}}
+}
+
+body:json {
+  {
+   
+      "adminId": "ac110002-9a58-1513-819a-588048340001",
+      "employeeId": "ac110005-9a86-13d6-819a-873b76ed002f",
+      "timeStamp": 1763450957193,
+      "status": true
+  }
+}
+
+settings {
+  encodeUrl: true
+}

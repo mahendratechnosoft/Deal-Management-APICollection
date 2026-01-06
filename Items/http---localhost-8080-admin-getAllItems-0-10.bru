@@ -1,0 +1,23 @@
+meta {
+  name: http://localhost:8080/admin/getAllItems/0/10
+  type: http
+  seq: 3
+}
+
+get {
+  url: http://91.203.133.210:9091/employee/getAllItems/0/10
+  body: none
+  auth: bearer
+}
+
+params:query {
+  ~search: KARTIK
+}
+
+auth:bearer {
+  token: {{bearerToken}}
+}
+
+settings {
+  encodeUrl: true
+}

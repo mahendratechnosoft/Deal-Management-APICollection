@@ -1,0 +1,19 @@
+meta {
+  name: http://localhost:8080/admin/deleteProposalContent
+  type: http
+  seq: 6
+}
+
+delete {
+  url: http://localhost:8080/admin/deleteProposalContent
+  body: none
+  auth: bearer
+}
+
+auth:bearer {
+  token: {{bearerToken}}
+}
+
+settings {
+  encodeUrl: true
+}

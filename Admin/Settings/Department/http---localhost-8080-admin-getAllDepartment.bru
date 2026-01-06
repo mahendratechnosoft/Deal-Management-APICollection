@@ -1,0 +1,23 @@
+meta {
+  name: http://localhost:8080/admin/getAllDepartment
+  type: http
+  seq: 2
+}
+
+get {
+  url: http://localhost:8080/admin/getAllDepartment
+  body: none
+  auth: bearer
+}
+
+params:query {
+  ~name: Marketing
+}
+
+auth:bearer {
+  token: {{bearerToken}}
+}
+
+settings {
+  encodeUrl: true
+}

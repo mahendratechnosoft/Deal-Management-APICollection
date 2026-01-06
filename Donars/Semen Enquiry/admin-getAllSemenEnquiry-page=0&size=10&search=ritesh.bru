@@ -1,0 +1,21 @@
+meta {
+  name: /admin/getAllSemenEnquiry?page=0&size=10&search=ritesh
+  type: http
+  seq: 5
+}
+
+get {
+  url: {{baseUrl}}/admin/getAllSemenEnquiry?page=0&size=10&search=ritesh
+  body: none
+  auth: inherit
+}
+
+params:query {
+  page: 0
+  size: 10
+  search: ritesh
+}
+
+settings {
+  encodeUrl: true
+}

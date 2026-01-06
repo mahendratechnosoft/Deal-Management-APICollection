@@ -1,0 +1,19 @@
+meta {
+  name: http://localhost:8080/admin/getAllPerforma
+  type: http
+  seq: 6
+}
+
+get {
+  url: http://91.203.133.210:9091/admin/getAllPerforma
+  body: none
+  auth: bearer
+}
+
+auth:bearer {
+  token: {{bearerToken}}
+}
+
+settings {
+  encodeUrl: true
+}

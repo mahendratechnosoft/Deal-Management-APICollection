@@ -1,0 +1,39 @@
+meta {
+  name: /admin/createSemenEnquiry
+  type: http
+  seq: 1
+}
+
+post {
+  url: {{baseUrl}}/admin/createSemenEnquiry
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+    "email": "donor@example.com",
+    "name": "Rahul Patil",
+    "phoneNumber": "9876543210",
+    "dateOfBirth": "1996-05-14",
+    "marriedStatus": "No",
+    "age": 28,
+    "height": 175.5,
+    "weight": 70.0,
+    "adharCardNo": "123412341234",
+    "bloodGroup": "O+",
+    "address": "Flat No 12, Shivaji Nagar, Near City Hospital",
+    "city": "Pune",
+    "pincode": "411005",
+    "education": "Undergraduate (Bachelor’s Degree)",
+    "profession": "Software Engineer",
+  
+    "fullLengthImage": "/9j/2wDFAAQFBQkGCQkJCQkKCAkICgsLCgoLCwwKCwoLCgwMDA.......",
+    "selfeImage": "/9j/2wDFAAQFBQkGCQkJCQkKCAkICgsLCgoLCwwKCwoLCgwMDAwNDQwMDAwMDw4PDAwNDw8PDw0OERERDh......"
+  }
+  
+}
+
+settings {
+  encodeUrl: true
+}

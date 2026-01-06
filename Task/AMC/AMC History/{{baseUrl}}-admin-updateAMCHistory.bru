@@ -1,0 +1,32 @@
+meta {
+  name: {{baseUrl}}/admin/updateAMCHistory
+  type: http
+  seq: 2
+}
+
+put {
+  url: {{baseUrl}}/admin/updateAMCHistory
+  body: json
+  auth: bearer
+}
+
+auth:bearer {
+  token: {{bearerToken}}
+}
+
+body:json {
+  {
+         
+          "amcId": "ac16d001-9b07-1f9b-819b-07ad60e10009",
+          "amcStartDate": "2025-01-01",
+          "amcEndDate": "2026-01-01",
+          "amcAmount": 25000.0,
+          "amcScope": "Full website maintenance, bug fixes, security patches",
+          "amcRecycleType": "Yearly",
+          "sequence": 1
+      }
+}
+
+settings {
+  encodeUrl: true
+}

@@ -1,0 +1,26 @@
+meta {
+  name: http://localhost:8080/lead/getAllLeads/0/10
+  type: http
+  seq: 4
+}
+
+get {
+  url: http://localhost:9091/admin/getAllLeads/0/10?startDate=2025-11-12&endDate=2025-11-12&followUpDate=2025-11-12
+  body: none
+  auth: bearer
+}
+
+params:query {
+  startDate: 2025-11-12
+  endDate: 2025-11-12
+  followUpDate: 2025-11-12
+  ~leadStatus: New Lead
+}
+
+auth:bearer {
+  token: {{bearerToken}}}
+}
+
+settings {
+  encodeUrl: true
+}

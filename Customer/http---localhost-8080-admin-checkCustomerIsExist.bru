@@ -1,0 +1,25 @@
+meta {
+  name: http://localhost:8080/admin/checkCustomerIsExist
+  type: http
+  seq: 8
+}
+
+get {
+  url: {{baseUrl}}/admin/checkCustomerIsExist/company 123
+  body: json
+  auth: bearer
+}
+
+auth:bearer {
+  token: {{bearerToken}}
+}
+
+body:json {
+  {
+      "companyName": "company 123"
+  }
+}
+
+settings {
+  encodeUrl: true
+}

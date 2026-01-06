@@ -1,0 +1,19 @@
+meta {
+  name: http://localhost:8080/super/getAllAdmin/0/10
+  type: http
+  seq: 4
+}
+
+get {
+  url: {{baseUrl}}/super/getAllAdmin/0/1000
+  body: none
+  auth: bearer
+}
+
+auth:bearer {
+  token: {{bearerToken}}
+}
+
+settings {
+  encodeUrl: true
+}

@@ -1,0 +1,19 @@
+meta {
+  name: http://localhost:8080/lead/deleteLead/{leadId}
+  type: http
+  seq: 7
+}
+
+delete {
+  url: http://localhost:8080/lead/deleteLead/{leadId}
+  body: none
+  auth: bearer
+}
+
+auth:bearer {
+  token: eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJkZW1vQGdtYWlsLmNvbSIsImlhdCI6MTc2MTYyNzA5MiwiZXhwIjoxNzYxODA3MDkyfQ.he2G3o88o780-cfQ7yZc0xEYRB5AApVMB_6zOj7zG59lZ_3tgtyOMDgvSjRcKh0ncG346ysh7HMU5EVrvtx9Qg
+}
+
+settings {
+  encodeUrl: true
+}

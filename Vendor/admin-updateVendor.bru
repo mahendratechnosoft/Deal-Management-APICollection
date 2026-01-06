@@ -1,0 +1,44 @@
+meta {
+  name: /admin/updateVendor
+  type: http
+  seq: 3
+}
+
+put {
+  url: {{baseUrl}}/admin/updateVendor
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+      "vendorId": "c0a800ef-9b25-187a-819b-35f724fa0068",
+      "employeeId": null,
+      "vendorCode": "V-2024-001",
+      "vendorName": "Shital Mate teat",
+      "companyName": "Tech World",
+      "emailAddress": "shital@example.com",
+      "phone": "9876543210",
+      "balance": 5000.0,
+      "pan": "ABCDE1234F",
+      "isMSMERegister": true,
+      "udyamRegistrationType": "Micro",
+      "udyamRegistrationNumber": "MH-12-3456",
+      "remark": "Primary Supplier",
+      "accountHolderName": "Shital Mate",
+      "bankName": "SBI",
+      "accountNumber": "1234567890",
+      "ifscCode": "SBIN0001234",
+      "street": "Tarawala Nagar",
+      "country": "India",
+      "state": "Maharashtra",
+      "city": "Nashik",
+      "zipCode": "422001",
+      "createdAt": "2025-12-19T15:05:47.9665956",
+      "createdBy": "Ritesh Thete"
+  }
+}
+
+settings {
+  encodeUrl: true
+}

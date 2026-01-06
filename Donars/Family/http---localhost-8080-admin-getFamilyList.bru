@@ -1,0 +1,19 @@
+meta {
+  name: http://localhost:8080/admin/getFamilyList
+  type: http
+  seq: 5
+}
+
+get {
+  url: http://localhost:9091/admin/getFamilyList
+  body: none
+  auth: bearer
+}
+
+auth:bearer {
+  token: {{bearerToken}}
+}
+
+settings {
+  encodeUrl: true
+}

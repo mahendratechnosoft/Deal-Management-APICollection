@@ -1,0 +1,19 @@
+meta {
+  name: http://localhost:8080/admin/getLoginStatusAllEmployee/05-12-2025
+  type: http
+  seq: 7
+}
+
+get {
+  url: http://localhost:8080/employee/getLoginStatusAllEmployee/05-12-2025
+  body: none
+  auth: bearer
+}
+
+auth:bearer {
+  token: {{bearerToken}}
+}
+
+settings {
+  encodeUrl: true
+}

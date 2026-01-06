@@ -1,0 +1,81 @@
+meta {
+  name: http://localhost:8080/lead/createLead
+  type: http
+  seq: 3
+}
+
+post {
+  url: http://localhost:8080/employee/createLead
+  body: json
+  auth: bearer
+}
+
+auth:bearer {
+  token: eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJBZGl0eWFFTVAxQGdtaWwuY29tIiwiaWF0IjoxNzYxOTc3Nzg2LCJleHAiOjE3NjIxNTc3ODZ9.whkqwcvahltJE_cdMbtGzg2b8LvDoqI-SPbL3fKN6uwZSlGkOzmCaD9zjnSD7RYrfZFmD8X1chXZER-pi9i4fg
+}
+
+body:json {
+  {
+      "columns": [
+          {
+              "name": "Column 1",
+              "sequence": 1
+          },
+          {
+              "name": "Column 2",
+              "sequence": 2
+          },
+          {
+              "name": "Column 3",
+              "sequence": 3
+          },
+          {
+              "name": "Column 4",
+              "sequence": 4
+          },
+          {
+              "name": "Column 5",
+              "sequence": 5
+          },
+             {
+              "name": "Column 6",
+              "sequence": 6
+          }
+      ],
+      "fields": {
+          
+          "Column 1": " value 1",
+          "Column 2": "value 2",
+          "Column 3": "value 3",
+          "Column 4": "value 4",
+          "Column 5":"value 5",
+          "Column 6":"value 6"
+      },
+     
+      "employeeId": "EMP001",
+      "assignTo": "ADMIN001",
+       "status": "Won",
+      "source": "Instagram",
+      "clientName": " Tata 25",
+      "companyName": "Sumo",
+      "customerId":"90090jjiijijj",
+      "revenue":3000.22,
+      "mobileNumber": 89750,
+      "phoneNumber": 8585,
+      "email": "kartik@gmail.com",
+      "website": "kartik.com",
+      "industry": "IT",
+      "priority": "High",
+      "street":"home street",
+      "country":"India",
+      "state":"MH",
+      "city":"akola",
+      "zipCode":"445505",
+      "description":"5000"
+  
+  }
+}
+
+settings {
+  encodeUrl: true
+}

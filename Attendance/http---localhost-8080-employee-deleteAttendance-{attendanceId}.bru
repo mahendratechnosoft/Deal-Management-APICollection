@@ -1,0 +1,19 @@
+meta {
+  name: http://localhost:8080/employee/deleteAttendance/{attendanceId}
+  type: http
+  seq: 6
+}
+
+delete {
+  url: http://91.203.133.210:9091/admin/deleteAttendance/ac110005-9abe-1bfe-819a-c3d045200022
+  body: none
+  auth: bearer
+}
+
+auth:bearer {
+  token: {{bearerToken}}
+}
+
+settings {
+  encodeUrl: true
+}

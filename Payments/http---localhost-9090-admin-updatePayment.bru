@@ -1,0 +1,40 @@
+meta {
+  name: http://localhost:9090/admin/updatePayment
+  type: http
+  seq: 2
+}
+
+put {
+  url: http://91.203.133.210:9091/admin/updatePayment
+  body: json
+  auth: bearer
+}
+
+auth:bearer {
+  token: {{bearerToken}}
+}
+
+body:json {
+  {
+      "paymentId": "ac110005-9a7c-1121-819a-7ceba1800004",
+      "adminId": "ac110002-9a58-1513-819a-588048340001",
+      "employeeId": null,
+      "createdBy": "MTech",
+      "proformaInvoiceNo": "PROF-2025-001",
+      "proformaInvoiceId": "c0a800bc-9a53-108a-819a-53721e970008",
+      "transactionId": "TXN-987654321",
+      "companyName": "Mahendra Technosoft Pvt Ltd",
+      "customerId": "",
+      "amount": 1000,
+      "paymentDate": "2025-11-13",
+      "createdDateTime": "2025-11-06T17:23:55.808729",
+      "totalProformaInvoicePaidAmount": 8000,
+       "paymentMode": "Bank"
+  }
+  
+  
+}
+
+settings {
+  encodeUrl: true
+}

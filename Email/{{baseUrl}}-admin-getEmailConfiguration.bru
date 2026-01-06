@@ -1,0 +1,19 @@
+meta {
+  name: {{baseUrl}}/admin/getEmailConfiguration
+  type: http
+  seq: 2
+}
+
+get {
+  url: {{baseUrl}}/admin/getEmailConfiguration
+  body: none
+  auth: bearer
+}
+
+auth:bearer {
+  token: {{bearerToken}}
+}
+
+settings {
+  encodeUrl: true
+}

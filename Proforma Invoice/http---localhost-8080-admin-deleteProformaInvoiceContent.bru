@@ -1,0 +1,28 @@
+meta {
+  name: http://localhost:8080/admin/deleteProformaInvoiceContent
+  type: http
+  seq: 5
+}
+
+delete {
+  url: http://localhost:8080/admin/deleteProformaInvoiceContent
+  body: json
+  auth: bearer
+}
+
+auth:bearer {
+  token: eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJkZW1vQGdtYWlsLmNvbSIsImlhdCI6MTc2MjMzNDY4NywiZXhwIjoxNzYyNTE0Njg3fQ.BsHDPOJFForDUd8rSrTbQuJmF4DPW93uAQoHyZVWuWUxnwcQ7OLtGhMbQZC6Au35dwFLFBnVyRF_aSiP870ssQ
+}
+
+body:json {
+  [
+    "c0a800bc-9a53-108a-819a-536120090005",
+    "c0a800bc-9a53-108a-819a-5361200a0006",
+    "c0a800bc-9a53-108a-819a-5361200a0007"
+  ]
+  
+}
+
+settings {
+  encodeUrl: true
+}

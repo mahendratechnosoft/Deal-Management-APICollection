@@ -1,0 +1,113 @@
+meta {
+  name: http://localhost:8080/super/updateAdminInfoWithAccess
+  type: http
+  seq: 3
+}
+
+put {
+  url: {{baseUrl}}/super/updateAdminInfoWithAccess
+  body: json
+  auth: bearer
+}
+
+auth:bearer {
+  token: {{bearerToken}}
+}
+
+body:json {
+  {
+      "adminId": "ac110005-9a7c-14bd-819a-7cb6a01f0001",
+      "companyEmail": "theteritesh2@gmail.com",
+      "name": "John Doe",
+      "phone": "9876543210",
+      "address": "123 Main Street, Mumbai",
+      "companyName": "Ritesh Company",
+      "gstNumber": "27AANCM4515G1ZD",
+      "moduleAccess": {
+          "moduleAccessId": "ac110005-9add-1891-819a-dd9898030002",
+          "adminId": "ac110005-9a7c-14bd-819a-7cb6a01f0001",
+          "employeeId": null,
+          "customerId": null,
+          "leadAccess": true,
+          "leadViewAll": true,
+          "leadCreate": true,
+          "leadDelete": true,
+          "leadEdit": true,
+          "customerAccess": true,
+          "customerViewAll": true,
+          "customerCreate": true,
+          "customerDelete": true,
+          "customerEdit": true,
+          "proposalAccess": true,
+          "proposalViewAll": true,
+          "proposalCreate": true,
+          "proposalDelete": true,
+          "proposalEdit": true,
+          "proformaInvoiceAccess": true,
+          "proformaInvoiceViewAll": true,
+          "proformaInvoiceCreate": true,
+          "proformaInvoiceDelete": true,
+          "proformaInvoiceEdit": true,
+          "invoiceAccess": true,
+          "invoiceViewAll": true,
+          "invoiceCreate": true,
+          "invoiceDelete": true,
+          "invoiceEdit": true,
+          "paymentAccess": true,
+          "paymentViewAll": true,
+          "paymentCreate": true,
+          "paymentDelete": true,
+          "paymentEdit": true,
+          "timeSheetAccess": true,
+          "timeSheetViewAll": true,
+          "timeSheetCreate": true,
+          "timeSheetDelete": true,
+          "timeSheetEdit": true,
+          "donorAccess": false,
+          "donorViewAll": true,
+          "donorCreate": true,
+          "donorDelete": true,
+          "donorEdit": true,
+          "itemAccess": true,
+          "itemViewAll": true,
+          "itemCreate": true,
+          "itemDelete": true,
+          "itemEdit": true,
+          "taskAccess": true,
+          "taskLogAccess": false,
+          "taskViewAll": true,
+          "taskCreate": true,
+          "taskDelete": true,
+          "taskEdit": true,
+          "employeeAccess": true,
+          "settingAccess": true,
+          "amcAccess": true,
+          "amcViewAll": true,
+          "amcCreate": true,
+          "amcDelete": true,
+          "amcEdit": true,
+          "vendorAccess": true,
+          "vendorViewAll": true,
+          "vendorCreate": true,
+          "vendorDelete": true,
+          "vendorEdit": true,
+          "complianceAccess": true,
+          "complianceViewAll": true,
+          "complianceCreate": true,
+          "complianceDelete": true,
+          "complianceEdit": true,
+          "canCustomerLogin": true,
+          "canContactPersonLogin": true,
+          "customerComplianceAccess": true,
+          "customerComplianceViewAll": true,
+          "customerComplianceCreate": true,
+          "customerComplianceDelete": true,
+          "customerComplianceEdit": true
+      }
+       
+  }
+}
+
+settings {
+  encodeUrl: true
+}

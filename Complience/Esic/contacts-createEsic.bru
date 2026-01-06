@@ -1,0 +1,56 @@
+meta {
+  name: /contacts/createEsic
+  type: http
+  seq: 7
+}
+
+post {
+  url: {{baseUrl}}/contacts/createEsic
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+      "esic": {
+          "name": "Mahesh Kumar 3",
+          "dateOfJoining": "2023-04-01",
+          "esicNumber": "37001234560001001",
+          "dateOfBirth": "1990-08-15",
+          "fatherName": "Suresh Kumar",
+          "phone": "9876543210",
+          "gender": "Male",
+          "isMarried": true,
+          "aadhaarNumber": "123456789012",
+          "accountHolderName": "Rajesh Kumar",
+          "bankName": "HDFC Bank",
+          "accountNumber": "50100234567890",
+          "ifsc": "HDFC0001234",
+          "presentAddress": "Flat 101, MG Road, Pune, Maharashtra",
+          "permantAddress": "House 22, Gandhi Nagar, Nagpur, Maharashtra",
+          "nomineeName": "Priya Kumar",
+          "nomineeRelation": "Wife",
+          "nomineeAdhaar": "901234567890",
+          "aadhaarPhoto": null,
+          "passportPhoto": null
+      },
+      "esicContents": [
+          {
+              "name": "Priya Kumar",
+              "relation": "Wife",
+              "aadhaarPhoto": null,
+              "passportPhoto": null
+          },
+          {
+              "name": "Rohan Kumar",
+              "relation": "Son",
+              "aadhaarPhoto": null,
+              "passportPhoto": null
+          }
+      ]
+  }
+}
+
+settings {
+  encodeUrl: true
+}

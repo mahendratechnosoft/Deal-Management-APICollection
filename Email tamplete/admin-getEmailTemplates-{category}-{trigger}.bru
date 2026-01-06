@@ -1,0 +1,15 @@
+meta {
+  name: /admin/getEmailTemplates/{category}/{trigger}
+  type: http
+  seq: 4
+}
+
+get {
+  url: {{baseUrl}}/admin/getEmailTemplates/SALES/PROPOSAL_SEND
+  body: none
+  auth: inherit
+}
+
+settings {
+  encodeUrl: true
+}

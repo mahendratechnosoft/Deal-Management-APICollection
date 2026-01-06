@@ -1,0 +1,26 @@
+meta {
+  name: /admin/createVendorContact
+  type: http
+  seq: 1
+}
+
+post {
+  url: {{baseUrl}}/admin/createVendorContact
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+      "vendorId": "c0a800ef-9b25-187a-819b-2c3f2a940039",
+      "contactPersonName": "Rohan Patil3 Rohan Patil3 Rohan Patil3 Rohan Patil3 Rohan Patil3Rohan Patil3 Rohan Patil3 Rohan Patil3 Rohan Patil3Rohan Patil3 Rohan Patil3 ",
+      "emailAddress": "rohan@techworld.com  rohan@techworld.com rohan@techworld.com rohan@techworld.com rohan@techworld.com rohan@techworld.com rohan@techworld.com ",
+      "phone": "9988776655",
+      "position": "Sales Manager Sales ManagerSales ManagerSales ManagerSales ManagerSales ManagerSales Manager",
+      "isActive": true
+  }
+}
+
+settings {
+  encodeUrl: true
+}

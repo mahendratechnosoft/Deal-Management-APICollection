@@ -1,0 +1,26 @@
+meta {
+  name: http://localhost:9091/employee/updateDonorStatus
+  type: http
+  seq: 10
+}
+
+put {
+  url: http://localhost:9091/employee/updateDonorStatus
+  body: json
+  auth: bearer
+}
+
+auth:bearer {
+  token: {{bearerToken}}
+}
+
+body:json {
+  {
+      "donorId": "c0a800ef-9ade-1ad0-819a-dee0506b0007",
+      "status": "Qualified"
+  }
+}
+
+settings {
+  encodeUrl: true
+}

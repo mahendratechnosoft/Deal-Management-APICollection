@@ -1,0 +1,27 @@
+meta {
+  name: http://localhost:8080/admin/getAttendanceExcelExport
+  type: http
+  seq: 8
+}
+
+get {
+  url: http://localhost:8080/admin/getAttendanceExcelExport?attendanceType=daily&fromDate=01-12-2025&toDate=10-12-2025&monthName=November
+  body: none
+  auth: bearer
+}
+
+params:query {
+  attendanceType: daily
+  fromDate: 01-12-2025
+  toDate: 10-12-2025
+  monthName: November
+  ~employeeId: ac110002-9a58-1513-819a-588d4e640005
+}
+
+auth:bearer {
+  token: {{bearerToken}}
+}
+
+settings {
+  encodeUrl: true
+}

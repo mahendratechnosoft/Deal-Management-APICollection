@@ -1,0 +1,19 @@
+meta {
+  name: /admin/getTaskCount
+  type: http
+  seq: 15
+}
+
+get {
+  url: {{baseUrl}}/employee/getTaskCount?listType=ASSIGNED
+  body: none
+  auth: inherit
+}
+
+params:query {
+  listType: ASSIGNED
+}
+
+settings {
+  encodeUrl: true
+}

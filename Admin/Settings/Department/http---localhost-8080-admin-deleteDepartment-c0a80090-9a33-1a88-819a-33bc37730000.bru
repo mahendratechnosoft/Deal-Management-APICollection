@@ -1,0 +1,19 @@
+meta {
+  name: http://localhost:8080/admin/deleteDepartment/c0a80090-9a33-1a88-819a-33bc37730000
+  type: http
+  seq: 3
+}
+
+delete {
+  url: http://localhost:8080/admin/deleteDepartment/c0a80090-9a33-1a88-819a-33bc37730000
+  body: none
+  auth: bearer
+}
+
+auth:bearer {
+  token: {{bearerToken}}
+}
+
+settings {
+  encodeUrl: true
+}

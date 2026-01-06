@@ -1,0 +1,26 @@
+meta {
+  name: http://localhost:8080/admin/deleteRole/c0a80090-9a33-159f-819a-33f425410001
+  type: http
+  seq: 3
+}
+
+delete {
+  url: http://localhost:8080/admin/deleteRole/c0a80090-9a33-159f-819a-33f425410001
+  body: text
+  auth: bearer
+}
+
+auth:bearer {
+  token: {{bearerToken}}
+}
+
+body:text {
+  {
+      "name":"Sales Manager",
+      "departmentId":"c0a80090-9a2f-1c8c-819a-2fda4adc0001"
+  }
+}
+
+settings {
+  encodeUrl: true
+}

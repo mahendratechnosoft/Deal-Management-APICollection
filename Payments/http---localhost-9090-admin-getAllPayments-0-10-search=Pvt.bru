@@ -1,0 +1,23 @@
+meta {
+  name: http://localhost:9090/admin/getAllPayments/0/10?search=Pvt
+  type: http
+  seq: 4
+}
+
+get {
+  url: https://api.mtechnosoft.xpertbizsolutions.com/admin/getAllPayments/0/10?search=Pv
+  body: none
+  auth: bearer
+}
+
+params:query {
+  search: Pv
+}
+
+auth:bearer {
+  token: {{bearerToken}}
+}
+
+settings {
+  encodeUrl: true
+}

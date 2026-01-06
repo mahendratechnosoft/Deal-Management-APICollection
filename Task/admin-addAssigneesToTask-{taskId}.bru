@@ -1,0 +1,111 @@
+meta {
+  name: /admin/addAssigneesToTask/{taskId}
+  type: http
+  seq: 10
+}
+
+put {
+  url: {{baseUrl}}/employee/addAssigneesToTask/ac110005-9afd-16ad-819b-01f7b4950017
+  body: json
+  auth: inherit
+}
+
+body:json {
+  [
+      "ac110005-9afd-16ad-819b-01f7b4950017"
+  
+  ]
+}
+
+settings {
+  encodeUrl: true
+}
+
+example {
+  name: /admin/addAssigneesToTask/{taskId}
+  
+  request: {
+    url: {{baseUrl}}/admin/addAssigneesToTask/c0a800ef-9b02-13bd-819b-02d673ac0001
+    method: PUT
+    mode: json
+    body:json: {
+      [
+          "c0a800ef-9b02-13bd-819b-02d673ac0001",
+          "c0a800ef-9aa4-10d4-819a-a4dc21dd001b",
+          "c0a800ef-9aa4-10d4-819a-a4e369df001e"
+      ]
+    }
+  }
+  
+  response: {
+    headers: {
+      Vary: Origin
+      Vary: Access-Control-Request-Method
+      Vary: Access-Control-Request-Headers
+      X-Content-Type-Options: nosniff
+      X-XSS-Protection: 0
+      Cache-Control: no-cache, no-store, max-age=0, must-revalidate
+      Pragma: no-cache
+      Expires: 0
+      X-Frame-Options: DENY
+      Content-Type: application/json
+      Transfer-Encoding: chunked
+      Date: Wed, 10 Dec 2025 04:33:11 GMT
+      Keep-Alive: timeout=60
+      Connection: keep-alive
+    }
+  
+    status: {
+      code: OK
+      text: 200
+    }
+  
+    body: {
+      type: json
+      content: '''
+        {
+            "taskId": "c0a800ef-9b02-13bd-819b-02d673ac0001",
+            "adminId": "c0a800ef-9a76-1de1-819a-76c0f7840001",
+            "employeeId": null,
+            "subject": "Testin task created by admin",
+            "startDate": "2025-12-08",
+            "endDate": "2025-12-10",
+            "priority": "High",
+            "relatedTo": "Project",
+            "relatedToId": "PROJ-555",
+            "relatedToName": "CRM System Upgrade",
+            "hourlyRate": 50,
+            "estimatedHours": 12.5,
+            "description": "Resolve CSS conflict in the login modal.",
+            "status": "IN_PROGRESS",
+            "assignedEmployees": [
+                {
+                    "employeeId": "c0a800ef-9a76-1de1-819a-76c863fc000d",
+                    "name": "emp 1"
+                },
+                {
+                    "employeeId": "c0a800ef-9aa4-10d4-819a-a4dc21dd001b",
+                    "name": "emp3"
+                },
+                {
+                    "employeeId": "c0a800ef-9aa4-10d4-819a-a4e369df001e",
+                    "name": "emp4"
+                }
+            ],
+            "followersEmployees": [
+                {
+                    "employeeId": "c0a800ef-9aa4-10d4-819a-a4dc21dd001b",
+                    "name": "emp3"
+                },
+                {
+                    "employeeId": "c0a800ef-9aa4-10d4-819a-a4e369df001e",
+                    "name": "emp4"
+                }
+            ],
+            "createdAt": "2025-12-09T16:49:27.404755",
+            "createdBy": "John Doe"
+        }
+      '''
+    }
+  }
+}

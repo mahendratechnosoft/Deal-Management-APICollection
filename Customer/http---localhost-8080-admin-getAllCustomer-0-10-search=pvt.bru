@@ -1,0 +1,27 @@
+meta {
+  name: http://localhost:8080/admin/getAllCustomer/0/10?search=pvt
+  type: http
+  seq: 3
+}
+
+get {
+  url: {{baseUrl}}/admin/getAllCustomer/0/10
+  body: none
+  auth: bearer
+}
+
+params:query {
+  ~search: tcs
+}
+
+headers {
+  search: sales
+}
+
+auth:bearer {
+  token: {{bearerToken}}
+}
+
+settings {
+  encodeUrl: true
+}

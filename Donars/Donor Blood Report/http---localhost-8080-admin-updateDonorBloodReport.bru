@@ -1,0 +1,69 @@
+meta {
+  name: http://localhost:8080/admin/updateDonorBloodReport
+  type: http
+  seq: 2
+}
+
+put {
+  url: http://localhost:8080/admin/updateDonorBloodReport
+  body: json
+  auth: bearer
+}
+
+auth:bearer {
+  token: {{bearerToken}}
+}
+
+body:json {
+  [
+      {
+          "donorBloodReportId": "ac1a8001-9ac9-173b-819a-c9e5c334000a",
+          "donorId": null,
+          "reportDateTime": "2025-11-28T15:30:00",
+          "bloodGroup": "B+",
+          "bsl": "Normal",
+          "reportType": "Initial Screening",
+          "cmv": null,
+          "hbsag": null,
+          "hiv": null,
+          "vdrl": null,
+          "hcv": null,
+          "hbelectrophoresis": null,
+          "srcreatinine": null
+      },
+      {
+          "donorBloodReportId": "ac1a8001-9ac9-173b-819a-c9e5c334000a",
+          "donorId": null,
+          "reportDateTime": "2025-11-28T15:30:00",
+          "bloodGroup": "B+",
+          "bsl": "Normal",
+          "reportType": "Initial Screening",
+          "cmv": null,
+          "hbsag": null,
+          "hiv": null,
+          "vdrl": null,
+          "hcv": null,
+          "hbelectrophoresis": null,
+          "srcreatinine": null
+      },
+      {
+          "donorBloodReportId": "ac1a8001-9ac9-173b-819a-c9e5c334000a",
+          "donorId": null,
+          "reportDateTime": "2025-11-28T15:30:00",
+          "bloodGroup": "B+",
+          "bsl": "Normal",
+          "reportType": "Initial Screening",
+          "cmv": null,
+          "hbsag": null,
+          "hiv": null,
+          "vdrl": null,
+          "hcv": null,
+          "hbelectrophoresis": null,
+          "srcreatinine": null
+      }
+  ]
+}
+
+settings {
+  encodeUrl: true
+}

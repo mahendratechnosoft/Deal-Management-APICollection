@@ -1,0 +1,23 @@
+meta {
+  name: http://localhost:8080/admin/getLeadFollowUp
+  type: http
+  seq: 12
+}
+
+get {
+  url: http://91.203.133.210:9091/admin/getLeadFollowUp?followUpdate=2025-12-12
+  body: none
+  auth: bearer
+}
+
+params:query {
+  followUpdate: 2025-12-12
+}
+
+auth:bearer {
+  token: {{bearerToken}}
+}
+
+settings {
+  encodeUrl: true
+}
