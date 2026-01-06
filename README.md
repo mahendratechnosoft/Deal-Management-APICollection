@@ -1,46 +1,85 @@
-# CRM API Documentation
+# 📘 Deal Management Service - API Documentation
 
-This guide explains how to set up and use the API collection for the CRM Deal Management project using **Bruno**.
+This guide explains how to set up, use, and update the API collection for the **Deal Management Service** using **Bruno**. We use Bruno to keep our API testing synced directly with our code repository.
 
-## 1. Initial Setup
+## 1. Prerequisites
 
-1.  **Install Bruno:** Download from [usebruno.com](https://www.usebruno.com/).
-2.  **Open Collection:**
-    * Launch Bruno.
-    * Click **Open Collection**.
-    * Navigate to the project folder and select the `api-collection` folder (inside `backend/`).
-3.  **Select Environment:**
-    * In the top-right corner, click the dropdown menu.
-    * Select **`deal management`**.
-    * *Note: This sets the `{{baseUrl}}` to your local server.*
+Before starting, ensure you have the following:
 
-## 2. Authentication (Important)
+1.  **Project Code:** Clone the repository to your local machine.
+    ```bash
+    git clone <YOUR_REPO_URL_HERE>
+    ```
+2.  **Bruno Client:** Download and install the tool.
+    * [Download Bruno](https://www.usebruno.com/downloads)
 
-We use **JWT Authentication** with an automated script. You do not need to manually copy tokens.
+---
 
-### How to Log In:
-1.  Expand the **`Auth`** folder in the sidebar.
-2.  Select the **`Sign In`** request.
-3.  Update the **Body** with your credentials (if needed).
+## 2. Importing the Collection
+
+You can load the "Deal management service" collection in two ways.
+
+### Option A: Open from Local Folder (Recommended)
+*Best if you are a developer working on the backend code.*
+
+1.  Open **Bruno**.
+2.  Click **"Open Collection"**.
+3.  Navigate to your project folder: `<Project_Path>/backend/api-collection` (or your specific path).
+4.  Click **Open**.
+
+### Option B: Clone Directly via Git
+*Best if you only need the APIs and not the full backend code.*
+
+1.  Open **Bruno**.
+2.  Click **"Import Collection"** > **"Clone Git Repository"**.
+3.  Enter the Project Repository URL.
+4.  Select a location on your computer to save it.
+5.  Click **Clone**.
+
+---
+
+## 3. Environment Setup (Critical)
+
+To run APIs successfully, you must select the correct environment to load the variables.
+
+1.  Look at the **top-right corner** of the Bruno window.
+2.  Click the dropdown menu (it may currently say "No Environment").
+3.  Select **`XpertBiz`**.
+
+**Verifying Variables:**
+Once `XpertBiz` is selected, the system will recognize:
+* `{{baseUrl}}`: Points to your local server (e.g., `http://localhost:8080`).
+* `{{bearerToken}}`: Automatically populated after you sign in.
+
+---
+
+## 4. How to Use & Authenticate
+
+We have automated the authentication process. You do not need to manually copy/paste tokens.
+
+### Step 1: Run Sign In
+1.  In Bruno, expand the **Auth** folder.
+2.  Select the **Sign In** request.
+3.  Update the Body with valid credentials if necessary.
 4.  Click **Run (->)**.
 
-**What happens automatically?**
-* The script captures the `jwtToken` from the response.
-* It automatically sets the `{{bearerToken}}` variable in your current session.
-* It sets your user role (Admin/Employee).
+### Step 2: Auto-Token Script
+* A script automatically runs after the response.
+* It extracts the `jwtToken`.
+* It updates the `{{bearerToken}}` variable inside the **XpertBiz** environment.
 
-## 3. Using the API
+### Step 3: Run Any API
+* Go to any other request (e.g., "Create Deal").
+* Click **Run**.
+* The request will automatically use the `{{bearerToken}}` generated in Step 2.
 
-Once you have run the **Sign In** request successfully, you can use any other API endpoint immediately.
+---
 
-* **Authorization:** All protected endpoints use `{{bearerToken}}` automatically.
-* **Variables:**
-    * `{{baseUrl}}`: Points to the backend server (e.g., `http://localhost:8080`).
-    * `{{bearerToken}}`: The current session's access token.
+## 5. Fetching Latest Changes
 
-## 4. Workflow for Updates
+Our API collection is version-controlled. When teammates add new APIs, follow these steps to see them:
 
-Our API collection is version-controlled via Git.
-
-* **To get updates:** Always run `git pull` before testing. This ensures you have the latest API definitions from the team.
-* **To share changes:** If you add a new API request, simply save it (Ctrl+S) and commit the `.bru` file to Git.
+**If you used Option A (Local Folder):**
+Run this in your terminal:
+```bash
+git pull origin master
