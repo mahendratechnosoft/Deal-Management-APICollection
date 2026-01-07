@@ -12,15 +12,16 @@ post {
 
 body:json {
   {
-      "templateName": "Update Task Status Notification",
-      "subject": "Task Status Updated: {{taskSubject}}",
-      "emailBody": "<p>Hello,</p><p>Task status is get updated please take attendsion: {{taskSubject}}. Please review the details below:</p><p><strong>Description:</strong><br>{{taskDescription}}</p><p>Best Regards,<br>{{myCompanyName}}</p>",
-      "category": "TASK",
-      "triggerEvent": "TASK_STATUS_CHANGE",
-      "isActive": true
+    "templateName": "Update Task Status Notification",
+    "subject": "Attendance: {{attendanceDate}}",
+    "emailBody": "<p>Hello,</p><p>{{attendanceDate}}</p><p>Best Regards,<br>{{myCompanyName}}</p>",
+    "category": "ATTENDANCE",
+    "triggerEvent": "ATTENDANCE_CHECK_IN",
+    "isActive": true
   }
 }
 
 settings {
   encodeUrl: true
+  timeout: 0
 }
