@@ -1,0 +1,25 @@
+meta {
+  name: {{baseUrl}}/{{role}}/getAllReminder?page=1&size=5
+  type: http
+  seq: 5
+}
+
+get {
+  url: {{baseUrl}}/{{role}}/getAllReminder?page=1&size=5
+  body: json
+  auth: bearer
+}
+
+params:query {
+  page: 1
+  size: 5
+}
+
+auth:bearer {
+  token: {{bearerToken}}
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}

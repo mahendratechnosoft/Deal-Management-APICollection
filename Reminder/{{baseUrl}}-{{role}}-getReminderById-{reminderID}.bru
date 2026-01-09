@@ -1,0 +1,20 @@
+meta {
+  name: {{baseUrl}}/{{role}}/getReminderById/{reminderID}
+  type: http
+  seq: 3
+}
+
+get {
+  url: {{baseUrl}}/{{role}}/getReminderById/c0a800ef-9b91-1357-819b-a16e03ab0268
+  body: json
+  auth: bearer
+}
+
+auth:bearer {
+  token: {{bearerToken}}
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}

@@ -12,17 +12,18 @@ put {
 
 body:json {
   {
-      "emailTemplateId": "0a390914-9b73-1db0-819b-73cec05b0000",
+      "emailTemplateId": "c0a800ef-9b91-1357-819b-a17667020270",
       "templateName": "Rich Text Proposal",
       "adminId": "ac110005-9a7c-14bd-819a-7cb6a01f0001",
-      "subject": "Proposal for {{projectName}}",
-      "emailBody": "<div style='font-family: Arial, sans-serif; color: #333;'><h1>Hello {{customerName}},</h1><p>We are pleased to submit our proposal.</p><p><b>Highlights:</b></p><ul><li>Feature A</li><li>Feature B</li></ul><br><p style='color: blue;'>Click here to view.</p></div>",
+      "subject": "Proposal  {{proposalNumber}}",
+     "emailBody": "<div style=\"font-family: Arial, Helvetica, sans-serif; color:#333; font-size:14px; line-height:1.6;\"><p>Dear <strong>{{companyName}}</strong>,</p><p>We are pleased to share our proposal with you. Below are the complete details for your reference.</p><h3 style=\"color:#1a237e; border-bottom:2px solid #1a237e; padding-bottom:5px;\">Proposal Details</h3><table width=\"100%\" cellpadding=\"6\" cellspacing=\"0\" style=\"border-collapse:collapse;\"><tr><td width=\"35%\"><strong>Proposal Number</strong></td><td>{{proposalNumber}}</td></tr><tr><td><strong>Subject</strong></td><td>{{subject}}</td></tr><tr><td><strong>Status</strong></td><td>{{status}}</td></tr><tr><td><strong>Proposal Date</strong></td><td>{{proposalDate}}</td></tr><tr><td><strong>Valid Until</strong></td><td>{{validUntil}}</td></tr><tr><td><strong>Total Amount</strong></td><td><strong>{{totalAmount}}</strong></td></tr></table><h3 style=\"color:#1a237e; border-bottom:2px solid #1a237e; padding-bottom:5px; margin-top:25px;\">Customer Details</h3><table width=\"100%\" cellpadding=\"6\" cellspacing=\"0\" style=\"border-collapse:collapse;\"><tr><td width=\"35%\"><strong>Company Name</strong></td><td>{{companyName}}</td></tr><tr><td><strong>Email</strong></td><td>{{customerEmail}}</td></tr><tr><td><strong>Mobile</strong></td><td>{{customerMobile}}</td></tr><tr><td><strong>Location</strong></td><td>{{customerCity}}, {{customerState}}, {{customerCountry}} - {{customerZip}}</td></tr></table><h3 style=\"color:#1a237e; border-bottom:2px solid #1a237e; padding-bottom:5px; margin-top:25px;\">Notes</h3><p style=\"background:#f9f9f9; padding:10px; border-left:4px solid #1a237e;\">{{notes}}</p><h3 style=\"color:#1a237e; border-bottom:2px solid #1a237e; padding-bottom:5px; margin-top:25px;\">Terms & Conditions</h3><p style=\"background:#f9f9f9; padding:10px; border-left:4px solid #1a237e;\">{{terms}}</p><p style=\"margin-top:30px;\">If you have any questions or need further clarification, feel free to contact us.</p><p>Best regards,<br><strong>{{myCompanyName}}</strong><br>Email: {{myEmail}}<br>Phone: {{myPhone}}<br>Website: <a href=\"{{myWebsite}}\" target=\"_blank\" style=\"color:#0056b3;\">{{myWebsite}}</a><br>Address: {{myAddress}}<br>GST: {{myGst}} | PAN: {{myPan}}</p></div>"
+  ,
       "category": "SALES",
       "triggerEvent": "PROPOSAL_SEND",
-      "createdAt": "2025-12-31T15:18:08.156947",
+      "createdAt": "2026-01-09T12:04:10.051883",
       "default": true,
       "active": true
-    }
+  }
 }
 
 settings {
