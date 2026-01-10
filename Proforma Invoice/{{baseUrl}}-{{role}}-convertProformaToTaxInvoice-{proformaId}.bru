@@ -1,0 +1,16 @@
+meta {
+  name: {{baseUrl}}/{{role}}/convertProformaToTaxInvoice/{proformaId}
+  type: http
+  seq: 11
+}
+
+get {
+  url: {{baseUrl}}/{{role}}/convertProformaToTaxInvoice/{proformaId}
+  body: none
+  auth: inherit
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}
