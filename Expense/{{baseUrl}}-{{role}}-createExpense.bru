@@ -1,0 +1,38 @@
+meta {
+  name: {{baseUrl}}/{{role}}/createExpense
+  type: http
+  seq: 2
+}
+
+post {
+  url: {{baseUrl}}/{{role}}/createExpense
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+    "vendorId": "c0a800ef-9ba2-1378-819b-a769d1700023",
+    "vendorName": "Mahendra Technosoft Pvt. Ltd.",
+    "expenseCategoryId": "c0a800ef-9bb0-1291-819b-b5a21270000e",
+    "expenseCategoryName": "Fuel Expenses",
+    "expenseDate": "2025-01-14",
+    "dueDate": "2025-01-20",
+    "expenseType": "GOODS",
+    "hsnSac": "9403",
+    "note": "Office Chair Purchase emp 2",
+    "currency": "INR",
+    "taxableAmount": 1000,
+    "taxInvoiceInclusive": false,
+    "taxType": "CGST_SGST",
+    "taxPercentage": 18.0,
+    "tdsPercentage": 0,
+    "status": "UNPAID",
+    "paidAmount": 0
+  }
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}

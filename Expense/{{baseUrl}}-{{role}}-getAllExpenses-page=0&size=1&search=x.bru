@@ -1,0 +1,22 @@
+meta {
+  name: {{baseUrl}}/{{role}}/getAllExpenses?page=0&size=1&search=x
+  type: http
+  seq: 28
+}
+
+get {
+  url: {{baseUrl}}/{{role}}/getAllExpenses?page=0&size=10
+  body: none
+  auth: inherit
+}
+
+params:query {
+  page: 0
+  size: 10
+  ~search: x
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}
