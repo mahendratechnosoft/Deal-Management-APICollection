@@ -1,0 +1,21 @@
+meta {
+  name: {{baseUrl}}/{{role}}/isCategoryExistInGroup
+  type: http
+  seq: 5
+}
+
+get {
+  url: {{baseUrl}}/{{role}}/isCategoryExistInGroup?categoryGroup=Variable Expenses&categoryName=Electricity Charges
+  body: none
+  auth: inherit
+}
+
+params:query {
+  categoryGroup: Variable Expenses
+  categoryName: Electricity Charges
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}

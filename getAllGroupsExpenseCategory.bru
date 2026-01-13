@@ -1,0 +1,16 @@
+meta {
+  name: getAllGroupsExpenseCategory
+  type: http
+  seq: 29
+}
+
+get {
+  url: {{baseUrl}}/{{role}}/getAllGroupsExpenseCategory
+  body: none
+  auth: inherit
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}

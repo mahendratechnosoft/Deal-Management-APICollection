@@ -1,0 +1,16 @@
+meta {
+  name: {{baseUrl}}/{{role}}/getAllExpenseCategories
+  type: http
+  seq: 2
+}
+
+get {
+  url: {{baseUrl}}/{{role}}/getAllExpenseCategories
+  body: none
+  auth: inherit
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}
