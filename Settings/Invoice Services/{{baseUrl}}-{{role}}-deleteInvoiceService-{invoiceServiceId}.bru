@@ -1,0 +1,20 @@
+meta {
+  name: {{baseUrl}}/{{role}}/deleteInvoiceService/{invoiceServiceId}
+  type: http
+  seq: 2
+}
+
+delete {
+  url: {{baseUrl}}/{{role}}/deleteInvoiceService/c0a800ef-9bbc-17bc-819b-bc1db6a30004
+  body: none
+  auth: bearer
+}
+
+auth:bearer {
+  token: {{bearerToken}}
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}

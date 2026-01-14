@@ -1,0 +1,27 @@
+meta {
+  name: {{baseUrl}}/{{role}}/updateInvoiceService
+  type: http
+  seq: 1
+}
+
+post {
+  url: {{baseUrl}}/{{role}}/updateInvoiceService
+  body: json
+  auth: bearer
+}
+
+auth:bearer {
+  token: {{bearerToken}}
+}
+
+body:json {
+  {
+    "serviceName":"Marketing Service Charges",
+    "serviceCode":"MSC"
+  }
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}

@@ -1,0 +1,20 @@
+meta {
+  name: {{baseUrl}}/{{role}}/isServiceCodeUnique?serviceCode=AMC
+  type: http
+  seq: 4
+}
+
+get {
+  url: {{baseUrl}}/{{role}}/isServiceCodeUnique?serviceCode=AMC
+  body: none
+  auth: inherit
+}
+
+params:query {
+  serviceCode: AMC
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}
