@@ -1,0 +1,25 @@
+meta {
+  name: {{baseUrl}}/{{role}}/changeInvoiceServiceStatus?invoiceServiceId=c0a800ef-9bbc-17bc-819b-bc1cdbfd0002&status=true
+  type: http
+  seq: 2
+}
+
+put {
+  url: {{baseUrl}}/{{role}}/changeInvoiceServiceStatus?invoiceServiceId=c0a800ef-9bbc-17bc-819b-bc1cdbfd0002&status=true
+  body: none
+  auth: bearer
+}
+
+params:query {
+  invoiceServiceId: c0a800ef-9bbc-17bc-819b-bc1cdbfd0002
+  status: true
+}
+
+auth:bearer {
+  token: {{bearerToken}}
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}

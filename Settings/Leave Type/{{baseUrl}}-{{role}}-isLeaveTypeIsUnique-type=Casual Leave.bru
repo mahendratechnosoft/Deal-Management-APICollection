@@ -1,0 +1,20 @@
+meta {
+  name: {{baseUrl}}/{{role}}/isLeaveTypeIsUnique?type=Casual Leave
+  type: http
+  seq: 4
+}
+
+get {
+  url: {{baseUrl}}/{{role}}/isLeaveTypeIsUnique?type=Casual Leave
+  body: none
+  auth: inherit
+}
+
+params:query {
+  type: Casual Leave
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}

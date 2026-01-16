@@ -1,0 +1,26 @@
+meta {
+  name: {{baseUrl}}/employee/applyForLeave
+  type: http
+  seq: 1
+}
+
+post {
+  url: {{baseUrl}}/{{role}}/applyForLeave
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+    "leaveTypeId":"c0a800ef-9bbc-17bc-819b-c1b8db8d00670",
+    "leaveTypeName":"Demo Leave",
+    "startDate": "2026-01-22",
+    "endDate": "2026-01-22",
+    "reason": "Family function emp 2"
+  }
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}

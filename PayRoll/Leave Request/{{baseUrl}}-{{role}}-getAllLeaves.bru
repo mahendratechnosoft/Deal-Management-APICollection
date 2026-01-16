@@ -1,0 +1,24 @@
+meta {
+  name: {{baseUrl}}/{{role}}/getAllLeaves
+  type: http
+  seq: 3
+}
+
+get {
+  url: {{baseUrl}}/{{role}}/getAllLeaves?page=0&size=10
+  body: none
+  auth: inherit
+}
+
+params:query {
+  page: 0
+  size: 10
+  ~status: PENDING
+  ~search: 
+  ~ownLeaves: true
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}
