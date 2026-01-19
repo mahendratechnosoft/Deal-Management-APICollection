@@ -1,0 +1,21 @@
+meta {
+  name: {{baseUrl}}/{{role}}/changeExpenseCategoryStatus
+  type: http
+  seq: 6
+}
+
+put {
+  url: {{baseUrl}}/{{role}}/changeExpenseCategoryStatus?categoryId=c0a800ef-9bb0-1291-819b-b24e350e000b&active=true
+  body: none
+  auth: inherit
+}
+
+params:query {
+  categoryId: c0a800ef-9bb0-1291-819b-b24e350e000b
+  active: true
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}
