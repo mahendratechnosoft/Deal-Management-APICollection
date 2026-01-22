@@ -5,9 +5,13 @@ meta {
 }
 
 get {
-  url: {{baseUrl}}/{{role}}/getAllGroupsExpenseCategory
+  url: {{baseUrl}}/{{role}}/getAllGroupsExpenseCategory?type=direct
   body: none
   auth: inherit
+}
+
+params:query {
+  type: direct
 }
 
 settings {
