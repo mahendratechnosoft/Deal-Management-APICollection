@@ -5,9 +5,14 @@ meta {
 }
 
 get {
-  url: {{baseUrl}}/{{role}}/getCalendarForYear/2024
+  url: {{baseUrl}}/{{role}}/getCalendar?startDate=2024-04-01&endDate=2025-03-31
   body: none
   auth: inherit
+}
+
+params:query {
+  startDate: 2024-04-01
+  endDate: 2025-03-31
 }
 
 settings {
