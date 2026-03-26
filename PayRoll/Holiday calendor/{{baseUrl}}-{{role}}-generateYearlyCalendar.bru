@@ -12,7 +12,8 @@ post {
 
 body:json {
   {
-    "year": 2024,
+    "startDate": "2024-04-01",
+    "endDate": "2025-03-31",
     "standardWorkingDays": [
       "MONDAY",
       "TUESDAY",
@@ -22,8 +23,9 @@ body:json {
       "SATURDAY"
     ],
     "alternateRule": {
+      "type": "ALTERNATE",
       "day": "SATURDAY",
-      "offWeeks": [2, 4]
+      "alternatePatternStartDate": "2024-04-06"
     }
   }
 }
@@ -31,4 +33,91 @@ body:json {
 settings {
   encodeUrl: true
   timeout: 0
+}
+
+docs {
+  # Generate Yearly Calendar
+  
+  Generates company holiday calendar entries for standard weekly off-days and custom alternate off-days within a specified date range.
+  
+  **Method:** `POST`  
+  **Endpoint:** `/generateYearlyCalendar`
+  
+  ---
+  
+  ## 📝 Description
+  
+  This API calculates and saves weekly off-days for a given period. It supports both standard calendar years and financial years. It also handles two types of alternate working rules:
+  1. **Fixed Monthly Weeks:** (e.g., Off on the 2nd and 4th Saturday of every month).
+  2. **Continuous Alternate Weeks:** (e.g., Off every other week starting from a specific anchor date, regardless of the month).
+  
+  > ⚠️ **Warning:** Calling this API will **delete** all existing `WEEKEND` entries in the database for the specified `startDate` to `endDate` range before generating the new ones.
+  
+  ---
+  
+  ## 🛠️ Payload Definition
+  
+  | Field | Type | Description |
+  | :--- | :--- | :--- |
+  | `startDate` | `String` | Start date of the calendar generation in `YYYY-MM-DD` format. |
+  | `endDate` | `String` | End date of the calendar generation in `YYYY-MM-DD` format. |
+  | `standardWorkingDays` | `Array[String]` | Days the office is working. Any day *not* in this list is marked as a regular weekly off. Allowed values: `MONDAY`, `TUESDAY`, `WEDNESDAY`, `THURSDAY`, `FRIDAY`, `SATURDAY`, `SUNDAY`. |
+  | `alternateRule` | `Object` | *(Optional)* Defines specific rules for days that alternate between working and off. |
+  
+  ### Alternate Rule Object
+  | Field | Type | Description |
+  | :--- | :--- | :--- |
+  | `type` | `String` | Determines the logic used. Allowed values: `FIXED_MONTHLY`, `ALTERNATE`. |
+  | `day` | `String` | The day of the week the rule applies to (e.g., `SATURDAY`). |
+  | `fixedWeeks` | `Array[Int]` | *(Required if type is FIXED_MONTHLY)* The specific weeks of the month to take off (e.g., `[2, 4]`). |
+  | `alternatePatternStartDate` | `String` | *(Required if type is ALTERNATE)* The anchor date (`YYYY-MM-DD`) when the bi-weekly off cycle begins. |
+  
+  ---
+  
+  ## 💡 Request Examples
+  
+  ### Scenario 1: Fixed Monthly Offs (2nd & 4th Saturday)
+  Use this when employees get specific weeks of the month off.
+  
+  ```json
+  {
+    "startDate": "2024-04-01",
+    "endDate": "2025-03-31",
+    "standardWorkingDays": [
+      "MONDAY", "TUESDAY", "WEDNESDAY", "THURSDAY", "FRIDAY", "SATURDAY"
+    ],
+    "alternateRule": {
+      "type": "FIXED_MONTHLY",
+      "day": "SATURDAY",
+      "fixedWeeks": [2, 4]
+    }
+  }
+  ```
+  
+  
+  
+  ### Scenario: Continuous Alternate Offs (Bi-Weekly)
+  
+  Use this configuration when employees get every other week off, starting from a specific anchor date, flowing continuously across months and years.
+  
+  **Example Payload:**
+  ```json
+  {
+    "startDate": "2024-04-01",
+    "endDate": "2025-03-31",
+    "standardWorkingDays": [
+      "MONDAY", 
+      "TUESDAY", 
+      "WEDNESDAY", 
+      "THURSDAY", 
+      "FRIDAY", 
+      "SATURDAY"
+    ],
+    "alternateRule": {
+      "type": "ALTERNATE",
+      "day": "SATURDAY",
+      "alternatePatternStartDate": "2024-04-06"
+    }
+  }
+  ```
 }
