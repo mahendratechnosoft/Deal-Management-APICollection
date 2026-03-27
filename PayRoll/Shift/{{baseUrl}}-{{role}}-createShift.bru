@@ -1,0 +1,26 @@
+meta {
+  name: {{baseUrl}}/{{role}}/createShift
+  type: http
+  seq: 1
+}
+
+post {
+  url: {{baseUrl}}/{{role}}/createShift
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+    "shiftName": "Night Shift",
+    "shiftStartTime": "17:00:00",
+    "shiftEndTime": "02:00:00",
+    "lunchBreakDurationMinutes": 30,
+    "description": "Regular Night shift"
+  }
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}

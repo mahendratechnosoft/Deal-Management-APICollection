@@ -1,0 +1,20 @@
+meta {
+  name: {{baseUrl}}/{{role}}/getAllShifts
+  type: http
+  seq: 2
+}
+
+get {
+  url: {{baseUrl}}/{{role}}/getAllShifts
+  body: none
+  auth: inherit
+}
+
+params:query {
+  ~search: morning shift
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}

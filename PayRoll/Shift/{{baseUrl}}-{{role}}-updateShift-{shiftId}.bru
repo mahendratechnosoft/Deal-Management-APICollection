@@ -1,0 +1,26 @@
+meta {
+  name: {{baseUrl}}/{{role}}/updateShift/{shiftId}
+  type: http
+  seq: 3
+}
+
+put {
+  url: {{baseUrl}}/{{role}}/updateShift/c0a8012b-9d29-1ec2-819d-2a2f35fc0000
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+    "shiftName": "Morning Shift",
+    "shiftStartTime": "09:00:00",
+    "shiftEndTime": "18:00:00",
+    "lunchBreakDurationMinutes": 30,
+    "description": "Regular morning shift"
+  }
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}
