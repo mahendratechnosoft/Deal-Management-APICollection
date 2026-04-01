@@ -1,0 +1,23 @@
+meta {
+  name: {{baseUrl}}/{{role}}/processLeaveRequest/{leaveRequestId}
+  type: http
+  seq: 4
+}
+
+put {
+  url: {{baseUrl}}/{{role}}/processLeaveRequest/c0a8012c-9d43-1d1d-819d-43f209660002
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+    "newStatus":"REJECTED",
+    "remarks":"not good resion approve"
+  }
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}

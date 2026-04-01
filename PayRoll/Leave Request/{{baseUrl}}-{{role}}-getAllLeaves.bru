@@ -5,17 +5,20 @@ meta {
 }
 
 get {
-  url: {{baseUrl}}/{{role}}/getAllLeaves?page=0&size=10
+  url: {{baseUrl}}/{{role}}/getAllLeaves?page=0&size=11
   body: none
   auth: inherit
 }
 
 params:query {
   page: 0
-  size: 10
+  size: 11
+  ~viewType: APPROVALS
   ~status: PENDING
-  ~search: 
-  ~ownLeaves: true
+  ~search: emp 1
+  ~startDate: 2026-04-01
+  ~endDate: 2026-04-03
+  ~leaveType: Casual Leaves
 }
 
 settings {

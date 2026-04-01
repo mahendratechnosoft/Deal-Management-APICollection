@@ -1,0 +1,23 @@
+meta {
+  name: {{baseUrl}}/{{role}}/updatePaidLeave/{paidLeaveId}
+  type: http
+  seq: 2
+}
+
+put {
+  url: {{baseUrl}}/{{role}}/updatePaidLeave/c0a8012c-9d43-15be-819d-4306aaa30000
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+    "type":"Casual Leaves",
+    "noOfLeaves":12
+  }
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}
