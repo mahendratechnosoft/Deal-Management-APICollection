@@ -1,0 +1,25 @@
+meta {
+  name: {{baseUrl}}/{{role}}/updateLeaveRequest/{leaveRequestId}
+  type: http
+  seq: 5
+}
+
+put {
+  url: {{baseUrl}}/{{role}}/updateLeaveRequest/c0a8012c-9d48-1bbd-819d-485c48600000
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+    "leaveType": "Casual Leaves",
+    "startDate": "2026-04-01",
+    "endDate": "2026-04-03",
+    "reason": "Fever and rest required upated"
+  }
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}

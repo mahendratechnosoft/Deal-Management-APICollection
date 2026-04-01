@@ -5,7 +5,7 @@ meta {
 }
 
 get {
-  url: {{baseUrl}}/{{role}}/getAllLeaves?page=0&size=11
+  url: {{baseUrl}}/{{role}}/getAllLeaves?page=0&size=11&viewType=APPROVALS
   body: none
   auth: inherit
 }
@@ -13,7 +13,7 @@ get {
 params:query {
   page: 0
   size: 11
-  ~viewType: APPROVALS
+  viewType: APPROVALS
   ~status: PENDING
   ~search: emp 1
   ~startDate: 2026-04-01
