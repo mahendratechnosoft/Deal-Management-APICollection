@@ -1,0 +1,15 @@
+meta {
+  name: {{baseUrl}}/{{role}}/getLeaveSettings
+  type: http
+  seq: 1
+}
+
+get {
+  url: {{baseUrl}}/{{role}}/getLeaveSettings
+  body: none
+  auth: inherit
+}
+
+settings {
+  encodeUrl: true
+}

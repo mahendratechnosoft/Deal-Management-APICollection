@@ -1,0 +1,28 @@
+meta {
+  name: {{baseUrl}}/{{role}}/saveLeaveSettings
+  type: http
+  seq: 2
+}
+
+post {
+  url: {{baseUrl}}/{{role}}/saveLeaveSettings
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+    "startMonth": 4,
+    "startDay": 1,
+    "leaveDistribution": "MONTHLY_EARNED",
+    "maxLeavesPerMonth": 3,
+    "maxLeavesInRow": 2,
+    "canCarryForwardLeaves": true,
+    "maxCarryForwardDays": 5
+  }
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}
