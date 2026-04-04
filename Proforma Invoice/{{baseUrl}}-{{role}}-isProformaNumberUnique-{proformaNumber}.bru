@@ -1,0 +1,20 @@
+meta {
+  name: {{baseUrl}}/{{role}}/isProformaNumberUnique/{proformaNumber}
+  type: http
+  seq: 14
+}
+
+get {
+  url: {{baseUrl}}/{{role}}/isProformaNumberUnique/69?date=2026-04-03
+  body: none
+  auth: inherit
+}
+
+params:query {
+  date: 2026-04-03
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}

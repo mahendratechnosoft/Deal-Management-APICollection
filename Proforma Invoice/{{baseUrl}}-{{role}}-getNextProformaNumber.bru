@@ -1,0 +1,20 @@
+meta {
+  name: {{baseUrl}}/{{role}}/getNextProformaNumber
+  type: http
+  seq: 15
+}
+
+get {
+  url: {{baseUrl}}/{{role}}/getNextProformaNumber?date=2027-04-03
+  body: none
+  auth: inherit
+}
+
+params:query {
+  date: 2027-04-03
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}
