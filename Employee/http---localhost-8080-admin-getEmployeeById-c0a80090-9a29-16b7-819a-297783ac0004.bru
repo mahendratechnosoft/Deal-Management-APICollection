@@ -5,7 +5,7 @@ meta {
 }
 
 get {
-  url: http://localhost:9091/admin/getEmployeeById/c0a800ef-9aa4-10d4-819a-a4d8276e0018
+  url: {{baseUrl}}/{{role}}/getEmployeeById/c0a800ef-9a76-1de1-819a-76c863fc000d
   body: none
   auth: bearer
 }
@@ -16,4 +16,5 @@ auth:bearer {
 
 settings {
   encodeUrl: true
+  timeout: 0
 }

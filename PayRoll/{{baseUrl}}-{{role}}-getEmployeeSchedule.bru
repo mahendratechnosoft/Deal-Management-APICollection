@@ -1,0 +1,21 @@
+meta {
+  name: {{baseUrl}}/{{role}}/getEmployeeSchedule
+  type: http
+  seq: 3
+}
+
+get {
+  url: {{baseUrl}}/{{role}}/getEmployeeSchedule?startDate=2024-04-01&endDate=2024-05-01
+  body: none
+  auth: inherit
+}
+
+params:query {
+  startDate: 2024-04-01
+  endDate: 2024-05-01
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}

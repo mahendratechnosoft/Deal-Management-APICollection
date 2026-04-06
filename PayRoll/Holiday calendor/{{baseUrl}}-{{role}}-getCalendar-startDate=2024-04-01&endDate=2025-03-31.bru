@@ -1,11 +1,11 @@
 meta {
-  name: {{baseUrl}}/{{role}}/getCalendarForYear/{year}
+  name: {{baseUrl}}/{{role}}/getCalendar?startDate=2024-04-01&endDate=2025-03-31
   type: http
   seq: 1
 }
 
 get {
-  url: {{baseUrl}}/{{role}}/getCalendar?startDate=2024-04-01&endDate=2025-03-31&type=HOLIDAY
+  url: {{baseUrl}}/{{role}}/getCalendar?startDate=2024-04-01&endDate=2025-03-31
   body: none
   auth: inherit
 }
@@ -13,7 +13,7 @@ get {
 params:query {
   startDate: 2024-04-01
   endDate: 2025-03-31
-  type: HOLIDAY
+  ~type: HOLIDAY
 }
 
 settings {

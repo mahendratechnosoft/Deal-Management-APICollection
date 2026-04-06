@@ -4,18 +4,40 @@ meta {
   seq: 6
 }
 
-get {
-  url: {{baseUrl}}/admin/getAllTaskList/0/10?status=IN_PROGRESS&listType=ASSIGNED
-  body: none
+put {
+  url: {{baseUrl}}/admin/getAllTaskList/0/10?status=IN_PROGRESS
+  body: json
   auth: inherit
 }
 
 params:query {
   status: IN_PROGRESS
-  listType: ASSIGNED
+  ~listType: ASSIGNED
   ~search: Fix
+}
+
+body:json {
+  {
+    "relatedToId": [
+      "Non selected",
+      "ac110005-9a7c-14bd-819a-7cba9256000b",
+      "ac110005-9add-1891-819a-dda683b00003",
+      "ac110005-9add-1891-819a-dda683b00003"
+    ],
+    "assignEmployeeIds": [
+      "ac110005-9ae3-17ae-819a-e3fd13d60004",
+      "ac110005-9ae3-17ae-819a-e3fd13d60004",
+      "ac110005-9b0b-1532-819b-0c0efdd50004"
+    ],
+    "followerId": [
+      "ac110005-9b06-10b3-819b-06e4c1af0005",
+      "ac110005-9b0b-1532-819b-0c0e865a0001",
+      "ac110005-9b0b-1532-819b-0c0e865a0001"
+    ]
+  }
 }
 
 settings {
   encodeUrl: true
+  timeout: 0
 }
