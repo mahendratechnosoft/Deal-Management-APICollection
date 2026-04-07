@@ -1,0 +1,78 @@
+meta {
+  name: {{baseUrl}}/media/image/upload
+  type: http
+  seq: 1
+}
+
+post {
+  url: {{baseUrl}}/media/image/upload
+  body: multipartForm
+  auth: inherit
+}
+
+body:multipart-form {
+  file: @file(D:\Testing Images\donorDemoFull.jpg)
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}
+
+docs {
+  # 📤 Upload Media API
+  
+  This API endpoint allows the frontend client to upload media files (Images, Documents, Videos) to the Xpertibiz CRM server. 
+  
+  The server validates the file, stores it safely on the disk, and returns a detailed JSON object containing the saved filename and an instant preview URL.
+  
+  ### **HTTP Request**
+  `POST {{baseUrl}}/media/{category}/upload`
+  
+  
+  ### **Path Parameters**
+  | Parameter | Type | Description |
+  | :--- | :--- | :--- |
+  | `category` | `string` | **Required.** The type of media being uploaded. Accepted values: `image`, `document`, `video`. |
+  
+  ### **Headers**
+  | Key | Value | Description |
+  | :--- | :--- | :--- |
+  | `Content-Type` | `multipart/form-data` | **Required.** Must be sent as form data to handle binary files. |
+  
+  ### **Request Body (Form-Data)**
+  | Key | Type | Description |
+  | :--- | :--- | :--- |
+  | `file` | `File` | **Required.** The binary file to be uploaded. |
+  
+  ---
+  
+  ## 🛡️ Validation Rules & Limits
+  The backend automatically enforces these rules based on the `category` provided in the URL:
+  
+  | Category | Max Size | Allowed Formats (MIME Types) |
+  | :--- | :--- | :--- |
+  | **`image`** | 5 MB | `.jpg`, `.jpeg`, `.png`, `.webp`, `.gif` |
+  | **`document`**| 20 MB | `.pdf`, `.doc`, `.docx`, `.csv`, `.xls`, `.xlsx` |
+  | **`video`** | 50 MB | `.mp4`, `.webm`, `.avi`, `.mkv` |
+  
+  ---
+  
+  ## 💻 Code Examples
+  
+  ### Request Example (JavaScript / Fetch)
+  ```javascript
+  const fileInput = document.querySelector('input[type="file"]');
+  const formData = new FormData();
+  
+  // Append the file with the key 'file'
+  formData.append('file', fileInput.files[0]);
+  
+  fetch('[https://api.xpertibiz.com/api/media/image/upload](https://api.xpertibiz.com/api/media/image/upload)', {
+      method: 'POST',
+      body: formData // The browser automatically sets the correct multipart/form-data boundaries
+  })
+  .then(response => response.json())
+  .then(data => console.log(data))
+  .catch(error => console.error('Error:', error));
+}

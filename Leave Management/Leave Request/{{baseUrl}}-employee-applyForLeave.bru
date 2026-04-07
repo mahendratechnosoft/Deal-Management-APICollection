@@ -1,0 +1,131 @@
+meta {
+  name: {{baseUrl}}/employee/applyForLeave
+  type: http
+  seq: 1
+}
+
+post {
+  url: {{baseUrl}}/{{role}}/applyForLeave
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+    "assignToId": "ac110005-9b0b-1532-819b-0c0e865a0001",
+    "assignToName": "empQA2",
+    "leaveType": "Casual Leaves",
+    "reason": "Attending a family wedding out of town.",
+    "attachedFileUrl":"86208907-2b5f-4265-bef1-6aa931c7b48f_3s1Special.jpg",
+    "handoverId":"ac110005-9b0b-1532-819b-0c0e865a0001",
+    "handoverName":"empQA2",
+    "leaveDays": [
+      {
+        "date": "2026-04-18",
+        "leaveDayType": "HALF_DAY"
+      },
+      {
+        "date": "2026-04-20",
+        "leaveDayType": "FULL_DAY"
+      }
+    ]
+  }
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}
+
+example {
+  name: example 1
+  description: check this response if you dont want to call the api
+  
+  request: {
+    url: {{baseUrl}}/{{role}}/applyForLeave
+    method: POST
+    mode: json
+    body:json: {
+      {
+        "assignToId": "ac110005-9b0b-1532-819b-0c0e865a0001",
+        "assignToName": "empQA2",
+        "leaveType": "Casual Leaves",
+        "reason": "Attending a family wedding out of town.",
+        "attachedFileUrl":"86208907-2b5f-4265-bef1-6aa931c7b48f_3s1Special.jpg",
+        "handoverId":"ac110005-9b0b-1532-819b-0c0e865a0001",
+        "handoverName":"empQA2",
+        "leaveDays": [
+          {
+            "date": "2026-04-18",
+            "leaveDayType": "HALF_DAY"
+          },
+          {
+            "date": "2026-04-20",
+            "leaveDayType": "FULL_DAY"
+          }
+        ]
+      }
+    }
+  }
+  
+  response: {
+    headers: {
+      vary: Origin, Access-Control-Request-Method, Access-Control-Request-Headers
+      x-content-type-options: nosniff
+      x-xss-protection: 0
+      cache-control: no-cache, no-store, max-age=0, must-revalidate
+      pragma: no-cache
+      expires: 0
+      x-frame-options: DENY
+      content-type: application/json
+      transfer-encoding: chunked
+      date: Tue, 07 Apr 2026 09:45:26 GMT
+      keep-alive: timeout=60
+      connection: keep-alive
+    }
+  
+    status: {
+      code: 200
+      text: OK
+    }
+  
+    body: {
+      type: json
+      content: '''
+        {
+          "leaveRequestId": "c0a80114-9d67-1798-819d-675522c40000",
+          "adminId": "c0a800ef-9a76-1de1-819a-76c0f7840001",
+          "creatorId": "c0a800ef-9a76-1de1-819a-76c863fc000d",
+          "creatorName": "emp 1",
+          "assignToId": "ac110005-9b0b-1532-819b-0c0e865a0001",
+          "assignToName": "empQA2",
+          "leaveType": "Casual Leaves",
+          "startDate": "2026-04-18",
+          "endDate": "2026-04-20",
+          "leaveDays": [
+            {
+              "leaveDayId": "c0a80114-9d67-1798-819d-675523110001",
+              "leaveDate": "2026-04-18",
+              "leaveDayType": "WEEKEND",
+              "status": "ACTIVE"
+            },
+            {
+              "leaveDayId": "c0a80114-9d67-1798-819d-675523120002",
+              "leaveDate": "2026-04-20",
+              "leaveDayType": "FULL_DAY",
+              "status": "ACTIVE"
+            }
+          ],
+          "reason": "Attending a family wedding out of town.",
+          "status": "PENDING",
+          "remarks": "[07-Apr-2026 15:15] Leave request submitted by emp 1 (Employee) - Note: Attending a family wedding out of town.",
+          "attachedFileUrl": "86208907-2b5f-4265-bef1-6aa931c7b48f_3s1Special.jpg",
+          "handoverId": "ac110005-9b0b-1532-819b-0c0e865a0001",
+          "handoverName": "empQA2",
+          "createdAt": "2026-04-07T15:15:25.9671182",
+          "updatedAt": "2026-04-07T15:15:25.9671182"
+        }
+      '''
+    }
+  }
+}
