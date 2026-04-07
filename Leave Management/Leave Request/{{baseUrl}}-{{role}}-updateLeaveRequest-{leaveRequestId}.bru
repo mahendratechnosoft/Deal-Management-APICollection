@@ -5,17 +5,44 @@ meta {
 }
 
 put {
-  url: {{baseUrl}}/{{role}}/updateLeaveRequest/c0a8012c-9d48-1bbd-819d-485c48600000
+  url: {{baseUrl}}/{{role}}/updateLeaveRequest/c0a80114-9d67-1798-819d-675522c40000
   body: json
   auth: inherit
 }
 
 body:json {
   {
+    "leaveRequestId": "c0a80114-9d67-1798-819d-675522c40000",
+    "adminId": "c0a800ef-9a76-1de1-819a-76c0f7840001",
+    "creatorId": "c0a800ef-9a76-1de1-819a-76c863fc000d",
+    "creatorName": "emp 1",
+    "assignToId": "ac110005-9b0b-1532-819b-0c0e865a0001",
+    "assignToName": "empQA2",
     "leaveType": "Casual Leaves",
-    "startDate": "2026-04-01",
-    "endDate": "2026-04-03",
-    "reason": "Fever and rest required upated"
+    "startDate": "2026-04-18",
+    "endDate": "2026-04-20",
+    "leaveDays": [
+      {
+        "leaveDayId": "c0a80114-9d67-1798-819d-675523110001",
+        "date": "2026-04-18",
+        "leaveDayType": "WEEKEND",
+        "status": "ACTIVE"
+      },
+      {
+        "leaveDayId": "c0a80114-9d67-1798-819d-675523120002",
+        "date": "2026-04-20",
+        "leaveDayType": "FULL_DAY",
+        "status": "ACTIVE"
+      }
+    ],
+    "reason": "Attending a family wedding out of town.",
+    "status": "PENDING",
+    "remarks": "[07-Apr-2026 15:15] Leave request submitted by emp 1 (Employee) - Note: Attending a family wedding out of town.",
+    "attachedFileUrl": null,
+    "handoverId": "ac110005-9b0b-1532-819b-0c0e865a0001",
+    "handoverName": "empQA2",
+    "createdAt": "2026-04-07T15:15:25.967118",
+    "updatedAt": "2026-04-07T15:15:25.967118"
   }
 }
 

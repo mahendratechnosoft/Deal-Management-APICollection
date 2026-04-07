@@ -1,0 +1,26 @@
+meta {
+  name: {{baseUrl}}/{{role}}/saveTimesheetSetting
+  type: http
+  seq: 1
+}
+
+put {
+  url: {{baseUrl}}/{{role}}/saveTimesheetSetting
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+    "lateMarkAfterMinutes": 15,
+    "halfDayAfterMinutes": 240,
+    "fullDayAfterMinutes": 480,
+    "maxLateMarksAllowed": 3,
+    "lateMarkType": "MONTH"
+  }
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}

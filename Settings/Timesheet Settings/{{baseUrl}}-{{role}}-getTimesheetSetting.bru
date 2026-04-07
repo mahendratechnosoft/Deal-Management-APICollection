@@ -1,0 +1,16 @@
+meta {
+  name: {{baseUrl}}/{{role}}/getTimesheetSetting
+  type: http
+  seq: 2
+}
+
+get {
+  url: {{baseUrl}}/{{role}}/getTimesheetSetting
+  body: none
+  auth: inherit
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}
