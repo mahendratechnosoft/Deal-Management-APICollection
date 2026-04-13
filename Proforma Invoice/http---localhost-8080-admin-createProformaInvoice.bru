@@ -17,63 +17,76 @@ auth:bearer {
 body:json {
   {
     "proformaInvoiceInfo": {
-      "proformaInvoiceNumber": 1001,
-      "formatedProformaInvoiceNumber": "P_INV-2024/001",
+      "proformaInvoiceNumber": 1003,
+      "formatedProformaInvoiceNumber": "P_INV-2024/003",
       "currencyType": "INR",
-      "discount": 10.0,
-      "dueDate": "2024-05-01",
-      "proformaInvoiceDate": "2024-04-15",
+      "discount": 0.0,
       "status": "Unpaid",
-      "relatedTo": "customer",
-      "relatedId": "CUST-123",
-      "companyName": "Acme Corp",
-      "email": "contact@acmecorp.com",
-      "billingStreet": "123 Main St",
-      "billingCity": "Mumbai",
-      "billingState": "Maharashtra",
-      "billingCountry": "India",
-      "billingZipCode": "400001",
+      "companyName": "Global Enterprises",
       "proformaType": "PROFORMA",
+      "taxCalculationMode": "ITEM_LEVEL",
       
-      "subTotal": 1000.0,
-      "totalTaxAmount": 162.0,
-      "totalAmount": 1062.0,
+      "subTotal": 3500.0,
+      "totalTaxAmount": 470.0,
+      "totalAmount": 3970.0,
       "paidAmount": 0.0,
-      "taxCalculationMode": "INVOICE_LEVEL",
       
       "taxSummaries": [
         {
           "taxName": "CGST",
           "taxRate": 9.0,
-          "totalTaxAmount": 81.0
+          "totalTaxAmount": 315.0
         },
         {
           "taxName": "SGST",
           "taxRate": 9.0,
-          "totalTaxAmount": 81.0
+          "totalTaxAmount": 135.0
+        },
+        {
+          "taxName": "Kerala Flood Cess",
+          "taxRate": 1.0,
+          "totalTaxAmount": 20.0
         }
-      ],
-      
-      "paymentProfileIds": ["PAY-PROF-1"]
+      ]
     },
     "proformaInvoiceContents": [
       {
-        "item": "Web Development Services",
-        "description": "Frontend and Backend development",
-        "quantity": 1,
-        "rate": 600.0,
-        "itemSubTotal": 600.0,
-        "itemTotalAmount": 600.0,
-        "appliedTaxes": []
+        "item": "Software License",
+        "quantity": 2,
+        "rate": 1000.0,
+        "subTotal": 2000.0,
+        "total": 2200.0,
+        "appliedTaxes": [
+          {
+            "taxName": "CGST",
+            "taxRate": 9.0,
+            "taxAmount": 180.0
+          },
+          {
+            "taxName": "Kerala Flood Cess",
+            "taxRate": 1.0,
+            "taxAmount": 20.0
+          }
+        ]
       },
       {
-        "item": "Server Hosting",
-        "description": "1 Year Cloud Hosting",
+        "item": "Consulting Setup",
         "quantity": 1,
-        "rate": 400.0,
-        "itemSubTotal": 400.0,
-        "itemTotalAmount": 400.0,
-        "appliedTaxes": []
+        "rate": 1500.0,
+        "subTotal": 1500.0,
+        "total": 1770.0,
+        "appliedTaxes": [
+          {
+            "taxName": "CGST",
+            "taxRate": 9.0,
+            "taxAmount": 135.0
+          },
+          {
+            "taxName": "SGST",
+            "taxRate": 9.0,
+            "taxAmount": 135.0
+          }
+        ]
       }
     ]
   }
@@ -111,13 +124,13 @@ example {
           "billingCountry": "India",
           "billingZipCode": "400001",
           "proformaType": "PROFORMA",
-          
+              
           "subTotal": 1000.0,
           "totalTaxAmount": 162.0,
           "totalAmount": 1062.0,
           "paidAmount": 0.0,
           "taxCalculationMode": "INVOICE_LEVEL",
-          
+              
           "taxSummaries": [
             {
               "taxName": "CGST",
@@ -130,7 +143,7 @@ example {
               "totalTaxAmount": 81.0
             }
           ],
-          
+              
           "paymentProfileIds": ["PAY-PROF-1"]
         },
         "proformaInvoiceContents": [
@@ -274,6 +287,249 @@ example {
               "sacCode": null,
               "itemId": null,
               "createdAt": "2026-04-13T16:13:49.1429797"
+            }
+          ],
+          "paymentProfiles": null
+        }
+      '''
+    }
+  }
+}
+
+example {
+  name: ITEM_LEVEL
+  
+  request: {
+    url: {{baseUrl}}/admin/createProformaInvoice
+    method: POST
+    mode: json
+    body:json: {
+      {
+        "proformaInvoiceInfo": {
+          "proformaInvoiceNumber": 1003,
+          "formatedProformaInvoiceNumber": "P_INV-2024/003",
+          "currencyType": "INR",
+          "discount": 0.0,
+          "status": "Unpaid",
+          "companyName": "Global Enterprises",
+          "proformaType": "PROFORMA",
+          "taxCalculationMode": "ITEM_LEVEL",
+          
+          "subTotal": 3500.0,
+          "totalTaxAmount": 470.0,
+          "totalAmount": 3970.0,
+          "paidAmount": 0.0,
+          
+          "taxSummaries": [
+            {
+              "taxName": "CGST",
+              "taxRate": 9.0,
+              "totalTaxAmount": 315.0
+            },
+            {
+              "taxName": "SGST",
+              "taxRate": 9.0,
+              "totalTaxAmount": 135.0
+            },
+            {
+              "taxName": "Kerala Flood Cess",
+              "taxRate": 1.0,
+              "totalTaxAmount": 20.0
+            }
+          ]
+        },
+        "proformaInvoiceContents": [
+          {
+            "item": "Software License",
+            "quantity": 2,
+            "rate": 1000.0,
+            "subTotal": 2000.0,
+            "total": 2200.0,
+            "appliedTaxes": [
+              {
+                "taxName": "CGST",
+                "taxRate": 9.0,
+                "taxAmount": 180.0
+              },
+              {
+                "taxName": "Kerala Flood Cess",
+                "taxRate": 1.0,
+                "taxAmount": 20.0
+              }
+            ]
+          },
+          {
+            "item": "Consulting Setup",
+            "quantity": 1,
+            "rate": 1500.0,
+            "subTotal": 1500.0,
+            "total": 1770.0,
+            "appliedTaxes": [
+              {
+                "taxName": "CGST",
+                "taxRate": 9.0,
+                "taxAmount": 135.0
+              },
+              {
+                "taxName": "SGST",
+                "taxRate": 9.0,
+                "taxAmount": 135.0
+              }
+            ]
+          }
+        ]
+      }
+    }
+  }
+  
+  response: {
+    headers: {
+      vary: Origin, Access-Control-Request-Method, Access-Control-Request-Headers
+      x-content-type-options: nosniff
+      x-xss-protection: 0
+      cache-control: no-cache, no-store, max-age=0, must-revalidate
+      pragma: no-cache
+      expires: 0
+      x-frame-options: DENY
+      content-type: application/json
+      transfer-encoding: chunked
+      date: Mon, 13 Apr 2026 12:45:26 GMT
+      keep-alive: timeout=60
+      connection: keep-alive
+    }
+  
+    status: {
+      code: 200
+      text: OK
+    }
+  
+    body: {
+      type: json
+      content: '''
+        {
+          "proformaInvoiceInfo": {
+            "proformaInvoiceId": "c0a80121-9d85-152f-819d-86e01689001b",
+            "adminId": "c0a800ef-9a76-1de1-819a-76c0f7840001",
+            "employeeId": null,
+            "proposalId": null,
+            "assignTo": null,
+            "proformaInvoiceNumber": 1003,
+            "formatedProformaInvoiceNumber": "P_INV-2024/003",
+            "currencyType": "INR",
+            "discount": 0.0,
+            "taxType": null,
+            "taxPercentage": 0.0,
+            "cgstPercentage": 0.0,
+            "sgstPercentage": 0.0,
+            "dueDate": null,
+            "proformaInvoiceDate": null,
+            "totalAmount": 3970.0,
+            "paidAmount": 0.0,
+            "status": "Unpaid",
+            "relatedTo": null,
+            "relatedId": null,
+            "companyName": "Global Enterprises",
+            "mobileNumber": null,
+            "gstin": null,
+            "panNumber": null,
+            "email": null,
+            "billingStreet": null,
+            "billingCity": null,
+            "billingState": null,
+            "billingCountry": null,
+            "billingZipCode": null,
+            "shippingStreet": null,
+            "shippingCity": null,
+            "shippingState": null,
+            "shippingCountry": null,
+            "shippingZipCode": null,
+            "notes": null,
+            "termsAndConditions": null,
+            "companySignature": null,
+            "companyStamp": null,
+            "createdAt": "2026-04-13T18:15:26.0259099",
+            "invoiceNumber": 0,
+            "invoiceDate": null,
+            "invoiceDueDate": null,
+            "formatedInvoiceNumber": null,
+            "paymentProfileIds": [],
+            "paidPaymentProfileIds": null,
+            "amcHistoryId": null,
+            "amcDomainHistoryId": null,
+            "amcGsuitHistoryId": null,
+            "proformaType": "PROFORMA",
+            "serviceType": null,
+            "subTotal": 3500.0,
+            "totalTaxAmount": 470.0,
+            "taxCalculationMode": "ITEM_LEVEL",
+            "taxSummaries": [
+              {
+                "taxName": "CGST",
+                "taxRate": 9.0,
+                "totalTaxAmount": 315.0
+              },
+              {
+                "taxName": "SGST",
+                "taxRate": 9.0,
+                "totalTaxAmount": 135.0
+              },
+              {
+                "taxName": "Kerala Flood Cess",
+                "taxRate": 1.0,
+                "totalTaxAmount": 20.0
+              }
+            ]
+          },
+          "proformaInvoiceContents": [
+            {
+              "proformaInvoiceContentId": "c0a80121-9d85-152f-819d-86e0169b001c",
+              "proformaInvoiceId": "c0a80121-9d85-152f-819d-86e01689001b",
+              "item": "Software License",
+              "description": null,
+              "quantity": 2,
+              "rate": 1000.0,
+              "sacCode": null,
+              "itemId": null,
+              "subTotal": 2000.0,
+              "total": 2200.0,
+              "appliedTaxes": [
+                {
+                  "taxName": "CGST",
+                  "taxRate": 9.0,
+                  "taxAmount": 180.0
+                },
+                {
+                  "taxName": "Kerala Flood Cess",
+                  "taxRate": 1.0,
+                  "taxAmount": 20.0
+                }
+              ],
+              "createdAt": "2026-04-13T18:15:26.0430148"
+            },
+            {
+              "proformaInvoiceContentId": "c0a80121-9d85-152f-819d-86e0169f001d",
+              "proformaInvoiceId": "c0a80121-9d85-152f-819d-86e01689001b",
+              "item": "Consulting Setup",
+              "description": null,
+              "quantity": 1,
+              "rate": 1500.0,
+              "sacCode": null,
+              "itemId": null,
+              "subTotal": 1500.0,
+              "total": 1770.0,
+              "appliedTaxes": [
+                {
+                  "taxName": "CGST",
+                  "taxRate": 9.0,
+                  "taxAmount": 135.0
+                },
+                {
+                  "taxName": "SGST",
+                  "taxRate": 9.0,
+                  "taxAmount": 135.0
+                }
+              ],
+              "createdAt": "2026-04-13T18:15:26.0472787"
             }
           ],
           "paymentProfiles": null
