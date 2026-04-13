@@ -16,91 +16,269 @@ auth:bearer {
 
 body:json {
   {
-      "proformaInvoiceInfo": {
-          "proformaInvoiceId": "c0a800ef-9b25-187a-819b-2aefc254002f",
-          "adminId": "ac110005-9a7c-14bd-819a-7cb6a01f0001",
-          "employeeId": null,
-          "proposalId": null,
-          "assignTo": "John Doe",
-          "proformaInvoiceNumber": 5,
-          "currencyType": "INR",
-          "discount": 5.0,
-          "taxType": "GST 18%",
-          "taxPercentage": 0.0,
-          "dueDate": "2025-11-15",
-          "proformaInvoiceDate": null,
-          "totalAmount": 1000.0,
-          "paidAmount": 0.0,
-          "status": "PARTIALLY_PAID",
-          "relatedTo": "lead",
-          "relatedId": "LEAD101",
-          "companyName": "Shital EMp",
-          "mobileNumber": "9876543210",
-          "gstin": "29ABCDE1234F1Z5",
-          "panNumber": "ABCDE1234F",
-          "email": "billing@xpertbiz.com",
-          "billingStreet": "123 MG Road",
-          "billingCity": "Bengaluru",
-          "billingState": "Karnataka",
-          "billingCountry": "India",
-          "billingZipCode": "560001",
-          "shippingStreet": "456 Brigade Road",
-          "shippingCity": "Bengaluru",
-          "shippingState": "Karnataka",
-          "shippingCountry": "India",
-          "shippingZipCode": "560002",
-          "notes": null,
-          "termsAndConditions": null,
-          "companySignature": null,
-          "companyStamp": null,
-          "createdAt": "2025-12-17T11:41:54.5812548",
-          "invoiceNumber": 0,
-          "invoiceDate": "2025-11-05",
-          // "amcHistoryId":"c0a800ef-9b25-187a-819b-361d54db0074",
-          // "amcDomainHistoryId":"ac110005-9b35-11ae-819b-3611fd2b000b",
-          "amcGsuitHistoryId":"c0a800ef-9b25-187a-819b-361d56090076",
-          "paymentProfileIds": [
-              "c0a800ef-9b25-187a-819b-2727d355001e"
-          ]
+    "proformaInvoiceInfo": {
+      "proformaInvoiceNumber": 1001,
+      "formatedProformaInvoiceNumber": "P_INV-2024/001",
+      "currencyType": "INR",
+      "discount": 10.0,
+      "dueDate": "2024-05-01",
+      "proformaInvoiceDate": "2024-04-15",
+      "status": "Unpaid",
+      "relatedTo": "customer",
+      "relatedId": "CUST-123",
+      "companyName": "Acme Corp",
+      "email": "contact@acmecorp.com",
+      "billingStreet": "123 Main St",
+      "billingCity": "Mumbai",
+      "billingState": "Maharashtra",
+      "billingCountry": "India",
+      "billingZipCode": "400001",
+      "proformaType": "PROFORMA",
+      
+      "subTotal": 1000.0,
+      "totalTaxAmount": 162.0,
+      "totalAmount": 1062.0,
+      "paidAmount": 0.0,
+      "taxCalculationMode": "INVOICE_LEVEL",
+      
+      "taxSummaries": [
+        {
+          "taxName": "CGST",
+          "taxRate": 9.0,
+          "totalTaxAmount": 81.0
+        },
+        {
+          "taxName": "SGST",
+          "taxRate": 9.0,
+          "totalTaxAmount": 81.0
+        }
+      ],
+      
+      "paymentProfileIds": ["PAY-PROF-1"]
+    },
+    "proformaInvoiceContents": [
+      {
+        "item": "Web Development Services",
+        "description": "Frontend and Backend development",
+        "quantity": 1,
+        "rate": 600.0,
+        "itemSubTotal": 600.0,
+        "itemTotalAmount": 600.0,
+        "appliedTaxes": []
       },
-      "proformaInvoiceContents": [
-          {
-              "proformaInvoiceContentId": "c0a800ef-9b25-187a-819b-2aefc3100030",
-              "proformaInvoiceId": "c0a800ef-9b25-187a-819b-2aefc254002f",
-              "item": "Website Development",
-              "description": "Complete website design and development including frontend, backend, and deployment.",
-              "quantity": 1,
-              "rate": 25000.0,
-              "sacCode": "998314",
-              "itemId": null,
-              "createdAt": "2025-12-17T11:41:54.7685772"
-          },
-          {
-              "proformaInvoiceContentId": "c0a800ef-9b25-187a-819b-2aefc3100031",
-              "proformaInvoiceId": "c0a800ef-9b25-187a-819b-2aefc254002f",
-              "item": "Website Development",
-              "description": "Complete website design and development including frontend, backend, and deployment.",
-              "quantity": 1,
-              "rate": 25000.0,
-              "sacCode": "998314",
-              "itemId": null,
-              "createdAt": "2025-12-17T11:41:54.7685772"
-          },
-          {
-              "proformaInvoiceContentId": "c0a800ef-9b25-187a-819b-2aefc3110032",
-              "proformaInvoiceId": "c0a800ef-9b25-187a-819b-2aefc254002f",
-              "item": "Website Development",
-              "description": "Complete website design and development including frontend, backend, and deployment.",
-              "quantity": 1,
-              "rate": 25000.0,
-              "sacCode": "998314",
-              "itemId": null,
-              "createdAt": "2025-12-17T11:41:54.7696647"
-          }
-      ]
+      {
+        "item": "Server Hosting",
+        "description": "1 Year Cloud Hosting",
+        "quantity": 1,
+        "rate": 400.0,
+        "itemSubTotal": 400.0,
+        "itemTotalAmount": 400.0,
+        "appliedTaxes": []
+      }
+    ]
   }
 }
 
 settings {
   encodeUrl: true
+  timeout: 0
+}
+
+example {
+  name: invoice level tax example
+  
+  request: {
+    url: {{baseUrl}}/admin/createProformaInvoice
+    method: POST
+    mode: json
+    body:json: {
+      {
+        "proformaInvoiceInfo": {
+          "proformaInvoiceNumber": 1001,
+          "formatedProformaInvoiceNumber": "P_INV-2024/001",
+          "currencyType": "INR",
+          "discount": 10.0,
+          "dueDate": "2024-05-01",
+          "proformaInvoiceDate": "2024-04-15",
+          "status": "Unpaid",
+          "relatedTo": "customer",
+          "relatedId": "CUST-123",
+          "companyName": "Acme Corp",
+          "email": "contact@acmecorp.com",
+          "billingStreet": "123 Main St",
+          "billingCity": "Mumbai",
+          "billingState": "Maharashtra",
+          "billingCountry": "India",
+          "billingZipCode": "400001",
+          "proformaType": "PROFORMA",
+          
+          "subTotal": 1000.0,
+          "totalTaxAmount": 162.0,
+          "totalAmount": 1062.0,
+          "paidAmount": 0.0,
+          "taxCalculationMode": "INVOICE_LEVEL",
+          
+          "taxSummaries": [
+            {
+              "taxName": "CGST",
+              "taxRate": 9.0,
+              "totalTaxAmount": 81.0
+            },
+            {
+              "taxName": "SGST",
+              "taxRate": 9.0,
+              "totalTaxAmount": 81.0
+            }
+          ],
+          
+          "paymentProfileIds": ["PAY-PROF-1"]
+        },
+        "proformaInvoiceContents": [
+          {
+            "item": "Web Development Services",
+            "description": "Frontend and Backend development",
+            "quantity": 1,
+            "rate": 600.0,
+            "itemSubTotal": 600.0,
+            "itemTotalAmount": 600.0,
+            "appliedTaxes": []
+          },
+          {
+            "item": "Server Hosting",
+            "description": "1 Year Cloud Hosting",
+            "quantity": 1,
+            "rate": 400.0,
+            "itemSubTotal": 400.0,
+            "itemTotalAmount": 400.0,
+            "appliedTaxes": []
+          }
+        ]
+      }
+    }
+  }
+  
+  response: {
+    headers: {
+      vary: Origin, Access-Control-Request-Method, Access-Control-Request-Headers
+      x-content-type-options: nosniff
+      x-xss-protection: 0
+      cache-control: no-cache, no-store, max-age=0, must-revalidate
+      pragma: no-cache
+      expires: 0
+      x-frame-options: DENY
+      content-type: application/json
+      transfer-encoding: chunked
+      date: Mon, 13 Apr 2026 10:43:49 GMT
+      keep-alive: timeout=60
+      connection: keep-alive
+    }
+  
+    status: {
+      code: 200
+      text: OK
+    }
+  
+    body: {
+      type: json
+      content: '''
+        {
+          "proformaInvoiceInfo": {
+            "proformaInvoiceId": "c0a80121-9d85-152f-819d-8670be950006",
+            "adminId": "c0a800ef-9a76-1de1-819a-76c0f7840001",
+            "employeeId": null,
+            "proposalId": null,
+            "assignTo": null,
+            "proformaInvoiceNumber": 1001,
+            "formatedProformaInvoiceNumber": "P_INV-2024/001",
+            "currencyType": "INR",
+            "discount": 10.0,
+            "taxType": null,
+            "taxPercentage": 0.0,
+            "cgstPercentage": 0.0,
+            "sgstPercentage": 0.0,
+            "dueDate": "2024-05-01",
+            "proformaInvoiceDate": "2024-04-15",
+            "totalAmount": 1062.0,
+            "paidAmount": 0.0,
+            "status": "Unpaid",
+            "relatedTo": "customer",
+            "relatedId": "CUST-123",
+            "companyName": "Acme Corp",
+            "mobileNumber": null,
+            "gstin": null,
+            "panNumber": null,
+            "email": "contact@acmecorp.com",
+            "billingStreet": "123 Main St",
+            "billingCity": "Mumbai",
+            "billingState": "Maharashtra",
+            "billingCountry": "India",
+            "billingZipCode": "400001",
+            "shippingStreet": null,
+            "shippingCity": null,
+            "shippingState": null,
+            "shippingCountry": null,
+            "shippingZipCode": null,
+            "notes": null,
+            "termsAndConditions": null,
+            "companySignature": null,
+            "companyStamp": null,
+            "createdAt": "2026-04-13T16:13:49.0131946",
+            "invoiceNumber": 0,
+            "invoiceDate": null,
+            "invoiceDueDate": null,
+            "formatedInvoiceNumber": null,
+            "paymentProfileIds": [
+              "PAY-PROF-1"
+            ],
+            "paidPaymentProfileIds": null,
+            "amcHistoryId": null,
+            "amcDomainHistoryId": null,
+            "amcGsuitHistoryId": null,
+            "proformaType": "PROFORMA",
+            "serviceType": null,
+            "subTotal": 1000.0,
+            "totalTaxAmount": 162.0,
+            "taxCalculationMode": "INVOICE_LEVEL",
+            "taxSummaries": [
+              {
+                "taxName": "CGST",
+                "taxRate": 9.0,
+                "totalTaxAmount": 81.0
+              },
+              {
+                "taxName": "SGST",
+                "taxRate": 9.0,
+                "totalTaxAmount": 81.0
+              }
+            ]
+          },
+          "proformaInvoiceContents": [
+            {
+              "proformaInvoiceContentId": "c0a80121-9d85-152f-819d-8670bf100007",
+              "proformaInvoiceId": "c0a80121-9d85-152f-819d-8670be950006",
+              "item": "Web Development Services",
+              "description": "Frontend and Backend development",
+              "quantity": 1,
+              "rate": 600.0,
+              "sacCode": null,
+              "itemId": null,
+              "createdAt": "2026-04-13T16:13:49.1372932"
+            },
+            {
+              "proformaInvoiceContentId": "c0a80121-9d85-152f-819d-8670bf160008",
+              "proformaInvoiceId": "c0a80121-9d85-152f-819d-8670be950006",
+              "item": "Server Hosting",
+              "description": "1 Year Cloud Hosting",
+              "quantity": 1,
+              "rate": 400.0,
+              "sacCode": null,
+              "itemId": null,
+              "createdAt": "2026-04-13T16:13:49.1429797"
+            }
+          ],
+          "paymentProfiles": null
+        }
+      '''
+    }
+  }
 }

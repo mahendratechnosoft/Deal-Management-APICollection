@@ -16,15 +16,84 @@ auth:bearer {
 
 body:json {
   {
+     "financeSettingId": "c0a8012c-9d52-148c-819d-523550160000",
+    "adminId": "c0a800ef-9a76-1de1-819a-76c0f7840001",
     "type": "INVOICE",
-    "prefix": "INV-",
-    "termsAndCondition": "Payment is due within the specified period.",
-    "dueDays": 30,
-    "numberFormat": "NUMBER"
+    "prefix": "INV",
+    "notes": "",
+    "termsAndConditions": "",
+    "dueDays": 7,
+    "numberFormat": "FY_SERVICE",
+    "restartInvoiceNumberAnnually": false,
+    "defaultTaxCalculationMode": "INVOICE_LEVEL"
   }
-  
 }
 
 settings {
   encodeUrl: true
+  timeout: 0
+}
+
+example {
+  name: default tax calculations
+  
+  request: {
+    url: {{baseUrl}}/admin/updateFinanceSetting
+    method: PUT
+    mode: json
+    body:json: {
+      {
+         "financeSettingId": "c0a8012c-9d52-148c-819d-523550160000",
+        "adminId": "c0a800ef-9a76-1de1-819a-76c0f7840001",
+        "type": "INVOICE",
+        "prefix": "INV",
+        "notes": "",
+        "termsAndConditions": "",
+        "dueDays": 7,
+        "numberFormat": "FY_SERVICE",
+        "restartInvoiceNumberAnnually": false,
+        "defaultTaxCalculationMode": "INVOICE_LEVEL"
+      }
+    }
+  }
+  
+  response: {
+    headers: {
+      vary: Origin, Access-Control-Request-Method, Access-Control-Request-Headers
+      x-content-type-options: nosniff
+      x-xss-protection: 0
+      cache-control: no-cache, no-store, max-age=0, must-revalidate
+      pragma: no-cache
+      expires: 0
+      x-frame-options: DENY
+      content-type: application/json
+      transfer-encoding: chunked
+      date: Mon, 13 Apr 2026 11:05:27 GMT
+      keep-alive: timeout=60
+      connection: keep-alive
+    }
+  
+    status: {
+      code: 200
+      text: OK
+    }
+  
+    body: {
+      type: json
+      content: '''
+        {
+          "financeSettingId": "c0a8012c-9d52-148c-819d-523550160000",
+          "adminId": "c0a800ef-9a76-1de1-819a-76c0f7840001",
+          "type": "INVOICE",
+          "prefix": "INV",
+          "notes": "",
+          "termsAndConditions": "",
+          "dueDays": 7,
+          "numberFormat": "FY_SERVICE",
+          "restartInvoiceNumberAnnually": false,
+          "defaultTaxCalculationMode": "INVOICE_LEVEL"
+        }
+      '''
+    }
+  }
 }
