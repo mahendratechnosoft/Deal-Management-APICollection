@@ -1,0 +1,24 @@
+meta {
+  name: {{baseUrl}}/{{role}}/updateTaxRate/{taxRateId}
+  type: http
+  seq: 3
+}
+
+put {
+  url: {{baseUrl}}/{{role}}/updateTaxRate/c0a80121-9d85-152f-819d-8584ba6f0002
+  body: json
+  auth: inherit
+}
+
+body:json {
+  
+  {
+    "taxRateName":"SGST",
+    "taxRate":5
+  }
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}

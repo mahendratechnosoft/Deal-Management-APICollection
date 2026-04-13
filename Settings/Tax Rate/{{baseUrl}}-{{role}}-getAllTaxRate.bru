@@ -1,0 +1,16 @@
+meta {
+  name: {{baseUrl}}/{{role}}/getAllTaxRate
+  type: http
+  seq: 2
+}
+
+get {
+  url: {{baseUrl}}/{{role}}/getAllTaxRate
+  body: none
+  auth: inherit
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}
