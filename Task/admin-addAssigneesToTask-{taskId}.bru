@@ -1,7 +1,7 @@
 meta {
   name: /admin/addAssigneesToTask/{taskId}
   type: http
-  seq: 10
+  seq: 9
 }
 
 put {
@@ -19,6 +19,7 @@ body:json {
 
 settings {
   encodeUrl: true
+  timeout: 0
 }
 
 example {
@@ -56,8 +57,8 @@ example {
     }
   
     status: {
-      code: OK
-      text: 200
+      code: 200
+      text: OK
     }
   
     body: {

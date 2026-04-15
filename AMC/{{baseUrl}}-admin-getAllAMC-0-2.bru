@@ -1,0 +1,96 @@
+meta {
+  name: {{baseUrl}}/admin/getAllAMC/0/2
+  type: http
+  seq: 5
+}
+
+get {
+  url: {{baseUrl}}/admin/getAllAMC/0/10?search=tcs&expiryFromDate=2027-04-20&expiryToDate=2028-04-20&serviceType=AMC&statusFilter=ACTIVE
+  body: none
+  auth: bearer
+}
+
+params:query {
+  search: tcs
+  expiryFromDate: 2027-04-20
+  expiryToDate: 2028-04-20
+  serviceType: AMC
+  statusFilter: ACTIVE
+}
+
+auth:bearer {
+  token: {{bearerToken}}
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}
+
+docs {
+  statusFilter :
+  UPCOMING/OVERDUE/ACTIVE
+}
+
+example {
+  name: example
+  
+  request: {
+    url: {{baseUrl}}/admin/getAllAMC/0/10?search=tcs&expiryFromDate=2027-04-20&expiryToDate=2028-04-20&serviceType=AMC&statusFilter=ACTIVE
+    method: GET
+    mode: none
+    params:query: {
+      search: tcs
+      expiryFromDate: 2027-04-20
+      expiryToDate: 2028-04-20
+      serviceType: AMC
+      statusFilter: ACTIVE
+    }
+  }
+  
+  response: {
+    headers: {
+      vary: Origin, Access-Control-Request-Method, Access-Control-Request-Headers
+      x-content-type-options: nosniff
+      x-xss-protection: 0
+      cache-control: no-cache, no-store, max-age=0, must-revalidate
+      pragma: no-cache
+      expires: 0
+      x-frame-options: DENY
+      content-type: application/json
+      transfer-encoding: chunked
+      date: Wed, 15 Apr 2026 07:20:29 GMT
+      keep-alive: timeout=60
+      connection: keep-alive
+    }
+  
+    status: {
+      code: 200
+      text: OK
+    }
+  
+    body: {
+      type: json
+      content: '''
+        {
+          "amcList": [
+            {
+              "proformaInvoiceId": "c0a80124-9d8a-1798-819d-8bfce16d0009",
+              "amcId": "c0a80124-9d8a-1798-819d-8bf4cd0c0004",
+              "amount": 118.0,
+              "serviceType": "AMC",
+              "companyName": "TCS",
+              "expiryDate": "2028-04-14",
+              "historyId": "c0a80124-9d8a-1798-819d-8bf5fdcf0008",
+              "startDate": "2027-04-14",
+              "isPaid": true
+            }
+          ],
+          "totalPages": 1,
+          "currentPage": 0,
+          "totalElements": 1
+        }
+      '''
+    }
+  }
+}

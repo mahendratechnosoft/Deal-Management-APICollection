@@ -1,0 +1,71 @@
+meta {
+  name: /admin/getAmcDashboardCounts
+  type: http
+  seq: 9
+}
+
+get {
+  url: {{baseUrl}}/admin/getAmcDashboardCounts?serviceType=AMC&expiryFromDate=2027-04-20&expiryToDate=2028-04-20
+  body: none
+  auth: inherit
+}
+
+params:query {
+  serviceType: AMC
+  expiryFromDate: 2027-04-20
+  expiryToDate: 2028-04-20
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}
+
+example {
+  name: example
+  
+  request: {
+    url: {{baseUrl}}/admin/getAmcDashboardCounts?serviceType=AMC&expiryFromDate=2027-04-20&expiryToDate=2028-04-20
+    method: GET
+    mode: none
+    params:query: {
+      serviceType: AMC
+      expiryFromDate: 2027-04-20
+      expiryToDate: 2028-04-20
+    }
+  }
+  
+  response: {
+    headers: {
+      vary: Origin, Access-Control-Request-Method, Access-Control-Request-Headers
+      x-content-type-options: nosniff
+      x-xss-protection: 0
+      cache-control: no-cache, no-store, max-age=0, must-revalidate
+      pragma: no-cache
+      expires: 0
+      x-frame-options: DENY
+      content-type: application/json
+      transfer-encoding: chunked
+      date: Wed, 15 Apr 2026 07:22:33 GMT
+      keep-alive: timeout=60
+      connection: keep-alive
+    }
+  
+    status: {
+      code: 200
+      text: OK
+    }
+  
+    body: {
+      type: json
+      content: '''
+        {
+          "activeCount": 1,
+          "expectedRevenue": 0.0,
+          "upcomingCount": 0,
+          "overdueCount": 0
+        }
+      '''
+    }
+  }
+}
