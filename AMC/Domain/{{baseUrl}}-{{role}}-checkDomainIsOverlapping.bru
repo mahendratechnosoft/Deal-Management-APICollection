@@ -1,0 +1,23 @@
+meta {
+  name: {{baseUrl}}/{{role}}/checkDomainIsOverlapping
+  type: http
+  seq: 5
+}
+
+get {
+  url: {{baseUrl}}/{{role}}/checkDomainIsOverlapping?amcId=c0a80124-9d8a-1798-819d-8bf4cd0c0004&startDate=2025-04-01&endDate=2025-07-01
+  body: none
+  auth: inherit
+}
+
+params:query {
+  amcId: c0a80124-9d8a-1798-819d-8bf4cd0c0004
+  startDate: 2025-04-01
+  endDate: 2025-07-01
+  ~excludeDomainHistoryId: c0a80124-9d8a-1798-819d-8bf4cd570006
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}

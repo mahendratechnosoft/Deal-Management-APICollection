@@ -1,0 +1,23 @@
+meta {
+  name: {{baseUrl}}/{{role}}/checkAmcIsOverlapping
+  type: http
+  seq: 5
+}
+
+get {
+  url: {{baseUrl}}/{{role}}/checkAmcIsOverlapping?amcId=c0a80124-9d8a-1798-819d-8bf4cd0c0004&startDate=2026-04-14&endDate=2027-04-14&excludeAmcHistoryId=c0a80124-9d8a-1798-819d-8bf5fdcf0008
+  body: none
+  auth: inherit
+}
+
+params:query {
+  amcId: c0a80124-9d8a-1798-819d-8bf4cd0c0004
+  startDate: 2026-04-14
+  endDate: 2027-04-14
+  excludeAmcHistoryId: c0a80124-9d8a-1798-819d-8bf5fdcf0008
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}
