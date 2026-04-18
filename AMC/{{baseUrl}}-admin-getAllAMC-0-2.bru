@@ -5,17 +5,17 @@ meta {
 }
 
 get {
-  url: {{baseUrl}}/admin/getAllAMC/0/10?search=tcs&expiryFromDate=2027-04-20&expiryToDate=2028-04-20&serviceType=AMC&statusFilter=ACTIVE
+  url: {{baseUrl}}/admin/getAllAMC/0/5
   body: none
   auth: bearer
 }
 
 params:query {
-  search: tcs
-  expiryFromDate: 2027-04-20
-  expiryToDate: 2028-04-20
-  serviceType: AMC
-  statusFilter: ACTIVE
+  ~search: tcs
+  ~expiryFromDate: 2027-04-20
+  ~expiryToDate: 2028-04-20
+  ~serviceType: AMC
+  ~statusFilter: ACTIVE
 }
 
 auth:bearer {

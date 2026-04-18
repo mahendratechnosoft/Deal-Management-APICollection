@@ -1,0 +1,21 @@
+meta {
+  name: {{baseUrl}}/{{role}}/checkExistingWeekends
+  type: http
+  seq: 9
+}
+
+get {
+  url: {{baseUrl}}/{{role}}/checkExistingWeekends?startDate=2028-04-13&endDate=2028-04-18
+  body: none
+  auth: inherit
+}
+
+params:query {
+  startDate: 2028-04-13
+  endDate: 2028-04-18
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}
