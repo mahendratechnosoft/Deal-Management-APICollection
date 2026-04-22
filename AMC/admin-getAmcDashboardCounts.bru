@@ -5,15 +5,15 @@ meta {
 }
 
 get {
-  url: {{baseUrl}}/admin/getAmcDashboardCounts?serviceType=AMC&expiryFromDate=2027-04-20&expiryToDate=2028-04-20
+  url: {{baseUrl}}/admin/getAmcDashboardCounts?serviceType=AMC
   body: none
   auth: inherit
 }
 
 params:query {
   serviceType: AMC
-  expiryFromDate: 2027-04-20
-  expiryToDate: 2028-04-20
+  ~expiryFromDate: 2027-04-20
+  ~expiryToDate: 2028-04-20
 }
 
 settings {

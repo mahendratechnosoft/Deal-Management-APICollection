@@ -5,7 +5,7 @@ meta {
 }
 
 get {
-  url: {{baseUrl}}/admin/getAllAMC/0/5
+  url: {{baseUrl}}/admin/getAllAMC/0/10
   body: none
   auth: bearer
 }
@@ -15,7 +15,7 @@ params:query {
   ~expiryFromDate: 2027-04-20
   ~expiryToDate: 2028-04-20
   ~serviceType: AMC
-  ~statusFilter: ACTIVE
+  ~statusFilter: UPCOMING
 }
 
 auth:bearer {
@@ -29,7 +29,7 @@ settings {
 
 docs {
   statusFilter :
-  UPCOMING/OVERDUE/ACTIVE
+  UPCOMING/EXPIRING/OVERDUE/ACTIVE/EXPIRED
 }
 
 example {
