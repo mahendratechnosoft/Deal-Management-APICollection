@@ -5,11 +5,12 @@ meta {
 }
 
 get {
-  url: {{baseUrl}}/{{role}}/getTimeSheetSettingForEmployee
+  url: {{baseUrl}}/{{role}}/getTimeSheetSetting
   body: none
   auth: inherit
 }
 
 settings {
   encodeUrl: true
+  timeout: 0
 }
