@@ -1,0 +1,26 @@
+meta {
+  name: {{baseUrl}}/{{role}}/updateLinkList
+  type: http
+  seq: 3
+}
+
+put {
+  url: {{baseUrl}}/{{role}}/updateLinkList?linkListId=0ac1b741-9dba-1b42-819d-bf6b9bff0000
+  body: json
+  auth: inherit
+}
+
+params:query {
+  linkListId: 0ac1b741-9dba-1b42-819d-bf6b9bff0000
+}
+
+body:json {
+  {
+    "title": "root folder updated"
+  }
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}

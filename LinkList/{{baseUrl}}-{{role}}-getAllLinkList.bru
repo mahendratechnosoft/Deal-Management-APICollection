@@ -1,0 +1,25 @@
+meta {
+  name: {{baseUrl}}/{{role}}/getAllLinkList
+  type: http
+  seq: 1
+}
+
+get {
+  url: {{baseUrl}}/{{role}}/getAllLinkList?sort=title,asc&creatorFilter=ALL
+  body: none
+  auth: inherit
+}
+
+params:query {
+  sort: title,asc
+  creatorFilter: ALL
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}
+
+docs {
+  creatorFilter: ALL/OWN/specific employeeId (by default own)
+}
