@@ -1,0 +1,22 @@
+meta {
+  name: {{baseUrl}}/{{role}}/getLateMarkList
+  type: http
+  seq: 6
+}
+
+get {
+  url: {{baseUrl}}/{{role}}/getLateMarkList?startDate=2026-01-01&endDate=2026-12-01&targetEmpId=c0a800ef-9aa4-10d4-819a-a4d8276e0018
+  body: none
+  auth: inherit
+}
+
+params:query {
+  startDate: 2026-01-01
+  endDate: 2026-12-01
+  targetEmpId: c0a800ef-9aa4-10d4-819a-a4d8276e0018
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}
