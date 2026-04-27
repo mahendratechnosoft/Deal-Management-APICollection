@@ -5,13 +5,13 @@ meta {
 }
 
 get {
-  url: {{baseUrl}}/{{role}}/getAllLinkList?sort=title,asc&creatorFilter=ALL
+  url: {{baseUrl}}/{{role}}/getAllLinkList?sort=createdAt,asc&creatorFilter=ALL
   body: none
   auth: inherit
 }
 
 params:query {
-  sort: title,asc
+  sort: createdAt,asc
   creatorFilter: ALL
 }
 
