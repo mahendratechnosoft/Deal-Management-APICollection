@@ -5,12 +5,13 @@ meta {
 }
 
 get {
-  url: {{baseUrl}}/{{role}}/getPaidLeaveBalances
+  url: {{baseUrl}}/{{role}}/getPaidLeaveBalances?targetEmpId=c0a800ef-9aa4-10d4-819a-a4d8276e0018
   body: none
   auth: inherit
 }
 
 params:query {
+  targetEmpId: c0a800ef-9aa4-10d4-819a-a4d8276e0018
   ~leaveType: Sick Leaves
 }
 
