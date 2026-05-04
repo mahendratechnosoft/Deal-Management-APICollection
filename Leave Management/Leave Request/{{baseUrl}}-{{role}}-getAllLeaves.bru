@@ -5,7 +5,7 @@ meta {
 }
 
 get {
-  url: {{baseUrl}}/{{role}}/getAllLeaves?page=0&size=11&viewType=ALL_LEAVES
+  url: {{baseUrl}}/{{role}}/getAllLeaves?page=0&size=11&targetEmpId=c0a800ef-9aa4-10d4-819a-a4d8276e0018&viewType=ALL_LEAVES
   body: none
   auth: inherit
 }
@@ -13,6 +13,7 @@ get {
 params:query {
   page: 0
   size: 11
+  targetEmpId: c0a800ef-9aa4-10d4-819a-a4d8276e0018
   viewType: ALL_LEAVES
   ~status: PENDING
   ~search: emp 1

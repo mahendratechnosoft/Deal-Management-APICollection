@@ -5,7 +5,7 @@ meta {
 }
 
 post {
-  url: http://91.203.133.210:9091/admin/createEmployee
+  url: {{baseUrl}}/{{role}}/createEmployee
   body: json
   auth: bearer
 }
@@ -16,57 +16,46 @@ auth:bearer {
 
 body:json {
   {
-      "loginEmail": "test9@gmail.com",
-      "password": "1234",
-      "name": "emp2",
-      "phone": "+91-9876543210",
-      "country": "India",
-      "state": "Maharashtra",
-      "city": "Pune",
-      "address": "123, Green Park, Mumbai, India",
-      "gender": "Male",
-      "description": "Passionate full-stack developer with experience in CRM systems and API integrations.",
-      "profileImageBase64": null,
-      "moduleAccess": {
-          "leadAccess": true,
-          "leadViewAll": true,
-          "leadCreate": true,
-          "leadDelete": true,
-          "leadEdit": true,
-          "customerAccess": true,
-          "customerViewAll": true,
-          "customerCreate": true,
-          "customerDelete": true,
-          "customerEdit": true,
-          "proposalAccess": true,
-          "proposalViewAll": true,
-          "proposalCreate": true,
-          "proposalDelete": true,
-          "proposalEdit": true,
-          "proformaInvoiceAccess": true,
-          "proformaInvoiceViewAll": true,
-          "proformaInvoiceCreate": true,
-          "proformaInvoiceDelete": true,
-          "proformaInvoiceEdit": true,
-          "invoiceAccess": true,
-          "invoiceViewAll": true,
-          "invoiceCreate": true,
-          "invoiceDelete": true,
-          "invoiceEdit": true,
-          "paymentAccess": true,
-          "paymentViewAll": true,
-          "paymentcreate": true,
-          "paymentDelete": true,
-          "paymentEdit": true,
-          "timeSheetAccess": true,
-          "timeSheetViewAll": true,
-          "timeSheetCreate": true,
-          "timeSheetDelete": true,
-          "timeSheetEdit": true
-      }
+    "loginEmail": "test17@gmail.com",
+    "password":"1234",
+    "name": "test17",
+    "phone": "+918796523132",
+    "address": "",
+    "gender": "Male",
+    "description": "",
+    "profileImage": "",
+    "departmentId": "c0a800ef-9a76-1de1-819a-76c77067000a",
+    "departmentName": "IT",
+    "roleId": "c0a800ef-9a76-1de1-819a-76c7b2fd000b",
+    "roleName": "Software Developer",
+    "shiftId": null,
+    "shiftName": null,
+    "country": "",
+    "state": "",
+    "city": "",
+    "joiningDate": null,
+    "dateOfBirth": null,
+    "maritalStatus": null,
+    "bloodGroup": null,
+    "nationality": null,
+    "alternatePhone": null,
+    "currentAddress": null,
+    "currentCity": null,
+    "currentState": null,
+    "currentCountry": null,
+    "sameAsPermanent": false,
+    "employeeType": null,
+    "workMode": null,
+    "probationPeriod": 0,
+    "noticePeriod": 0,
+    "adharNumber": null,
+    "panNumber": null,
+    "hasLoginAccess": true,
+    "active": true
   }
 }
 
 settings {
   encodeUrl: true
+  timeout: 0
 }

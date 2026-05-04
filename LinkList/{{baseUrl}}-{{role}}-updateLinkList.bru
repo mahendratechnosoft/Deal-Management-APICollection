@@ -5,22 +5,27 @@ meta {
 }
 
 put {
-  url: {{baseUrl}}/{{role}}/updateLinkList?linkListId=c0a8012b-9dcd-1601-819d-ce274d3e0006
+  url: {{baseUrl}}/{{role}}/updateLinkList?linkListId=c0a8012b-9ddd-1729-819d-dd3bfb240000
   body: json
   auth: inherit
 }
 
 params:query {
-  linkListId: c0a8012b-9dcd-1601-819d-ce274d3e0006
+  linkListId: c0a8012b-9ddd-1729-819d-dd3bfb240000
 }
 
 body:json {
-  {
-    "title": "child check",
-    "description": "updated lkdsajf;l",
-    "url": null,
-    "hexColor": "#ffffff"
-  }
+    {
+      "title": "attachement check",
+      "description": "attachment update check",
+      "url": "www.google.com",
+      "hexColor": "#ffffff",
+      "attachments": [
+  //       "37db2f20-7d27-42c5-be74-d9841e16f29d_two.png",
+        
+        "0e5912aa-154c-4747-b0de-c8c8c18d8e18_donorDemoShort.jpg"
+      ]
+    }
 }
 
 settings {
