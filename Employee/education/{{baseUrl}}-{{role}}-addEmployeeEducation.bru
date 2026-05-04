@@ -1,0 +1,30 @@
+meta {
+  name: {{baseUrl}}/{{role}}/addEmployeeEducation
+  type: http
+  seq: 2
+}
+
+post {
+  url: {{baseUrl}}/{{role}}/addEmployeeEducation
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+    "employeeId": "c0a80124-9de8-19f3-819d-e87501090004",
+    "degreeType": "Bachelor",
+    "degreeName": "Bachelor of Engineering",
+    "institutionName": "Savitribai Phule Pune University",
+    "fieldOfStudy": "Computer Science",
+    "startDate": "2018-06-01",
+    "endDate": "2022-05-30",
+    "marks": "8.5 CGPA",
+    "pursuing": false
+  }
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}

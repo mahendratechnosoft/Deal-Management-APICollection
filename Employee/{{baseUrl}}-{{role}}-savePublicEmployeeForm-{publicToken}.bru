@@ -1,0 +1,50 @@
+meta {
+  name: {{baseUrl}}/{{role}}/savePublicEmployeeForm/{publicToken}
+  type: http
+  seq: 13
+}
+
+put {
+  url: {{baseUrl}}/public/savePublicEmployeeForm/b99534b7-39c1-48dd-b432-64352a83c91c
+  body: json
+  auth: none
+}
+
+body:json {
+  {
+    "name": "test17 emp",
+    "phone": "+918796523132",
+    "gender": "Male",
+    "profileImageBase64": null,
+    "dateOfBirth": null,
+    "maritalStatus": null,
+    "bloodGroup": null,
+    "nationality": null,
+    "alternatePhone": "98765432100",
+    "address": "check update",
+    "country": "",
+    "state": "",
+    "city": "",
+    "sameAsPermanent": false,
+    "currentAddress": null,
+    "currentCity": null,
+    "currentState": null,
+    "currentCountry": null,
+    "adharNumber": null,
+    "panNumber": null,
+    "passportNumber": null,
+    "drivingLicenseNumber": null,
+    "voterId": null,
+    "accountHolderName": null,
+    "bankName": null,
+    "branchName": null,
+    "accountNumber": null,
+    "ifscCode": null,
+    "upiId": null
+  }
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}
