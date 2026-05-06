@@ -1,0 +1,29 @@
+meta {
+  name: {{baseUrl}}/{{role}}/verifyEmployeeDocument
+  type: http
+  seq: 3
+}
+
+put {
+  url: {{baseUrl}}/{{role}}/verifyEmployeeDocument?documentId=c0a8012c-9df1-1eae-819d-f78888c70007&status=VERIFIED&remarks=blury photo
+  body: none
+  auth: inherit
+}
+
+params:query {
+  documentId: c0a8012c-9df1-1eae-819d-f78888c70007
+  status: VERIFIED
+  remarks: blury photo
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}
+
+docs {
+  status :
+    VERIFIED,REJECTED,PENDING
+    
+  remark only for REJECTED status
+}

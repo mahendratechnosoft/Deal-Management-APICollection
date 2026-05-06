@@ -1,0 +1,24 @@
+meta {
+  name: {{baseUrl}}/{{role}}/addEmployeeDocument
+  type: http
+  seq: 2
+}
+
+post {
+  url: {{baseUrl}}/{{role}}/addEmployeeDocument
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+    "employeeId":"c0a80124-9de8-19f3-819d-e87501090004",
+    "documentType":"profile",
+    "documentUrl":"07beb843-8ab9-4a2d-b6aa-0166123992b2_donorDemoFull.jpg"
+  }
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}

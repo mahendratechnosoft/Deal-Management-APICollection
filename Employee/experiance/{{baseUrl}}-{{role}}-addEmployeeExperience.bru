@@ -1,0 +1,32 @@
+meta {
+  name: {{baseUrl}}/{{role}}/addEmployeeExperience
+  type: http
+  seq: 2
+}
+
+post {
+  url: {{baseUrl}}/{{role}}/addEmployeeExperience
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+    "employeeId": "c0a80124-9de8-19f3-819d-e87501090004",
+    "companyName": "Tata Consultancy Services",
+    "designation": "Sr .Software Engineer",
+    "startDate": "2024-04-01",
+    "endDate": "2026-03-31",
+    "currentCompany": false,
+    "location": "Mumbai",
+    
+    "jobDescription": "Worked on Spring Boot applications, REST APIs, and database design.",
+    "reasonForLeaving": "Looking for better growth opportunities",
+    "salary": 600000
+  }
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}
