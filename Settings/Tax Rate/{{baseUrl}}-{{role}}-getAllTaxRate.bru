@@ -5,9 +5,13 @@ meta {
 }
 
 get {
-  url: {{baseUrl}}/{{role}}/getAllTaxRate
+  url: {{baseUrl}}/{{role}}/getAllTaxRate?active=
   body: none
   auth: inherit
+}
+
+params:query {
+  active: 
 }
 
 settings {
