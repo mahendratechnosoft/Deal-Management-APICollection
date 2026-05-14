@@ -5,7 +5,7 @@ meta {
 }
 
 get {
-  url: {{baseUrl}}/admin/getAllVendors?page=0&size=5&search=check
+  url: {{baseUrl}}/admin/getAllVendors?page=0&size=5
   body: none
   auth: inherit
 }
@@ -13,9 +13,10 @@ get {
 params:query {
   page: 0
   size: 5
-  search: check
+  ~search: check
 }
 
 settings {
   encodeUrl: true
+  timeout: 0
 }
