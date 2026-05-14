@@ -1,0 +1,15 @@
+meta {
+  name: {{baseUrl}}/{{role}}/getExpenseCounts
+  type: http
+  seq: 6
+}
+
+get {
+  url: {{baseUrl}}/{{role}}/getExpenseCounts
+  body: none
+  auth: inherit
+}
+
+settings {
+  encodeUrl: true
+}

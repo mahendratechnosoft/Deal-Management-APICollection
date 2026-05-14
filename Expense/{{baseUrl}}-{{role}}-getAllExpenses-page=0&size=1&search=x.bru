@@ -5,7 +5,7 @@ meta {
 }
 
 get {
-  url: {{baseUrl}}/{{role}}/getAllExpenses?page=0&size=10&expenseCategoryId=c0a80126-9e24-14b7-819e-250960170008
+  url: {{baseUrl}}/{{role}}/getAllExpenses?page=0&size=10&status=OVERDUE
   body: none
   auth: inherit
 }
@@ -13,9 +13,9 @@ get {
 params:query {
   page: 0
   size: 10
-  expenseCategoryId: c0a80126-9e24-14b7-819e-250960170008
+  status: OVERDUE
+  ~expenseCategoryId: c0a80126-9e24-14b7-819e-250960170008
   ~vendorId: c0a80126-9e24-14b7-819e-24f3ce570002
-  ~status: UNPAID
   ~search: x
   ~startDate: 2026-05-14
   ~endDate: 2026-05-15
