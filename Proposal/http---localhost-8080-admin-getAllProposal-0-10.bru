@@ -5,12 +5,13 @@ meta {
 }
 
 get {
-  url: {{baseUrl}}/{{role}}/getAllProposal/0/10
+  url: {{baseUrl}}/{{role}}/getAllProposal/0/100?relatedId=c0a8013b-9e29-1cfe-819e-2b2f7d920000
   body: none
   auth: bearer
 }
 
 params:query {
+  relatedId: c0a8013b-9e29-1cfe-819e-2b2f7d920000
   ~search: 
 }
 

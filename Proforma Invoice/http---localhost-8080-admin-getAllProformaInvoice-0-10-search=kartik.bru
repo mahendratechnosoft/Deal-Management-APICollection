@@ -5,12 +5,13 @@ meta {
 }
 
 get {
-  url: {{baseUrl}}/admin/getAllProformaInvoice/0/10
+  url: {{baseUrl}}/admin/getAllProformaInvoice/0/10?relatedId=c0a800ef-9a76-1de1-819a-76c4f6210008
   body: none
   auth: bearer
 }
 
 params:query {
+  relatedId: c0a800ef-9a76-1de1-819a-76c4f6210008
   ~search: kartik
   ~proformaType: REIMBURSEMENT
 }
