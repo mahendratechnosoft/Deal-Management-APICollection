@@ -5,12 +5,13 @@ meta {
 }
 
 get {
-  url: {{baseUrl}}/admin/getAllAMC/0/10
+  url: {{baseUrl}}/admin/getAllAMC/0/10?customerId=c0a800ef-9ace-18df-819a-cf3e3fe40020
   body: none
   auth: bearer
 }
 
 params:query {
+  customerId: c0a800ef-9ace-18df-819a-cf3e3fe40020
   ~search: tcs
   ~expiryFromDate: 2027-04-20
   ~expiryToDate: 2028-04-20

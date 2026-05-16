@@ -5,13 +5,14 @@ meta {
 }
 
 get {
-  url: https://api.mtechnosoft.xpertbizsolutions.com/admin/getAllPayments/0/10?search=Pv
+  url: {{baseUrl}}/{{role}}/getAllPayments/0/10?customerId=c0a800ef-9a76-1de1-819a-76c4f6210008
   body: none
   auth: bearer
 }
 
 params:query {
-  search: Pv
+  customerId: c0a800ef-9a76-1de1-819a-76c4f6210008
+  ~search: Pv
 }
 
 auth:bearer {
@@ -20,4 +21,5 @@ auth:bearer {
 
 settings {
   encodeUrl: true
+  timeout: 0
 }
