@@ -5,14 +5,14 @@ meta {
 }
 
 get {
-  url: {{baseUrl}}/{{role}}/getAllInvoice/0/50?relatedId=c0a800ef-9ace-18df-819a-cf3e3fe40020
+  url: {{baseUrl}}/{{role}}/getAllInvoice/0/50?relatedId=c0a800ef-9ace-18df-819a-cf3e3fe40020&search=INV-26/27/000007
   body: none
   auth: bearer
 }
 
 params:query {
   relatedId: c0a800ef-9ace-18df-819a-cf3e3fe40020
-  ~search: Google
+  search: INV-26/27/000007
 }
 
 auth:bearer {
