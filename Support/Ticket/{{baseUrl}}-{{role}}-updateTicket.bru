@@ -1,0 +1,35 @@
+meta {
+  name: {{baseUrl}}/{{role}}/updateTicket
+  type: http
+  seq: 3
+}
+
+put {
+  url: {{baseUrl}}/{{role}}/updateTicket
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+    "ticketId": "c0a80130-9e43-1b0e-819e-43bc3fdb0000",
+    "subject": "Unable to Login to CRM Portal",
+    "description": "I am unable to login to the CRM portal using my credentials. It shows an invalid session error after entering username and password.",
+    "name": "Ritesh Thete",
+    "email": "theteriteshsomnath@gmail.com",
+    "contactId": null,
+    "departmentName": "Technical Support",
+    "departmentId": "DEPT-001",
+    "assignedToName": "Amit Sharma",
+    "assignedToId": "EMP-101",
+    "priority": "Medium",
+    "status": "open",
+    "service": "CRM Application",
+    "ccEmails": "harshadalokare2007@gmail.com"
+  }
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}

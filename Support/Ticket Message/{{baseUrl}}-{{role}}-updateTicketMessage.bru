@@ -1,0 +1,26 @@
+meta {
+  name: {{baseUrl}}/{{role}}/updateTicketMessage
+  type: http
+  seq: 2
+}
+
+put {
+  url: {{baseUrl}}/{{role}}/updateTicketMessage
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+    "ticketMessageId": "c0a80130-9e44-1957-819e-4511057a0008",
+    "message": "Issue has been resolved. Please verify from your side updated.",
+    
+    "attachments": [
+    ]
+  }
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}

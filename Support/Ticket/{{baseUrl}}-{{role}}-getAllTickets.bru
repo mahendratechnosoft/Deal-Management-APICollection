@@ -1,0 +1,37 @@
+meta {
+  name: {{baseUrl}}/{{role}}/getAllTickets
+  type: http
+  seq: 4
+}
+
+get {
+  url: {{baseUrl}}/{{role}}/getAllTickets?page=0&size=10&sort=createdAt,desc&createdBy=OWN
+  body: none
+  auth: inherit
+}
+
+params:query {
+  page: 0
+  size: 10
+  sort: createdAt,desc
+  createdBy: OWN
+  ~assignedTo: OWN
+  ~search: 5
+  ~status: Open
+  ~priority: High
+  ~service: CRM Application
+  ~department: DEPT-001
+  ~fromDate: 2026-05-19
+  ~toDate: 2026-05-19
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}
+
+docs {
+  assignedTo:
+  
+  ALL/OWN/UNASSIGNED/emp or admin ID
+}
