@@ -1,0 +1,21 @@
+meta {
+  name: {{baseUrl}}/{{role}}/updateTicketStatusSequence
+  type: http
+  seq: 5
+}
+
+put {
+  url: {{baseUrl}}/{{role}}/updateTicketStatusSequence?ticketStatusId=c0a8012b-9e68-14a2-819e-682e5b3b0031&newSequence=10
+  body: none
+  auth: inherit
+}
+
+params:query {
+  ticketStatusId: c0a8012b-9e68-14a2-819e-682e5b3b0031
+  newSequence: 10
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}

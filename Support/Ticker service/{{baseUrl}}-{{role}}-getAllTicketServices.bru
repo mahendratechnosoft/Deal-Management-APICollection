@@ -1,0 +1,20 @@
+meta {
+  name: {{baseUrl}}/{{role}}/getAllTicketServices
+  type: http
+  seq: 2
+}
+
+get {
+  url: {{baseUrl}}/{{role}}/getAllTicketServices
+  body: none
+  auth: inherit
+}
+
+params:query {
+  ~search: web
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}

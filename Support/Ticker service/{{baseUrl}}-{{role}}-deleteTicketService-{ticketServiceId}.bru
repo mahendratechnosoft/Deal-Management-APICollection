@@ -1,0 +1,15 @@
+meta {
+  name: {{baseUrl}}/{{role}}/deleteTicketService/{ticketServiceId}
+  type: http
+  seq: 4
+}
+
+delete {
+  url: {{baseUrl}}/{{role}}/deleteTicketService/{ticketServiceId}
+  body: none
+  auth: inherit
+}
+
+settings {
+  encodeUrl: true
+}

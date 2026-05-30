@@ -1,0 +1,23 @@
+meta {
+  name: {{baseUrl}}/{{role}}/updateTicketPriority
+  type: http
+  seq: 3
+}
+
+put {
+  url: {{baseUrl}}/{{role}}/updateTicketPriority
+  body: json
+  auth: inherit
+}
+
+body:json {
+    {
+      "ticketPriorityId": "c0a8012b-9e63-1a83-819e-643793e30001",
+      "name": "Low"
+    }
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}

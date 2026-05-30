@@ -1,0 +1,24 @@
+meta {
+  name: {{baseUrl}}/{{role}}/updateTicketStatus
+  type: http
+  seq: 3
+}
+
+put {
+  url: {{baseUrl}}/{{role}}/updateTicketStatus
+  body: json
+  auth: inherit
+}
+
+body:json {
+    {
+      "ticketStatusId": "c0a8012b-9e68-14a2-819e-6833871d0034",
+      "name": "Test updated",
+      "color": "#4DAF50"
+    }
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}

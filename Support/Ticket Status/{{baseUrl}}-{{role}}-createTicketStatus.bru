@@ -1,0 +1,23 @@
+meta {
+  name: {{baseUrl}}/{{role}}/createTicketStatus
+  type: http
+  seq: 2
+}
+
+post {
+  url: {{baseUrl}}/{{role}}/createTicketStatus
+  body: json
+  auth: inherit
+}
+
+body:json {
+    {
+      "name": "Test",
+      "color": "#4DAF50"
+    }
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}

@@ -1,0 +1,23 @@
+meta {
+  name: {{baseUrl}}/{{role}}/updateTicketService
+  type: http
+  seq: 3
+}
+
+put {
+  url: {{baseUrl}}/{{role}}/updateTicketService
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+    "ticketServiceId": "c0a8012f-9e77-1a3d-819e-7786f73b0001",
+    "name": "Crm Technology updated"
+  }
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}
