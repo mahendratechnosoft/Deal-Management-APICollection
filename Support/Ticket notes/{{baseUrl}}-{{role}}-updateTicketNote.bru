@@ -1,0 +1,23 @@
+meta {
+  name: {{baseUrl}}/{{role}}/updateTicketNote
+  type: http
+  seq: 2
+}
+
+put {
+  url: {{baseUrl}}/{{role}}/updateTicketNote
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+    "ticketNoteId": "c0a80122-9e87-1ed2-819e-8796287b0003",
+    "note": "this is my first note updated"
+  }
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}
