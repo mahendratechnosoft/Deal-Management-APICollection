@@ -1,0 +1,20 @@
+meta {
+  name: {{baseUrl}}/{{role}}/isVendorCodeUnique
+  type: http
+  seq: 11
+}
+
+get {
+  url: {{baseUrl}}/{{role}}/isVendorCodeUnique?vendorCode=V-2024-002
+  body: none
+  auth: inherit
+}
+
+params:query {
+  vendorCode: V-2024-002
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}
