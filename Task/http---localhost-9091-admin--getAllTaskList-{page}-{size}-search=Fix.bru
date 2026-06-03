@@ -4,16 +4,25 @@ meta {
   seq: 5
 }
 
-get {
-  url: http://localhost:9090/employee/getAllTaskList/0/10?status=IN_PROGRESS
+put {
+  url: {{baseUrl}}/{{role}}/getAllTaskList/0/10
   body: json
   auth: inherit
 }
 
 params:query {
-  status: IN_PROGRESS
+  ~status: IN_PROGRESS
   ~listType: ASSIGNED
   ~search: Fix
+}
+
+body:json {
+  {
+    "relatedTo": "customer",
+    "relatedToId":[
+      "c0a800ef-9a76-1de1-819a-76c4f6210008"
+    ]
+  }
 }
 
 settings {

@@ -5,17 +5,17 @@ meta {
 }
 
 get {
-  url: {{baseUrl}}/{{role}}/getAllReminder?page=0&size=5&search=up&startDate=2026-01-10&endDate=2026-01-10
+  url: {{baseUrl}}/{{role}}/getAllReminder?page=0&size=10
   body: json
   auth: bearer
 }
 
 params:query {
   page: 0
-  size: 5
-  search: up
-  startDate: 2026-01-10
-  endDate: 2026-01-10
+  size: 10
+  ~search: up
+  ~startDate: 2026-01-10
+  ~endDate: 2026-01-10
 }
 
 auth:bearer {
