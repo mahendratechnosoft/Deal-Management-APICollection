@@ -5,7 +5,7 @@ meta {
 }
 
 get {
-  url: {{baseUrl}}/{{role}}/getAllTickets?page=0&size=10&sort=createdAt,desc&createdBy=ALL&assignedTo=ALL&customerId=customer_id_check
+  url: {{baseUrl}}/{{role}}/getAllTickets?page=0&size=10&sort=createdAt,desc&createdBy=ALL&assignedTo=ALL
   body: none
   auth: inherit
 }
@@ -16,7 +16,7 @@ params:query {
   sort: createdAt,desc
   createdBy: ALL
   assignedTo: ALL
-  customerId: customer_id_check
+  ~customerId: customer_id_check
   ~search: 5
   ~status: Open
   ~priority: High

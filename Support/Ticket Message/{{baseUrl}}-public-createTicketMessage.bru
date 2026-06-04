@@ -1,0 +1,23 @@
+meta {
+  name: {{baseUrl}}/public/createTicketMessage
+  type: http
+  seq: 6
+}
+
+post {
+  url: {{baseUrl}}/public/createTicketMessage
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+    "ticketId": "c0a80130-9e44-1957-819e-44cc05c30004",
+    "message": "customer this side new mail "
+  }
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}
