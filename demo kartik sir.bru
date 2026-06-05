@@ -1,0 +1,25 @@
+meta {
+  name: demo kartik sir
+  type: http
+  seq: 32
+}
+
+put {
+  url: https://backend.cshare.in/v2/genericEmployee/updateRegionInEmployee?start=0&end=1
+  body: none
+  auth: inherit
+}
+
+params:query {
+  start: 0
+  end: 1
+}
+
+headers {
+  x-auth-token: eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiI2NTU3MzYxOGY5NTZkMjM3YWI2ZTBkZjEiLCJleHAiOjE3ODA2MTY4ODYsImlhdCI6MTc4MDU3MzY4Nn0.9ZEXhoLUa91rC1J1PrJ0Bmhy6KBz85t6LWLlCK2uzR72IwVyG3rVuxap4DuT6HzFJnyGjIqhcSTq6xg81vWPVQ
+  companyId: 64e30b49811ce13c491366bf
+}
+
+settings {
+  encodeUrl: false
+}
