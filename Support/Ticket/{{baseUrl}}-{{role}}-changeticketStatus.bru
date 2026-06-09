@@ -1,0 +1,21 @@
+meta {
+  name: {{baseUrl}}/{{role}}/changeticketStatus
+  type: http
+  seq: 8
+}
+
+put {
+  url: {{baseUrl}}/{{role}}/changeticketStatus?ticketId=c0a80122-9e97-1fa8-819e-9779aba90000&Status=Close
+  body: none
+  auth: inherit
+}
+
+params:query {
+  ticketId: c0a80122-9e97-1fa8-819e-9779aba90000
+  Status: Close
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}
