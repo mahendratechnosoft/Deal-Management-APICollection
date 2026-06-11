@@ -1,0 +1,27 @@
+meta {
+  name: {{baseUrl}}/{{role}}/saveAllAttachments
+  type: http
+  seq: 2
+}
+
+post {
+  url: {{baseUrl}}/{{role}}/saveAllAttachments
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+    "entityName": "Leads",
+    "entityId": "c0a8013b-9e29-1cfe-819e-2b3376b80003",
+    "urls": [
+      "735a7bb4-54dd-436b-8fec-8fe5c2466f5e_donorDemoShort.jpg",
+      "5c812b73-131d-46bb-8178-b7e9471d3e1c_speicialOffers.jpg"
+    ]
+  }
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}

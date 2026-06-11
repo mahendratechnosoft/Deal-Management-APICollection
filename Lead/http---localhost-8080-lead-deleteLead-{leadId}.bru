@@ -5,15 +5,12 @@ meta {
 }
 
 delete {
-  url: http://localhost:8080/lead/deleteLead/{leadId}
+  url: {{baseUrl}}/{{role}}/deleteLead/c0a8013b-9e29-1cfe-819e-2b3376b80003
   body: none
-  auth: bearer
-}
-
-auth:bearer {
-  token: eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJkZW1vQGdtYWlsLmNvbSIsImlhdCI6MTc2MTYyNzA5MiwiZXhwIjoxNzYxODA3MDkyfQ.he2G3o88o780-cfQ7yZc0xEYRB5AApVMB_6zOj7zG59lZ_3tgtyOMDgvSjRcKh0ncG346ysh7HMU5EVrvtx9Qg
+  auth: inherit
 }
 
 settings {
   encodeUrl: true
+  timeout: 0
 }

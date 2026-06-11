@@ -1,0 +1,20 @@
+meta {
+  name: {{baseUrl}}/{{role}}/deleteSingleAttachment
+  type: http
+  seq: 3
+}
+
+delete {
+  url: {{baseUrl}}/{{role}}/deleteSingleAttachment?attachmentId=c0a8012a-9eb4-1bad-819e-b5feb7050000
+  body: none
+  auth: inherit
+}
+
+params:query {
+  attachmentId: c0a8012a-9eb4-1bad-819e-b5feb7050000
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}

@@ -1,0 +1,21 @@
+meta {
+  name: {{baseUrl}}/{{role}}/getAttachmentsForEntity
+  type: http
+  seq: 1
+}
+
+get {
+  url: {{baseUrl}}/{{role}}/getAttachmentsForEntity?entityName=Leads&entityId=c0a8013b-9e29-1cfe-819e-2b3376b80003
+  body: none
+  auth: inherit
+}
+
+params:query {
+  entityName: Leads
+  entityId: c0a8013b-9e29-1cfe-819e-2b3376b80003
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}
