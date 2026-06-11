@@ -1,0 +1,21 @@
+meta {
+  name: {{baseUrl}}/{{role}}/updateSequence
+  type: http
+  seq: 6
+}
+
+put {
+  url: {{baseUrl}}/{{role}}/updateSequence?optionId=c0a8012a-9eb4-1bad-819e-b6bfc1ef002f&newSequence=2
+  body: none
+  auth: inherit
+}
+
+params:query {
+  optionId: c0a8012a-9eb4-1bad-819e-b6bfc1ef002f
+  newSequence: 2
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}

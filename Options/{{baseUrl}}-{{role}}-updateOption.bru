@@ -1,0 +1,24 @@
+meta {
+  name: {{baseUrl}}/{{role}}/updateOption
+  type: http
+  seq: 4
+}
+
+put {
+  url: {{baseUrl}}/{{role}}/updateOption
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+    "optionId": "c0a8012a-9eb4-1bad-819e-b6d8282e0037",
+    "name": "test lead type updated",
+    "color": "#F44336"
+  }
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}

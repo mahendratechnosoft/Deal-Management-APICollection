@@ -1,0 +1,20 @@
+meta {
+  name: {{baseUrl}}/{{role}}/getBatchOptions
+  type: http
+  seq: 2
+}
+
+get {
+  url: {{baseUrl}}/{{role}}/getBatchOptions?categories=LEAD_TYPE,LEAD_SOURCE,LEAD_STATUS
+  body: none
+  auth: inherit
+}
+
+params:query {
+  categories: LEAD_TYPE,LEAD_SOURCE,LEAD_STATUS
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}

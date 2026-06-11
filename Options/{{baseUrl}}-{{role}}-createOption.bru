@@ -1,0 +1,24 @@
+meta {
+  name: {{baseUrl}}/{{role}}/createOption
+  type: http
+  seq: 3
+}
+
+post {
+  url: {{baseUrl}}/{{role}}/createOption
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+    "category":"LEAD_TYPE",
+    "name":"test lead type",
+    "color":"#F44336"
+  }
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}

@@ -1,0 +1,23 @@
+meta {
+  name: {{baseUrl}}/{{role}}/getOptions
+  type: http
+  seq: 1
+}
+
+get {
+  url: {{baseUrl}}/{{role}}/getOptions?category=LEAD_TYPE&search=&active=true&sort=sequence,asc
+  body: none
+  auth: inherit
+}
+
+params:query {
+  category: LEAD_TYPE
+  search: 
+  active: true
+  sort: sequence,asc
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}
