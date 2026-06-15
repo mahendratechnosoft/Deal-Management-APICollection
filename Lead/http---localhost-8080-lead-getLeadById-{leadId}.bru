@@ -5,7 +5,7 @@ meta {
 }
 
 get {
-  url: http://localhost:8080/admin/getLeadById/c0a80091-9a3d-1dc8-819a-3e54b32b0011
+  url: {{baseUrl}}/{{role}}/getLeadById/c0a8012a-9ec1-1bb7-819e-c125d91e0000
   body: none
   auth: bearer
 }
@@ -16,4 +16,5 @@ auth:bearer {
 
 settings {
   encodeUrl: true
+  timeout: 0
 }

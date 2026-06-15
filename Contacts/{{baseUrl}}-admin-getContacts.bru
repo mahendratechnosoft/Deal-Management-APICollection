@@ -1,0 +1,26 @@
+meta {
+  name: {{baseUrl}}/admin/getContacts
+  type: http
+  seq: 3
+}
+
+get {
+  url: {{baseUrl}}/admin/getContacts?leadId=c0a8012a-9ec0-1162-819e-c0e8bdca0004
+  body: none
+  auth: bearer
+}
+
+params:query {
+  leadId: c0a8012a-9ec0-1162-819e-c0e8bdca0004
+  ~search: 
+  ~customerId: 
+}
+
+auth:bearer {
+  token: {{bearerToken}}
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}

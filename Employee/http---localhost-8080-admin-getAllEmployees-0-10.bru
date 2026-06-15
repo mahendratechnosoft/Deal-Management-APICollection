@@ -5,9 +5,13 @@ meta {
 }
 
 get {
-  url: {{baseUrl}}/{{role}}/getAllEmployees/0/10
+  url: {{baseUrl}}/{{role}}/getAllEmployees/0/10?searchTerm=emp@gmail.com
   body: none
   auth: bearer
+}
+
+params:query {
+  searchTerm: emp@gmail.com
 }
 
 auth:bearer {
