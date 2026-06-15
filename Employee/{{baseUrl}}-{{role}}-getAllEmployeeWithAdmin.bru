@@ -1,0 +1,22 @@
+meta {
+  name: {{baseUrl}}/{{role}}/getAllEmployeeWithAdmin
+  type: http
+  seq: 17
+}
+
+get {
+  url: {{baseUrl}}/{{role}}/getAllEmployeeWithAdmin?excludeSelf=true&excludeAdmin=true&onlyActive=true
+  body: none
+  auth: inherit
+}
+
+params:query {
+  excludeSelf: true
+  excludeAdmin: true
+  onlyActive: true
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}
