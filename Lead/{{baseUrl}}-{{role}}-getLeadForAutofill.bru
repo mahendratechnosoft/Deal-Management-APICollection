@@ -1,0 +1,20 @@
+meta {
+  name: {{baseUrl}}/{{role}}/getLeadForAutofill
+  type: http
+  seq: 13
+}
+
+get {
+  url: {{baseUrl}}/{{role}}/getLeadForAutofill?searchValue=autoFeel@gmail.com
+  body: none
+  auth: inherit
+}
+
+params:query {
+  searchValue: autoFeel@gmail.com
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}
