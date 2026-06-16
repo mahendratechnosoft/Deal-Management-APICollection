@@ -5,16 +5,16 @@ meta {
 }
 
 get {
-  url: {{baseUrl}}/{{role}}/getOptions?category=LEAD_TYPE&search=&active=true&sort=sequence,asc
+  url: {{baseUrl}}/{{role}}/getOptions?category=LEAD_STATUS&search=&active=true
   body: none
   auth: inherit
 }
 
 params:query {
-  category: LEAD_TYPE
+  category: LEAD_STATUS
   search: 
   active: true
-  sort: sequence,asc
+  ~sort: sequence,asc
 }
 
 settings {

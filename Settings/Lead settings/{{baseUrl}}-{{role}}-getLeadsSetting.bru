@@ -1,0 +1,16 @@
+meta {
+  name: {{baseUrl}}/{{role}}/getLeadsSetting
+  type: http
+  seq: 1
+}
+
+get {
+  url: {{baseUrl}}/{{role}}/getLeadsSetting
+  body: none
+  auth: inherit
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}

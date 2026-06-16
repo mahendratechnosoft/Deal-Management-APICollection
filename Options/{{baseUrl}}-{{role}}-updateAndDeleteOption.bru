@@ -1,0 +1,21 @@
+meta {
+  name: {{baseUrl}}/{{role}}/updateAndDeleteOption
+  type: http
+  seq: 8
+}
+
+post {
+  url: {{baseUrl}}/{{role}}/updateAndDeleteOption?optionIdToDelete=c0a8012a-9ece-1bb9-819e-cfa35a260038&fallbackOptionId=c0a8012a-9ece-1bb9-819e-cfa35a2a0039
+  body: none
+  auth: inherit
+}
+
+params:query {
+  optionIdToDelete: c0a8012a-9ece-1bb9-819e-cfa35a260038
+  fallbackOptionId: c0a8012a-9ece-1bb9-819e-cfa35a2a0039
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}
