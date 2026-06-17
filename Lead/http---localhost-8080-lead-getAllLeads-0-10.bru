@@ -5,7 +5,7 @@ meta {
 }
 
 get {
-  url: {{baseUrl}}/{{role}}/getAllLeads/0/10
+  url: {{baseUrl}}/{{role}}/getAllLeads/0/100
   body: none
   auth: bearer
 }
@@ -17,6 +17,11 @@ params:query {
   ~endDate: 
   ~followUpDate: 
   ~leadStatus: 
+  ~industry: Medical
+  ~source: Facebook
+  ~leadType: Cold
+  ~followUpStartDate: 2026-06-21
+  ~followUpEndDate: 2026-06-21
 }
 
 auth:bearer {
