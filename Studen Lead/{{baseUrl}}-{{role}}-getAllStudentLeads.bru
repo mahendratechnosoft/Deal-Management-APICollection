@@ -1,0 +1,29 @@
+meta {
+  name: {{baseUrl}}/{{role}}/getAllStudentLeads
+  type: http
+  seq: 2
+}
+
+get {
+  url: {{baseUrl}}/{{role}}/getAllStudentLeads
+  body: none
+  auth: inherit
+}
+
+params:query {
+  ~page: 0
+  ~size: 10
+  ~leadStatus: New
+  ~search: John
+  ~startDate: 2024-01-01
+  ~endDate: 2024-06-30
+  ~assignTo: EMP_123
+  ~createdBy: ADM_456
+  ~source: Website
+  ~leadType: hot
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}

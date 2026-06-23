@@ -5,15 +5,15 @@ meta {
 }
 
 get {
-  url: {{baseUrl}}/{{role}}/getAllEmployeeWithAdmin?excludeSelf=true&excludeAdmin=true&onlyActive=true
+  url: {{baseUrl}}/{{role}}/getAllEmployeeWithAdmin?excludeAdmin=true&onlyActive=true
   body: none
   auth: inherit
 }
 
 params:query {
-  excludeSelf: true
   excludeAdmin: true
   onlyActive: true
+  ~excludeSelf: true
 }
 
 settings {

@@ -1,0 +1,23 @@
+meta {
+  name: {{baseUrl}}/{{role}}/updateStudentLeadStatus
+  type: http
+  seq: 5
+}
+
+put {
+  url: {{baseUrl}}/{{role}}/updateStudentLeadStatus
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+    "leadId":"c0a8012c-9ef2-179d-819e-f2f958360000",
+    "status":"won"
+  }
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}

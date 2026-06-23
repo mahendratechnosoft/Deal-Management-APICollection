@@ -5,13 +5,13 @@ meta {
 }
 
 get {
-  url: {{baseUrl}}/{{role}}/getBatchOptions?categories=LEAD_TYPE,LEAD_SOURCE,LEAD_STATUS
+  url: {{baseUrl}}/{{role}}/getBatchOptions?categories=LEAD_TYPE,LEAD_SOURCE,INDUSTRY
   body: none
   auth: inherit
 }
 
 params:query {
-  categories: LEAD_TYPE,LEAD_SOURCE,LEAD_STATUS
+  categories: LEAD_TYPE,LEAD_SOURCE,INDUSTRY
 }
 
 settings {

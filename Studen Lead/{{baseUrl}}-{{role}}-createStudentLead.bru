@@ -1,0 +1,41 @@
+meta {
+  name: {{baseUrl}}/{{role}}/createStudentLead
+  type: http
+  seq: 1
+}
+
+post {
+  url: {{baseUrl}}/{{role}}/createStudentLead
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+    "studentName": "John Doe",
+    "interestedIn": "Medical Counseling",
+    "studentPhone": "9876543210",
+    "parentPhone": "9876543210",
+    "education": "12th Science",
+    "neetScore": "620",
+    "cetScore": "145",
+    "source": "Website",
+    "status": "New",
+    "type": "hot",
+    "street": "123 Education Lane",
+    "city": "Pune",
+    "state": "Maharashtra",
+    "zipCode": "411001",
+    "country": "India",
+    "description": "Student is very interested in top tier medical colleges in Maharashtra.",
+    "assignTo": [
+      "EMP_12345"
+    ]
+  }
+  
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}

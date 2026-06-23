@@ -1,0 +1,41 @@
+meta {
+  name: {{baseUrl}}/{{role}}/updateStudentLead
+  type: http
+  seq: 4
+}
+
+put {
+  url: {{baseUrl}}/{{role}}/updateStudentLead
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+    "id": "c0a8012c-9ef2-179d-819e-f2f958360000",
+    "assignTo": [
+      "EMP_12345"
+    ],
+    "status": "New",
+    "source": "Website",
+    "studentName": "John Doe updated",
+    "interestedIn": "Medical Counseling",
+    "studentPhone": "9876543210",
+    "parentPhone": "9876543210",
+    "education": "12th Science",
+    "neetScore": "620",
+    "cetScore": "145",
+    "type": "hot",
+    "street": "123 Education Lane",
+    "country": "India",
+    "state": "Maharashtra",
+    "city": "Pune",
+    "zipCode": "411001",
+    "description": "Student is very interested in top tier medical colleges in Maharashtra."
+  }
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}
