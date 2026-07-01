@@ -1,0 +1,21 @@
+meta {
+  name: {{baseUrl}}/public/getBatchOptions
+  type: http
+  seq: 9
+}
+
+get {
+  url: {{baseUrl}}/public/getBatchOptions?categories=LEAD_TYPE,LEAD_SOURCE,INDUSTRY,LEAD_STATUS&adminId=ac110002-9daf-1133-819d-b520a28f0005
+  body: none
+  auth: inherit
+}
+
+params:query {
+  categories: LEAD_TYPE,LEAD_SOURCE,INDUSTRY,LEAD_STATUS
+  adminId: ac110002-9daf-1133-819d-b520a28f0005
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}

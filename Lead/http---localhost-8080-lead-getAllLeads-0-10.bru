@@ -5,23 +5,22 @@ meta {
 }
 
 get {
-  url: {{baseUrl}}/{{role}}/getAllLeads/0/100
+  url: {{baseUrl}}/{{role}}/getAllLeads/0/100?assignTo=c0a80124-9de8-19f3-819d-e86e91380001&createdBy=c0a800ef-9a76-1de1-819a-76c0f7840001&startDate=&endDate=&leadStatus=&industry=Medical&source=Facebook&leadType=Cold&followUpStartDate=2026-06-21&followUpEndDate=2026-06-21
   body: none
   auth: bearer
 }
 
 params:query {
-  ~assignTo: c0a80124-9de8-19f3-819d-e86e91380001
-  ~createdBy: c0a800ef-9a76-1de1-819a-76c0f7840001
-  ~startDate: 
-  ~endDate: 
-  ~followUpDate: 
-  ~leadStatus: 
-  ~industry: Medical
-  ~source: Facebook
-  ~leadType: Cold
-  ~followUpStartDate: 2026-06-21
-  ~followUpEndDate: 2026-06-21
+  assignTo: c0a80124-9de8-19f3-819d-e86e91380001
+  createdBy: c0a800ef-9a76-1de1-819a-76c0f7840001
+  startDate: 
+  endDate: 
+  leadStatus: 
+  industry: Medical
+  source: Facebook
+  leadType: Cold
+  followUpStartDate: 2026-06-21
+  followUpEndDate: 2026-06-21
 }
 
 auth:bearer {
