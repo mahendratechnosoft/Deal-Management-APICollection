@@ -1,0 +1,22 @@
+meta {
+  name: {{baseUrl}}/{{role}}/getGSTReportExcel
+  type: http
+  seq: 2
+}
+
+get {
+  url: {{baseUrl}}/{{role}}/getGSTReportExcel?format=csv&startDate=&endDate=
+  body: none
+  auth: inherit
+}
+
+params:query {
+  format: csv
+  startDate: 
+  endDate: 
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}

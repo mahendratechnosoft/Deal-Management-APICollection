@@ -5,14 +5,16 @@ meta {
 }
 
 get {
-  url: http://localhost:9091/admin/getInvoiceTaxSummary?startDate&endDate
+  url: {{baseUrl}}/{{role}}/getInvoiceTaxSummary
   body: none
   auth: bearer
 }
 
 params:query {
-  startDate: 
-  endDate: 
+  ~startDate: 2026-04-01
+  ~endDate: 2027-03-31
+  ~currency: INR
+  ~status: Partially Paid
 }
 
 auth:bearer {
@@ -21,4 +23,5 @@ auth:bearer {
 
 settings {
   encodeUrl: true
+  timeout: 0
 }

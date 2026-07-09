@@ -1,0 +1,24 @@
+meta {
+  name: {{baseUrl}}/{{role}}/getGSTReport
+  type: http
+  seq: 1
+}
+
+get {
+  url: {{baseUrl}}/{{role}}/getGSTReport?startDate=&endDate=&page=0&size=1000
+  body: none
+  auth: inherit
+}
+
+params:query {
+  startDate: 
+  endDate: 
+  page: 0
+  size: 1000
+  : 
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}
