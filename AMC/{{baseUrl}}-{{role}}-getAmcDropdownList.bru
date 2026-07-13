@@ -1,0 +1,22 @@
+meta {
+  name: {{baseUrl}}/{{role}}/getAmcDropdownList
+  type: http
+  seq: 11
+}
+
+get {
+  url: {{baseUrl}}/{{role}}/getAmcDropdownList?serviceType=GSUITE
+  body: none
+  auth: inherit
+}
+
+params:query {
+  serviceType: GSUITE
+  ~serviceType: DOMAIN
+  ~serviceType: AMC
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}

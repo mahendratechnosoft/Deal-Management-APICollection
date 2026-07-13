@@ -17,8 +17,8 @@ auth:bearer {
 body:json {
   {
     "amcInfo": {
-      "customerId": "c0a800ef-9ace-18df-819a-cf745b320026",
-      "clinetName": "company 6",
+      "customerId": "c0a8013b-9e29-1cfe-819e-2b2f7d920000",
+      "clientName": "company clientName 6",
       "companyName": "company 6",
       "contactPersonName": "demo contact",
       "email": "support@techsolutions.com",
@@ -34,18 +34,14 @@ body:json {
       "amcAmount": 25000.0,
       "amcScope": "Full website maintenance, bug fixes, security patches updated",
       "amcRecycleType": "Yearly",
-      "paidAmount": 0.0,
-      "paymentStatus": null,
-      "deleted": false
+      "paidAmount": 0.0
     },
     "amcDomainHistoryInfo": {
       "domainStartDate": "2025-01-01",
       "domainRenewalDate": "2026-01-01",
       "domainAmount": 1200.0,
       "domainRenewalCycle": "Yearlyupdated",
-      "paidAmount": 1200,
-      "paymentStatus": null,
-      "deleted": false
+      "paidAmount": 1200
     },
     "amcGsuitHistory": {
       "domainName": "examplecompany.com",
@@ -60,10 +56,11 @@ body:json {
       "resellerName": "Google Authorized Partner Pvt Ltd",
       "gsuitRenewalCycle": "YEARLY",
       "paidAmount": 5000,
-      "paymentStatus": null,
-      "purchasedViaReseller": true,
-      "deleted": false
-    }
+      "paymentStatus": null
+    },
+    "sendMailToCustomerAmc": false,
+    "sendMailToCustomerDomain": false,
+    "sendMailToCustomerGsuit": false
   }
 }
 
