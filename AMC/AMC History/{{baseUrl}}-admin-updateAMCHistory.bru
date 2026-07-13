@@ -5,7 +5,7 @@ meta {
 }
 
 put {
-  url: {{baseUrl}}/admin/updateAMCHistory
+  url: {{baseUrl}}/{{role}}/updateAMCHistory
   body: json
   auth: bearer
 }
@@ -16,17 +16,19 @@ auth:bearer {
 
 body:json {
   {
-         
-          "amcId": "ac16d001-9b07-1f9b-819b-07ad60e10009",
-          "amcStartDate": "2025-01-01",
-          "amcEndDate": "2026-01-01",
-          "amcAmount": 25000.0,
-          "amcScope": "Full website maintenance, bug fixes, security patches",
-          "amcRecycleType": "Yearly",
-          "sequence": 1
-      }
+  
+      "acmHistoryId": "c0a80128-9f4f-132d-819f-4fe3f6db0001",
+      "amcId": "c0a80128-9f4f-132d-819f-4fe3f5a20000",
+      "amcStartDate": "2025-01-01",
+      "amcEndDate": "2026-01-01",
+      "amcAmount": 25000.0,
+      "amcScope": "Full website maintenance, bug fixes, security patches updated",
+      "amcRecycleType": "Yearly",
+      "paidAmount": 25000
+    }
 }
 
 settings {
   encodeUrl: true
+  timeout: 0
 }

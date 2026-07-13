@@ -5,29 +5,31 @@ meta {
 }
 
 put {
-  url: {{baseUrl}}/admin/updateAMCGsuitHistory
+  url: {{baseUrl}}/{{role}}/updateAMCGsuitHistory
   body: json
   auth: inherit
 }
 
 body:json {
   {
-          "domainName": "examplecompany.com",
-          "platform": "Google Workspace",
-          "gsuitStartDate": "2025-01-01",
-          "gsuitRenewalDate": "2026-01-01",
-          "adminEmail": "admin@examplecompany.com",
-          "adminPassword": "Admin@123",
-          "totalLicenses": 25,
-          "gsuitAmount": "45000",
-          "paidBy": "ADMIN",
-          "purchasedViaReseller": true,
-          "resellerName": "Google Authorized Partner Pvt Ltd",
-          "gsuitRenewalCycle": "YEARLY",
-          "sequence": 1
-      }
+      "acmGsuitHistoryId": "c0a80128-9f4f-132d-819f-4fe3f73b0003",
+      "domainName": "examplecompany.com",
+      "platform": "Google Workspaceupdated",
+      "gsuitStartDate": "2025-01-01",
+      "gsuitRenewalDate": "2026-01-01",
+      "adminEmail": "admin@examplecompany.com",
+      "adminPassword": "Admin@123",
+      "totalLicenses": 25,
+      "gsuitAmount": 45000.0,
+      "paidBy": "ADMIN",
+      "resellerName": "Google Authorized Partner Pvt Ltd",
+      "gsuitRenewalCycle": "YEARLY",
+      "paidAmount": 45000.0,
+      "purchasedViaReseller": true
+    }
 }
 
 settings {
   encodeUrl: true
+  timeout: 0
 }

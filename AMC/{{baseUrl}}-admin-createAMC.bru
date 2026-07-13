@@ -16,47 +16,58 @@ auth:bearer {
 
 body:json {
   {
-      "amcInfo": {
-          "adminId": "ADMIN123",
-          "employeeId": "",
-          "clinetName": "John Doe",
-          "companyName": "Tech Solutions Pvt Ltd",
-          "contactPersonName": "Sarah Johnson",
-          "email": "support@techsolutions.com",
-          "phoneNumber": "9876543210",
-          "websiteURL": "https://www.techsolutions.com",
-          "technology": "Java Spring Boot",
-          "hostingProvider": "AWS",
-          "domainProvider": "GoDaddy",
-          "assingedTo": "EMP789"
-      },
-      "amcHistoryInfo": {
-          "amcStartDate": "2025-01-01",
-          "amcEndDate": "2025-02-01",
-          "amcAmount": 25000,
-          "amcScope": "Full website maintenance, bug fixes, security patches",
-          "amcRecycleType": "Yearly",
-          "sequence": 1
-      },
-      "amcDomainHistoryInfo" : null,
-      "amcGsuitHistory": {
-          "domainName": "examplecompany.com",
-          "platform": "Google Workspace",
-          "gsuitStartDate": "2025-01-01",
-          "gsuitRenewalDate": "2026-01-01",
-          "adminEmail": "admin@examplecompany.com",
-          "adminPassword": "Admin@123",
-          "totalLicenses": 25,
-          "gsuitAmount": "45000",
-          "paidBy": "ADMIN",
-          "purchasedViaReseller": true,
-          "resellerName": "Google Authorized Partner Pvt Ltd",
-          "gsuitRenewalCycle": "YEARLY",
-          "sequence": 1
-      }
+    "amcInfo": {
+      "customerId": "c0a800ef-9ace-18df-819a-cf745b320026",
+      "clinetName": "company 6",
+      "companyName": "company 6",
+      "contactPersonName": "demo contact",
+      "email": "support@techsolutions.com",
+      "phoneNumber": "9876543210",
+      "websiteURL": "https://www.techsolutions.com",
+      "technology": "Java Spring Boot",
+      "hostingProvider": "AWS",
+      "domainProvider": "GoDaddy"
+    },
+    "amcHistoryInfo": {
+      "amcStartDate": "2025-01-01",
+      "amcEndDate": "2026-01-01",
+      "amcAmount": 25000.0,
+      "amcScope": "Full website maintenance, bug fixes, security patches updated",
+      "amcRecycleType": "Yearly",
+      "paidAmount": 0.0,
+      "paymentStatus": null,
+      "deleted": false
+    },
+    "amcDomainHistoryInfo": {
+      "domainStartDate": "2025-01-01",
+      "domainRenewalDate": "2026-01-01",
+      "domainAmount": 1200.0,
+      "domainRenewalCycle": "Yearlyupdated",
+      "paidAmount": 1200,
+      "paymentStatus": null,
+      "deleted": false
+    },
+    "amcGsuitHistory": {
+      "domainName": "examplecompany.com",
+      "platform": "Google Workspaceupdated",
+      "gsuitStartDate": "2025-01-01",
+      "gsuitRenewalDate": "2026-01-01",
+      "adminEmail": "admin@examplecompany.com",
+      "adminPassword": "Admin@123",
+      "totalLicenses": 25,
+      "gsuitAmount": 45000.0,
+      "paidBy": "ADMIN",
+      "resellerName": "Google Authorized Partner Pvt Ltd",
+      "gsuitRenewalCycle": "YEARLY",
+      "paidAmount": 5000,
+      "paymentStatus": null,
+      "purchasedViaReseller": true,
+      "deleted": false
+    }
   }
 }
 
 settings {
   encodeUrl: true
+  timeout: 0
 }

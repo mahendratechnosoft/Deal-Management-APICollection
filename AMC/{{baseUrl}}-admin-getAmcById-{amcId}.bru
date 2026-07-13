@@ -5,11 +5,12 @@ meta {
 }
 
 get {
-  url: {{baseUrl}}/admin/getAmcById/{amcId}
+  url: {{baseUrl}}/{{role}}/getAmcById/{amcId}
   body: none
   auth: inherit
 }
 
 settings {
   encodeUrl: true
+  timeout: 0
 }

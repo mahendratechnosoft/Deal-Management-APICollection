@@ -5,15 +5,15 @@ meta {
 }
 
 get {
-  url: {{baseUrl}}/{{role}}/getGSTReportExcel?format=csv&startDate=&endDate=
+  url: {{baseUrl}}/{{role}}/getGSTReportExcel?startDate=&endDate=
   body: none
   auth: inherit
 }
 
 params:query {
-  format: csv
   startDate: 
   endDate: 
+  ~format: csv
 }
 
 settings {
