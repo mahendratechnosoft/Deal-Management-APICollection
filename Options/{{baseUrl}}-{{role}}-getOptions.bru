@@ -5,13 +5,13 @@ meta {
 }
 
 get {
-  url: {{baseUrl}}/{{role}}/getOptions?category=LEAD_STATUS&search=&active=true
+  url: {{baseUrl}}/{{role}}/getOptions?category=STUDENT_LEAD_STATUS&search=&active=true
   body: none
   auth: inherit
 }
 
 params:query {
-  category: LEAD_STATUS
+  category: STUDENT_LEAD_STATUS
   search: 
   active: true
   ~sort: sequence,asc
@@ -20,4 +20,14 @@ params:query {
 settings {
   encodeUrl: true
   timeout: 0
+}
+
+docs {
+      LEAD_TYPE,
+      LEAD_SOURCE,
+      LEAD_STATUS,
+      INDUSTRY,
+      STUDENT_LEAD_TYPE,
+      STUDENT_LEAD_SOURCE,
+      STUDENT_LEAD_STATUS,
 }
