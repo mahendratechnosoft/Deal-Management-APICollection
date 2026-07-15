@@ -5,9 +5,13 @@ meta {
 }
 
 put {
-  url: {{baseUrl}}/{{role}}/updateAMCGsuitHistory
+  url: {{baseUrl}}/{{role}}/updateAMCGsuitHistory?sendMailToCustomer=true
   body: json
   auth: inherit
+}
+
+params:query {
+  sendMailToCustomer: true
 }
 
 body:json {
