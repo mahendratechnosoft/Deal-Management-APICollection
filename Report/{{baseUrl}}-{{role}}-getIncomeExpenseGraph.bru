@@ -1,0 +1,22 @@
+meta {
+  name: {{baseUrl}}/{{role}}/getIncomeExpenseGraph
+  type: http
+  seq: 3
+}
+
+get {
+  url: {{baseUrl}}/{{role}}/getIncomeExpenseGraph?currency=INR&startDate=2025-04-01&endDate=2026-04-01
+  body: none
+  auth: inherit
+}
+
+params:query {
+  currency: INR
+  startDate: 2025-04-01
+  endDate: 2026-04-01
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}
