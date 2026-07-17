@@ -1,0 +1,30 @@
+meta {
+  name: {{baseUrl}}/{{role}}/getAmcCounts
+  type: http
+  seq: 1
+}
+
+get {
+  url: {{baseUrl}}/{{role}}/getAmcCounts?customerId=c0a80126-9f70-14bb-819f-701d478a0000
+  body: none
+  auth: inherit
+}
+
+params:query {
+  customerId: c0a80126-9f70-14bb-819f-701d478a0000
+  ~serviceType: AMC
+  ~startDate: 2026-01-01
+  ~endDate: 2026-07-01
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}
+
+docs {
+  serviceType:
+  AMC
+  DOMAIN
+  GSUITE
+}
