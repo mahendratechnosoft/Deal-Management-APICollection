@@ -1,0 +1,23 @@
+meta {
+  name: {{baseUrl}}/{{role}}/getAmcRevenueGraph
+  type: http
+  seq: 4
+}
+
+get {
+  url: {{baseUrl}}/{{role}}/getAmcRevenueGraph?startDate=2025-01-01&endDate=2027-01-01&customerId=c0a80126-9f70-14bb-819f-701d478a0000
+  body: none
+  auth: inherit
+}
+
+params:query {
+  startDate: 2025-01-01
+  endDate: 2027-01-01
+  customerId: c0a80126-9f70-14bb-819f-701d478a0000
+  ~serviceType: GSUIT
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}
