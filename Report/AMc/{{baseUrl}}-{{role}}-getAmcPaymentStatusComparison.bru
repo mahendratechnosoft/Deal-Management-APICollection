@@ -5,15 +5,15 @@ meta {
 }
 
 get {
-  url: {{baseUrl}}/{{role}}/getAmcPaymentStatusComparison?startDate=2026-07-01&endDate=2026-07-31&customerId=c0a80126-9f70-14bb-819f-701d478a0000
+  url: {{baseUrl}}/{{role}}/getAmcPaymentStatusComparison
   body: none
   auth: inherit
 }
 
 params:query {
-  startDate: 2026-07-01
-  endDate: 2026-07-31
-  customerId: c0a80126-9f70-14bb-819f-701d478a0000
+  ~startDate: 2026-07-01
+  ~endDate: 2026-07-31
+  ~customerId: c0a80126-9f70-14bb-819f-701d478a0000
   ~serviceType: AMC
 }
 
