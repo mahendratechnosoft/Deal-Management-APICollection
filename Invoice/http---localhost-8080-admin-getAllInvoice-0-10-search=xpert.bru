@@ -5,13 +5,13 @@ meta {
 }
 
 get {
-  url: {{baseUrl}}/{{role}}/getAllInvoice/0/50
+  url: {{baseUrl}}/{{role}}/getAllInvoice/0/50?relatedId=c0a80128-9f94-107c-819f-9432c0bb0001
   body: none
   auth: bearer
 }
 
 params:query {
-  ~relatedId: ac110003-9bda-13d9-819b-db3b3ac50042
+  relatedId: c0a80128-9f94-107c-819f-9432c0bb0001
   ~search: INV-26/27/000007
 }
 

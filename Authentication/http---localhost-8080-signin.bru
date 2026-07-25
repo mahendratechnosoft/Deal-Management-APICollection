@@ -33,6 +33,8 @@ script:post-response {
       role = "admin";
   } else if (roleResponce === "ROLE_EMPLOYEE") {
       role = "employee";
+  } else if (roleResponce === "ROLE_CUSTOMER"){
+    role = "customer";
   }
   
   // 4. Set the environment variables
