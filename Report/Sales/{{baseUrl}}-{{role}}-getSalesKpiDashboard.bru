@@ -1,0 +1,23 @@
+meta {
+  name: {{baseUrl}}/{{role}}/getSalesKpiDashboard
+  type: http
+  seq: 1
+}
+
+get {
+  url: {{baseUrl}}/{{role}}/getSalesKpiDashboard?currency=USD&startDate=2026-01-01&endDate=2026-08-01
+  body: none
+  auth: inherit
+}
+
+params:query {
+  @description('this feild is requered to provide')
+  currency: USD
+  startDate: 2026-01-01
+  endDate: 2026-08-01
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}

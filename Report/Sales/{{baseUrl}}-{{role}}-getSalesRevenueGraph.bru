@@ -1,0 +1,22 @@
+meta {
+  name: {{baseUrl}}/{{role}}/getSalesRevenueGraph
+  type: http
+  seq: 2
+}
+
+get {
+  url: {{baseUrl}}/{{role}}/getSalesRevenueGraph?currency=USD
+  body: none
+  auth: inherit
+}
+
+params:query {
+  currency: USD
+  ~startDate: 2020-01-01
+  ~endDate: 2050-08-01
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}

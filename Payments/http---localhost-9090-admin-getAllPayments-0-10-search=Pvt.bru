@@ -5,13 +5,13 @@ meta {
 }
 
 get {
-  url: {{baseUrl}}/{{role}}/getAllPayments/0/10?customerId=c0a80128-9f94-107c-819f-9432c0bb0001
+  url: {{baseUrl}}/{{role}}/getAllPayments/0/10
   body: none
   auth: bearer
 }
 
 params:query {
-  customerId: c0a80128-9f94-107c-819f-9432c0bb0001
+  ~customerId: c0a80128-9f94-107c-819f-9432c0bb0001
   ~search: Pv
 }
 
