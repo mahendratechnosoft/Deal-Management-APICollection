@@ -5,15 +5,16 @@ meta {
 }
 
 get {
-  url: {{baseUrl}}/{{role}}/getProformaInvoiceSummary?startDate=2025-04-01&endDate=2026-03-31&serviceType=AMC
+  url: {{baseUrl}}/{{role}}/getProformaInvoiceSummary?currencyType=INR
   body: none
   auth: bearer
 }
 
 params:query {
-  startDate: 2025-04-01
-  endDate: 2026-03-31
-  serviceType: AMC
+  currencyType: INR
+  ~startDate: 2023-04-01
+  ~endDate: 2028-03-31
+  ~serviceType: AMC
 }
 
 auth:bearer {

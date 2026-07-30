@@ -1,0 +1,25 @@
+meta {
+  name: {{baseUrl}}/{{role}}/getTopCustomerRevenue
+  type: http
+  seq: 4
+}
+
+get {
+  url: {{baseUrl}}/{{role}}/getTopCustomerRevenue?currency=INR&page=0
+  body: none
+  auth: inherit
+}
+
+params:query {
+  currency: INR
+  page: 0
+  @description('defaut is 5')
+  ~size: 5
+  ~startDate: 2026-07-01
+  ~endDate: 2026-08-01
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}
