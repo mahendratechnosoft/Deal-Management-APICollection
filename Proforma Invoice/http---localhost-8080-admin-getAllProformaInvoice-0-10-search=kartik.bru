@@ -5,13 +5,14 @@ meta {
 }
 
 get {
-  url: {{baseUrl}}/{{role}}/getAllProformaInvoice/0/10?relatedId=c0a80128-9f94-107c-819f-9432c0bb0001
+  url: {{baseUrl}}/{{role}}/getAllProformaInvoice/0/10?sort=dueDate,asc
   body: none
   auth: bearer
 }
 
 params:query {
-  relatedId: c0a80128-9f94-107c-819f-9432c0bb0001
+  sort: dueDate,asc
+  ~relatedId: c0a80128-9f94-107c-819f-9432c0bb0001
   ~search: Prop-26/27/000011
   ~proformaType: REIMBURSEMENT
 }

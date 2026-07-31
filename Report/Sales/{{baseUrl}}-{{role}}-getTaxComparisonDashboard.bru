@@ -1,0 +1,22 @@
+meta {
+  name: {{baseUrl}}/{{role}}/getTaxComparisonDashboard
+  type: http
+  seq: 5
+}
+
+get {
+  url: {{baseUrl}}/{{role}}/getTaxComparisonDashboard?currency=INR&startDate=2025-01-01&endDate=2026-08-01
+  body: none
+  auth: inherit
+}
+
+params:query {
+  currency: INR
+  startDate: 2025-01-01
+  endDate: 2026-08-01
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}
