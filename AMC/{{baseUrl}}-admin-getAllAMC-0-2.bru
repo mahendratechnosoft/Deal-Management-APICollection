@@ -5,16 +5,18 @@ meta {
 }
 
 get {
-  url: {{baseUrl}}/{{role}}/getAllAMC/0/10?customerId=c0a80128-9f94-107c-819f-9432c0bb0001
+  url: {{baseUrl}}/{{role}}/getAllAMC/0/10?startDate=2026-01-01&endDate=2026-04-30
   body: none
   auth: bearer
 }
 
 params:query {
-  customerId: c0a80128-9f94-107c-819f-9432c0bb0001
+  startDate: 2026-01-01
+  endDate: 2026-04-30
+  ~expiryFromDate: 2026-01-01
+  ~expiryToDate: 2026-04-30
+  ~customerId: c0a80128-9f94-107c-819f-9432c0bb0001
   ~search: tcs
-  ~expiryFromDate: 2027-04-20
-  ~expiryToDate: 2028-04-20
   ~serviceType: AMC
   ~statusFilter: UPCOMING
 }
