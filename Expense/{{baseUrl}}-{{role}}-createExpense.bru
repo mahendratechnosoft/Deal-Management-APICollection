@@ -14,21 +14,28 @@ body:json {
   {
     "vendorId": "c0a80126-9e24-14b7-819e-24f41eba0005",
     "vendorName": "Vendor 6",
-    "expenseCategoryId": "c0a800ef-9bb0-1291-819b-b5a21270000e",
-    "expenseCategoryName": "Fuel Expenses",
-    "expenseDate": "2025-01-14",
-    "dueDate": "2025-01-20",
+    "expenseCategoryId": "c0a80126-9e24-14b7-819e-250960170008",
+    "expenseCategoryName": "ASDF",
+    "expenseDate": "2026-08-06",
+    "dueDate": "2026-08-15",
     "expenseType": "GOODS",
     "hsnSac": "9403",
     "note": "Office Chair Purchase emp 2",
     "currency": "INR",
-    "taxableAmount": 1000,
-    "taxInvoiceInclusive": false,
-    "taxType": "CGST_SGST",
-    "taxPercentage": 18.0,
-    "tdsPercentage": 0,
-    "status": "UNPAID",
-    "paidAmount": 0
+    "totalAmount": 1050.0,
+    "taxableAmount": 0,
+    "taxInvoiceInclusive": true,
+   "taxDetails": [
+      {
+        "taxRateId": "c0a80121-9d85-152f-819d-85849e320001",
+        "taxRateName": "CGST",
+        "taxPercentage": 5,
+        "taxAmount": 50
+      }
+    ],
+    "tdsPercentage": 10,
+    "status": "PARTIALLY_PAID",
+    "paidAmount": 500
   }
 }
 
