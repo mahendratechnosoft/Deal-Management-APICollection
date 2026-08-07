@@ -1,0 +1,22 @@
+meta {
+  name: {{baseUrl}}/{{role}}/getAllTerminatedAmc
+  type: http
+  seq: 13
+}
+
+get {
+  url: {{baseUrl}}/{{role}}/getAllTerminatedAmc?page=0&size=10
+  body: none
+  auth: inherit
+}
+
+params:query {
+  page: 0
+  size: 10
+  ~search: B
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}

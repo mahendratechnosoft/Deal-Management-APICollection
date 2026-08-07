@@ -1,0 +1,22 @@
+meta {
+  name: {{baseUrl}}/{{role}}/terminateAmcService
+  type: http
+  seq: 12
+}
+
+put {
+  url: {{baseUrl}}/{{role}}/terminateAmcService?amcId=c0a80124-9fda-1e5b-819f-daa1d7950000&service=DOMAIN
+  body: none
+  auth: inherit
+}
+
+params:query {
+  amcId: c0a80124-9fda-1e5b-819f-daa1d7950000
+  @description('DOMAIN/GSUITE/AMC')
+  service: DOMAIN
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}

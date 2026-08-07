@@ -5,14 +5,14 @@ meta {
 }
 
 get {
-  url: {{baseUrl}}/{{role}}/getAllAMC/0/10?startDate=2026-01-01&endDate=2026-04-30
+  url: {{baseUrl}}/{{role}}/getAllAMC/0/10
   body: none
   auth: bearer
 }
 
 params:query {
-  startDate: 2026-01-01
-  endDate: 2026-04-30
+  ~startDate: 2026-01-01
+  ~endDate: 2026-04-30
   ~expiryFromDate: 2026-01-01
   ~expiryToDate: 2026-04-30
   ~customerId: c0a80128-9f94-107c-819f-9432c0bb0001
