@@ -5,15 +5,15 @@ meta {
 }
 
 get {
-  url: {{baseUrl}}/{{role}}/getBusinessDashboard?currency=INR&startDate=2026-08-01&endDate=2026-08-31
+  url: {{baseUrl}}/{{role}}/getBusinessDashboard?currency=INR
   body: none
   auth: inherit
 }
 
 params:query {
   currency: INR
-  startDate: 2026-08-01
-  endDate: 2026-08-31
+  ~startDate: 2026-08-01
+  ~endDate: 2026-08-31
 }
 
 settings {

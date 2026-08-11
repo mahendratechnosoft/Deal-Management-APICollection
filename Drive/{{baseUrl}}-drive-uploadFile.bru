@@ -1,0 +1,21 @@
+meta {
+  name: {{baseUrl}}/drive/uploadFile
+  type: http
+  seq: 1
+}
+
+post {
+  url: {{baseUrl}}/drive/uploadFile
+  body: multipartForm
+  auth: inherit
+}
+
+body:multipart-form {
+  file: @file(D:\Testing Images\group1.jpg) @contentType(image/jpeg)
+  parentFolderId: c0a80125-9fef-1aac-819f-ef586bfa0007
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}

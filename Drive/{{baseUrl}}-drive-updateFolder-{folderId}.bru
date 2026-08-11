@@ -1,0 +1,24 @@
+meta {
+  name: {{baseUrl}}/drive/updateFolder/{folderId}
+  type: http
+  seq: 13
+}
+
+put {
+  url: {{baseUrl}}/drive/updateFolder/c0a80125-9ff0-1d2b-819f-f0402e810000
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+    "name": "updated",
+    "color": "#ffffff",
+    "visibility":"Internal"
+  }
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}

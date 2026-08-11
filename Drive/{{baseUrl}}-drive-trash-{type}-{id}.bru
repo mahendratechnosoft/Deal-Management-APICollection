@@ -1,0 +1,21 @@
+meta {
+  name: {{baseUrl}}/drive/trash/{type}/{id}
+  type: http
+  seq: 7
+}
+
+patch {
+  url: {{baseUrl}}/drive/trash/file/c0a80125-9fef-1aac-819f-ef4b8cbd0001
+  body: none
+  auth: inherit
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}
+
+docs {
+  type : file/folder
+  id : fileId/folderId
+}
