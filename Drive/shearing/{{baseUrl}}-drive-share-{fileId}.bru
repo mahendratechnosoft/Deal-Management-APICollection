@@ -1,0 +1,27 @@
+meta {
+  name: {{baseUrl}}/drive/share/{fileId}
+  type: http
+  seq: 1
+}
+
+post {
+  url: {{baseUrl}}/drive/share/c0a80125-9ff5-11c2-819f-f575bed20007
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+    "publicLink": true,
+    "password": "1234",
+    "expiryDays": 3,
+    "allowDownload": true,
+    "allowPrint": true,
+    "internalNote": "Shared with external auditors for review purposes."
+  }
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}

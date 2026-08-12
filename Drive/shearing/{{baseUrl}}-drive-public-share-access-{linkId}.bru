@@ -1,0 +1,20 @@
+meta {
+  name: {{baseUrl}}/drive/public/share/access/{linkId}
+  type: http
+  seq: 4
+}
+
+post {
+  url: {{baseUrl}}/drive/public/share/access/c0a80125-9ff5-1403-819f-f516805e0000?password=1234
+  body: none
+  auth: inherit
+}
+
+params:query {
+  password: 1234
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}

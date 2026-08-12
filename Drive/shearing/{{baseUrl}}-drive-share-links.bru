@@ -1,0 +1,20 @@
+meta {
+  name: {{baseUrl}}/drive/share/links
+  type: http
+  seq: 2
+}
+
+get {
+  url: {{baseUrl}}/drive/share/links?employeeId=c0a800ef-9a76-1de1-819a-76c863fc000d
+  body: none
+  auth: inherit
+}
+
+params:query {
+  employeeId: c0a800ef-9a76-1de1-819a-76c863fc000d
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}

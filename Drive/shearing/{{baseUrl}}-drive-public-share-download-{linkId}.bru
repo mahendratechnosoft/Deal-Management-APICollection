@@ -1,0 +1,20 @@
+meta {
+  name: {{baseUrl}}/drive/public/share/download/{linkId}
+  type: http
+  seq: 5
+}
+
+get {
+  url: {{baseUrl}}/drive/public/share/download/c0a80125-9ff5-1403-819f-f516805e0000?password=1234
+  body: none
+  auth: inherit
+}
+
+params:query {
+  password: 1234
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}

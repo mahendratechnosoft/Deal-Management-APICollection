@@ -1,0 +1,29 @@
+meta {
+  name: {{baseUrl}}/drive/updateFile/{fileId}
+  type: http
+  seq: 14
+}
+
+put {
+  url: {{baseUrl}}/drive/updateFile/c0a80125-9ff4-145b-819f-f4b50e9d0000
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+    "displayName": "mockup.png",
+    "description": "new description ",
+    "tags": [
+      "tag one",
+      "tag two",
+      "tag three"
+    ],
+    "visibility": "Private"
+  }
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}
