@@ -1,7 +1,7 @@
 meta {
   name: {{baseUrl}}/drive/getDriveContents
   type: http
-  seq: 3
+  seq: 5
 }
 
 get {
@@ -11,15 +11,10 @@ get {
 }
 
 params:query {
-  ~section: STARRED
   ~parentFolderId: c0a80125-9fef-1e51-819f-efa12c0d0000
 }
 
 settings {
   encodeUrl: true
   timeout: 0
-}
-
-docs {
-  section : MY_DRIVE/ARCHIVE/TRASH/STARRED
 }

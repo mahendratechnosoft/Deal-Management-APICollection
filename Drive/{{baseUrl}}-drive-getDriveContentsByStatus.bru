@@ -1,0 +1,25 @@
+meta {
+  name: {{baseUrl}}/drive/getDriveContentsByStatus
+  type: http
+  seq: 7
+}
+
+get {
+  url: {{baseUrl}}/drive/getDriveContentsByStatus?statusType=ARCHIVED
+  body: none
+  auth: inherit
+}
+
+params:query {
+  @description('ARCHIVED/STARRED')
+  statusType: ARCHIVED
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}
+
+docs {
+  section : MY_DRIVE/ARCHIVE/TRASH/STARRED
+}
