@@ -1,0 +1,20 @@
+meta {
+  name: {{baseUrl}}/drive/move/{type}/{id}
+  type: http
+  seq: 22
+}
+
+put {
+  url: {{baseUrl}}/drive/move/folder/c0a8012a-a00f-12d2-81a0-0fa6d6940004?newParentId=c0a8012a-a00f-12d2-81a0-0fa5513a0002
+  body: none
+  auth: inherit
+}
+
+params:query {
+  newParentId: c0a8012a-a00f-12d2-81a0-0fa5513a0002
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}

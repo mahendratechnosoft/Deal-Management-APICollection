@@ -1,0 +1,20 @@
+meta {
+  name: {{baseUrl}}/drive/sharedWithMe
+  type: http
+  seq: 5
+}
+
+get {
+  url: {{baseUrl}}/drive/sharedWithMe?parentFolderId=c0a8012a-a00f-12d2-81a0-0fa5513a0002
+  body: none
+  auth: inherit
+}
+
+params:query {
+  parentFolderId: c0a8012a-a00f-12d2-81a0-0fa5513a0002
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}

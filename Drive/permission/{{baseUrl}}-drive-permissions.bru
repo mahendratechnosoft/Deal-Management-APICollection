@@ -1,0 +1,40 @@
+meta {
+  name: {{baseUrl}}/drive/permissions
+  type: http
+  seq: 2
+}
+
+post {
+  url: {{baseUrl}}/drive/permissions
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+    "employeeIds": [
+      "c0a80125-9ff5-11c2-819f-f5772051000a"
+    ],
+    "permission": {
+      "canView": true,
+      "canPrint": true,
+      "canDownload": true,
+      "canShare": true,
+      "canCopy": false,
+      "canTrash": false,
+      "canRestore": false,
+      "canDelete": false,
+      "canMove": false,
+      "canUpdate": true,
+      "canManagePermissions": false,
+      "fullControl": false
+    },
+    "targetId": "c0a8012a-a00f-12d2-81a0-0fa5513a0002",
+    "targetType": "FOLDER"
+  }
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}
