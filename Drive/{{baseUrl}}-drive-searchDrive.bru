@@ -1,0 +1,33 @@
+meta {
+  name: {{baseUrl}}/drive/searchDrive
+  type: http
+  seq: 24
+}
+
+put {
+  url: {{baseUrl}}/drive/searchDrive
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+  //   "type": "FILE",
+  //   "search": "kid",
+  //   "visibility": "Private"
+  //   "extension": "pdf",
+  //   "tags": [
+  //     "important",
+  //     "finance"
+  //   ],
+  //   "minSize": 1024,
+  //   "maxSize": 10485760,
+  //   "createdFrom": "2026-01-01T00:00:00",
+  //   "createdTo": "2026-08-18T23:59:59"
+  }
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}
