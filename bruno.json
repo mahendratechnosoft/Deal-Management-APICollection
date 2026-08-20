@@ -1,15 +1,15 @@
 {
-  "version": "1",
   "name": "Deal-Management-Service",
   "type": "collection",
   "ignore": [
     "node_modules",
     ".git"
   ],
-  "size": 2.418351173400879,
-  "filesCount": 306,
+  "size": 2.430087089538574,
+  "filesCount": 536,
   "presets": {
     "requestType": "http",
-    "requestUrl": "{{baseUrl}}/{{role}}/"
-  }
+    "requestUrl": "{{baseUrl}}/"
+  },
+  "version": "1"
 }

@@ -1,0 +1,28 @@
+meta {
+  name: {{baseUrl}}/todo/getAllTodo
+  type: http
+  seq: 4
+}
+
+put {
+  url: {{baseUrl}}/todo/getAllTodo
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+  //   "status":"FINISHED"
+  //   "search":""
+  //   "category":"emp1"
+  //   "createdBy":"c0a80125-9ff5-11c2-819f-f5772051000a",
+    "priority":"HIGH",
+    "createdFrom":"2026-08-01",
+    "createdTo":"2026-08-19"
+  }  
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}

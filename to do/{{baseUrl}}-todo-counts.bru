@@ -1,0 +1,26 @@
+meta {
+  name: {{baseUrl}}/todo/counts
+  type: http
+  seq: 5
+}
+
+put {
+  url: {{baseUrl}}/todo/counts
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+  
+    "createdBy":"c0a80125-9ff5-11c2-819f-f5772051000a",
+    "priority":"HIGH",
+    "createdFrom":"2026-08-01",
+    "createdTo":"2026-08-19"
+  }  
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}

@@ -1,0 +1,26 @@
+meta {
+  name: {{baseUrl}}/todo/update
+  type: http
+  seq: 2
+}
+
+put {
+  url: {{baseUrl}}/todo/update
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+    "todoId": "c0a80138-a018-1e4d-81a0-1917b1f90000",
+    "description": "Follow up with the client regarding the pending payment checkupdate sdf",
+    "category": "emp1",
+    "priority": "HIGH",
+    "status": "UNFINISHED"
+  }
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}

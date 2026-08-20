@@ -1,0 +1,20 @@
+meta {
+  name: {{baseUrl}}/todo/updateStatus/{todoId}
+  type: http
+  seq: 3
+}
+
+put {
+  url: {{baseUrl}}/todo/updateStatus/c0a80138-a018-1e4d-81a0-1917b1f90000?status=Finished
+  body: none
+  auth: inherit
+}
+
+params:query {
+  status: Finished
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}
