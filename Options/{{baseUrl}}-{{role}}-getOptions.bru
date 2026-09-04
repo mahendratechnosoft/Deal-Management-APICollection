@@ -5,15 +5,15 @@ meta {
 }
 
 get {
-  url: {{baseUrl}}/{{role}}/getOptions?category=TODO_LIST_CATEGORY
+  url: {{baseUrl}}/{{role}}/getOptions?category=TODO_LIST_CATEGORY&active=true
   body: none
   auth: inherit
 }
 
 params:query {
   category: TODO_LIST_CATEGORY
+  active: true
   ~search: 
-  ~active: true
   ~sort: sequence,asc
 }
 
