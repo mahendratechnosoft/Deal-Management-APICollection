@@ -1,0 +1,21 @@
+meta {
+  name: {{baseUrl}}/{{role}}/getNextInvoiceNumber
+  type: http
+  seq: 9
+}
+
+get {
+  url: {{baseUrl}}/{{role}}/getNextInvoiceNumber?date=2026-01-01
+  body: none
+  auth: inherit
+}
+
+params:query {
+  date: 2026-01-01
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+  forwardAuthorizationHeader: false
+}
